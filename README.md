@@ -1,13 +1,13 @@
 Shop4FlexiBee
 =============
 
-![Shop4FlexiBee Logo](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/src/images/shop4flexibee-logo.svg "Project Logo")
+![Shop4FlexiBee Logo](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/src/images/logo.png "Project Logo")
 
 Aplikace pro objednávání z FlexiBee a následnou reakci na příchozí platbu
 
 Administrátor označí v ceníku nabízené položky štítkem ESHOP a ACTIVE. Poté jsou tyto nabízeny k obejdnání:
 
-![Nabídka](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/doc/shop4flexibee-screenshot.png "Snímek obrazovky aplikace")
+![Nabídka](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/doc/Shop4FlexiBee-screenshot.png "Snímek obrazovky aplikace")
 
 Po volbě položky je možné vyplnit detaily:
 
