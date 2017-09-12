@@ -55,7 +55,7 @@ class MainMenu extends \Ease\Html\NavTag
         $userID = \Ease\Shared::user()->getUserID();
 
         switch (get_class($user)) {
-            case 'Shop4FlexiBee\Shop4FlexiBee\User': //Admin
+            case 'Shop4FlexiBee\User': //Admin
                 $nav->addMenuItem(new NavBarSearchBox('search', 'search.php'));
 //                $nav->addDropDownMenu('<img width=30 src=images/gear.svg> '._('Scripts'),
 //                    [
@@ -90,7 +90,7 @@ class MainMenu extends \Ease\Html\NavTag
                         ], $this->getMenuList(\Ease\Shared::user(), 'user'))
                 );
                 break;
-            case 'Shop4FlexiBee\Shop4FlexiBee\Customer': //Customer
+            case 'Shop4FlexiBee\Customer': //Customer
                 $nav->addDropDownMenu('<img width=30 src=images/order.svg> '._('Orders'),
                     [
                     'orderform.php' => \Ease\TWB\Part::GlyphIcon('plus').' '._('New order'),

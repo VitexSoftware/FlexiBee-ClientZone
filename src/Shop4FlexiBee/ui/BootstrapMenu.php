@@ -37,7 +37,7 @@ class BootstrapMenu extends \Ease\TWB\Navbar
         \Ease\TWB\Part::twBootstrapize();
 
         switch (get_class($user)) {
-            case 'Shop4FlexiBee\Shop4FlexiBee\User': //Admin
+            case 'Shop4FlexiBee\User': //Admin
 
                 $adminMenu = '<li class="dropdown" style="width: 120px; text-align: right; background-image: url( '.$user->getIcon().' ) ;  background-repeat: no-repeat; background-position: left center; background-size: 40px 40px;"><a href="#" class="dropdown-toggle" data-toggle="dropdown">'.$user->getUserLogin().' <b class="caret"></b></a>
 <ul class="dropdown-menu" style="text-align: left; left: -60px;">
@@ -58,7 +58,7 @@ class BootstrapMenu extends \Ease\TWB\Navbar
 </li>
 ', 'right');
                 break;
-            case 'Shop4FlexiBee\Shop4FlexiBee\Customer': //Customer
+            case 'Shop4FlexiBee\Customer': //Customer
                 $userMenu = '<li class="dropdown" style="width: 120px; text-align: right; background-image: url( '.$user->getIcon().' ) ;  background-repeat: no-repeat; background-position: left center; background-size: 40px 40px;"><a href="#" class="dropdown-toggle" data-toggle="dropdown">'.$user->getUserLogin().' <b class="caret"></b></a>
 <ul class="dropdown-menu" style="text-align: left; left: -60px;">
 <!-- li><a href="settings.php">'.\Ease\TWB\Part::GlyphIcon('wrench').'<i class="icon-cog"></i> '._('Settings').'</a></li -->

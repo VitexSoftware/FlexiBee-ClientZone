@@ -1,11 +1,32 @@
 Shop4FlexiBee
 =============
 
-Co je hotové
-------------
+![Shop4FlexiBee Logo](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/src/images/shop4flexibee-logo.svg "Project Logo")
+
+Aplikace pro objednávání z FlexiBee a následnou reakci na příchozí platbu
+
+Administrátor označí v ceníku nabízené položky štítkem ESHOP a ACTIVE. Poté jsou tyto nabízeny k obejdnání:
+
+![Nabídka](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/doc/shop4flexibee-screenshot.png "Snímek obrazovky aplikace")
+
+Po volbě položky je možné vyplnit detaily:
+
+![Formulář](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/doc/Shop4FlexiBee-order-item-form.png "Formulář položky objednávky")
+
+Objednané položky jsou schraňovány v košíku:
+
+![Potvrzení](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/doc/Shop4FlexiBee-confirm-screenshot.png "Potvrzení obejdnávky")
+
+Výsledkem je buď zálohová faktura, nebo objednávka ve FlexiBee:
+
+![Objednáno](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/doc/Shop4FlexiBee-order-done.png "Dokončená objednávka")
 
 
-** Funkce automatizace **
+Vlastnosti
+----------
+
+
+**Funkce automatizace**
 
  * Příjmání WebHooků
  * Zpracování změn nepřijatých jako webhook
@@ -17,12 +38,12 @@ Co je hotové
  * Párování faktur
  * Obesílání upomínek
 
-** Funkce pro Administrátora **
+**Funkce pro Administrátora**
 
  * Nastavení ChangesApi a webhooků na stránce flexibee.php
  * Zakládání a mazání operátorů
 
-** Funkce pro Operátora **
+**Funkce pro Operátora**
  
  * Rozcestník často používaných aplikací
  * Vyhledávač v Adresách, Kontaktech a Ceníku
@@ -31,7 +52,7 @@ Co je hotové
  * Nabízeným položkám je možné přiřadit obrázek a jeho náhled. 
  * Zobrazení přehledu objednávek s možností je odeslat zákazníkovi mailem
 
-** Funkce pro Zákazníka **
+**Funkce pro Zákazníka**
 
  * Do aplikace je možné se zaregistrovat
  * Je možné si změnit heslo
@@ -42,13 +63,6 @@ Co je hotové
  * Po objednání je jsou z položek vytvářeny zálohová faktura a objednávka.
  * Klient vidí historii svých objednávek a jejich stav
  * Klient si může faktury/objednávky zobrazit jako pdf, stahnout jako isdoc či nechat zaslat mailem
-
-
-Co hotové není
---------------
-
-* Prava uživatelů aneb kdo může co vidět a dělat
-* Aplikace je schopna likvidovat faktury placené v hotovosti (rozbito)
 
 
 Moduly pro zpracování změn evidencí

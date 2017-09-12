@@ -24,10 +24,23 @@ class PageBottom extends \Ease\Html\FooterTag
         $this->addItem('<hr>');
 
         $rowFluid1 = new \Ease\TWB\Row();
-        $colA      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $colB      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $colC      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $colD      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
+        $colA      = $rowFluid1->addItem(new \Ease\TWB\Col(1));
+        $colD      = $rowFluid1->addItem(new \Ease\TWB\Col(4));
+        $colD->addItem(new \Ease\Html\DivTag(_('Other products')));
+
+        $icorow = new \Ease\TWB\Row();
+
+        $icorow->addColumn(6,
+            new \Ease\Html\ATag('https://github.com/VitexSoftware/FlexiProxy',
+            new \Ease\Html\ImgTag('images/flexiproxy-logo.png', 'FlexiProXY',
+            ['class' => 'img-responsive', 'style' => 'height: 100px;'])));
+        $icorow->addColumn(6,
+            new \Ease\Html\ATag('https://github.com/VitexSoftware/Flexplorer/',
+            new \Ease\Html\ImgTag('images/flexplorer-logo.png', 'FlexPlorer',
+            ['class' => 'img-responsive', 'style' => 'height: 100px;'])));
+
+        $colD->addItem($icorow);
+
         $colE      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
         $listE1    = $colE->addItem(new \Ease\Html\UlTag(_('Hosted by'),
             ['style' => 'list-style-type: none']));
@@ -38,22 +51,16 @@ class PageBottom extends \Ease\Html\FooterTag
         $colF      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
         $listF1    = $colF->addItem(new \Ease\Html\UlTag(_('More'),
             ['style' => 'list-style-type: none']));
-        $listF1->addItemSmart(new \Ease\Html\ATag('https://www.vitexsoftware.cz/',
-            _('About us')));
+        $listF1->addItemSmart(new \Ease\Html\ATag('about.php', _('About')));
         $listF1->addItemSmart(new \Ease\Html\ATag('https://github.com/VitexSoftware/Shop4FlexiBee/',
             _('Source code')));
         $listF1->addItemSmart(new \Ease\Html\ATag('https://github.com/VitexSoftware/Shop4FlexiBee/issues',
             _('Issues')));
 
+        $colG = $rowFluid1->addItem(new \Ease\TWB\Col(2));
+        $colG->addItem(_('Version').': '.$appInfo->version.' '.'&copy; 2017 <a href="https://vitexsoftware.cz/">Vitex Software</a>');
+
         $this->addItem($rowFluid1);
-
-        $rowFluid2 = new \Ease\TWB\Row();
-
-        $rowFluid2->addItem(new \Ease\TWB\Col(12,
-            [new \Ease\TWB\Col(8, ''), new \Ease\TWB\Col(4,
-                _('Version').': '.$appInfo->version.' '._('&copy; 2017 Vitex Software'))]));
-
-        $this->addItem(new \Ease\TWB\Container($rowFluid2));
     }
 
     /**

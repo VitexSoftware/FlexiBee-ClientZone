@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-09-12 14:09+0200\n"
-"PO-Revision-Date: 2017-09-12 14:10+0200\n"
+"POT-Creation-Date: 2017-09-12 14:58+0200\n"
+"PO-Revision-Date: 2017-09-12 14:58+0200\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
@@ -116,7 +116,6 @@ msgid "Handler Class %s does not exist"
 msgstr "Třída pro zpracování %s neexistuje"
 
 #: ../src/Shop4FlexiBee/HookReciever.php:127
-#, fuzzy
 msgid "Empty WebHook request"
 msgstr "Webhook vrátil prázdnou odezvu"
 
@@ -565,7 +564,8 @@ msgstr "Nastavení"
 msgid "Password change"
 msgstr "Změna hesla"
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:54 ../src/about.php:15
+#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:54
+#: ../src/Shop4FlexiBee/ui/PageBottom.php:54 ../src/about.php:15
 #: ../src/about.php:19
 msgid "About"
 msgstr "O aplikaci"
@@ -806,33 +806,29 @@ msgstr " %s dní do splatnosti"
 msgid " %s days after due"
 msgstr " %s dní po splatnosti"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:32
+#: ../src/Shop4FlexiBee/ui/PageBottom.php:29
+msgid "Other products"
+msgstr ""
+
+#: ../src/Shop4FlexiBee/ui/PageBottom.php:45
 msgid "Hosted by"
 msgstr "Hostuje"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:39
+#: ../src/Shop4FlexiBee/ui/PageBottom.php:52
 msgid "More"
 msgstr "Více"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:42
-msgid "About us"
-msgstr "O aplikaci"
-
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:44
+#: ../src/Shop4FlexiBee/ui/PageBottom.php:56
 msgid "Source code"
 msgstr "Zdrojové kódy"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:46
+#: ../src/Shop4FlexiBee/ui/PageBottom.php:58
 msgid "Issues"
 msgstr "Podpora"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:54
+#: ../src/Shop4FlexiBee/ui/PageBottom.php:61
 msgid "Version"
 msgstr "Verze"
-
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:54
-msgid "&copy; 2017 Vitex Software"
-msgstr "&copy; 2017 Vitex Software"
 
 #: ../src/Shop4FlexiBee/ui/Pillbox.php:67 ../src/admpasswrcvr.php:78
 #: ../src/custmpassrecv.php:87
@@ -1278,17 +1274,27 @@ msgstr "Faktury"
 msgid "FlexiBee Init"
 msgstr "Inicializace FlexiBee"
 
+#: ../src/flexibeeinit.php:26
+msgid "Changes API Enabled"
+msgstr ""
+
 #: ../src/flexibeeinit.php:28
-msgid "ChangesApi Povoleno"
+msgid "Changes API enabled"
 msgstr ""
 
-#: ../src/flexibeeinit.php:30
-msgid "ChangesAPI povoleno"
+#: ../src/flexibeeinit.php:31
+msgid "Changes API disabled"
 msgstr ""
 
-#: ../src/flexibeeinit.php:33
-msgid "ChangesAPI zakázáno"
-msgstr ""
+#: ../src/flexibeeinit.php:58
+#, fuzzy, php-format
+msgid "label %s created"
+msgstr "vytvořeno"
+
+#: ../src/flexibeeinit.php:66 ../src/flexibeeinit.php:73
+#, fuzzy, php-format
+msgid "label %s already exists"
+msgstr "Doména adresa %s je již registrována"
 
 #: ../src/flexibeelogin.php:19
 msgid "I already have an customer number"
@@ -1541,6 +1547,12 @@ msgstr ""
 msgid "Uživatelé"
 msgstr ""
 
+#~ msgid "About us"
+#~ msgstr "O aplikaci"
+
+#~ msgid "&copy; 2017 Vitex Software"
+#~ msgstr "&copy; 2017 Vitex Software"
+
 #~ msgid "Upravit"
 #~ msgstr "Upravit"
 
@@ -1555,9 +1567,6 @@ msgstr ""
 
 #~ msgid "Domain name %s is not valid"
 #~ msgstr "Jméno domény %s není validní"
-
-#~ msgid "Domain name %s allready registerd"
-#~ msgstr "Doména adresa %s je již registrována"
 
 #~ msgid "Please enter Domain name"
 #~ msgstr "Prosím zadejte jméno domény"
@@ -1633,9 +1642,6 @@ msgstr ""
 
 #~ msgid "Saving progress: %s/%s = %s%% %s "
 #~ msgstr "Průběh ukládání: %s/%s = %s%% %s "
-
-#~ msgid "created"
-#~ msgstr "vytvořeno"
 
 #~ msgid "updated"
 #~ msgstr "aktualizováno"

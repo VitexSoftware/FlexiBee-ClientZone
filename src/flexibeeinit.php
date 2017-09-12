@@ -16,8 +16,6 @@ $oPage->addItem(new ui\PageTop(_('FlexiBee Init')));
 
 $oPage->container->addItem(new FlexiBeeStatus());
 
-
-
 /* Povolit ChangesAPI */
 
 $changer = new \FlexiPeeHP\Changes();
@@ -25,12 +23,12 @@ if ($changer->getStatus() == false) {
     $chEnabled = $changer->enable();
 }
 if ($changer->getStatus()) {
-    $changer->addStatusMessage(_('ChangesApi Povoleno'));
+    $changer->addStatusMessage(_('Changes API Enabled'));
     $oPage->container->addItem(new \Ease\TWB\Label('success',
-        _('ChangesAPI povoleno')));
+        _('Changes API enabled')));
 } else {
     $oPage->container->addItem(new \Ease\TWB\Label('warning',
-        _('ChangesAPI zakázáno')));
+        _('Changes API disabled')));
 }
 
 
@@ -43,7 +41,7 @@ $oPage->container->addItem(new \Ease\TWB\LinkButton($webhook, $webhook,
     $hookResult ? 'success' : 'danger'));
 
 
-$cenik = new \FlexiPeeHP\Cenik();
+$cenik         = new \FlexiPeeHP\Cenik();
 $stitek        = new \FlexiPeeHP\Stitek();
 $labelsDefined = \FlexiPeeHP\Stitek::getAvailbleLabels($cenik);
 
@@ -57,24 +55,23 @@ function createLabel($label)
 
     $stitek->insertToFlexiBee($stitekData);
     if ($stitek->lastResponseCode == 201) {
-        $stitek->addStatusMessage('label '.$label.' created', 'success');
+        $stitek->addStatusMessage(sprintf(_('label %s created'), $label),
+            'success');
     }
 }
-
 $label = 'ESHOP';
 if (!array_key_exists($label, $labelsDefined)) {
     createLabel($label);
 } else {
-    $stitek->addStatusMessage('label '.$label.' already exits');
+    $stitek->addStatusMessage(sprintf(_('label %s already exists'), $label));
 }
 
 $label = 'AKTIVNI';
 if (!array_key_exists($label, $labelsDefined)) {
     createLabel($label);
 } else {
-    $stitek->addStatusMessage('label '.$label.' already exits');
+    $stitek->addStatusMessage(sprintf(_('label %s already exists'), $label));
 }
-
 
 $oPage->addItem(new ui\PageBottom());
 
