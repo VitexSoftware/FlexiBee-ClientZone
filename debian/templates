@@ -1,0 +1,61 @@
+Template: shop4flexibee/DB_TYPE
+Type: select
+Default: pgsql
+Choices: mysql, pgsql
+Description: Jakou pouzit databazi
+
+Template: shop4flexibee/DB_HOST
+Type: string
+Default: localhost
+Description: Host databáze
+
+Template: shop4flexibee/DB_PORT
+Type: string
+Default: 5432
+Description: 5432 pro postgres 3306 pro mysql
+
+Template: shop4flexibee/DB_DATABASE
+Type: string
+Default: shop4flexibee
+Description: název databáze pro použití
+
+Template: shop4flexibee/DB_USERNAME
+Type: string
+Default: shop4flexibee
+Description: Login pro připojení k databázi
+
+Template: shop4flexibee/DB_PASSWORD
+Type: string
+Default: shop4flexibee
+Description: Heslo pro připojení k databázi
+
+Template: shop4flexibee/FLEXIBEE_COMPANY
+Type: string
+Default: demo
+Description: Výchozí firma pro operace s API
+ Zatím bude stačit pouze jedna firma
+
+Template: shop4flexibee/FLEXIBEE_URL
+Type: string
+Default: https://demo.flexibee.eu
+Description: Url k API flexibee
+ Adresa kde běží FlexiBee API
+
+Template: shop4flexibee/FLEXIBEE_LOGIN
+Type: string
+Default: winstrom
+Description: Login pro připojení k API Flexibee
+ Login přiděluje správce FlexiBee
+
+Template: shop4flexibee/FLEXIBEE_PASSWORD
+Type: string
+Default: winstrom
+Description: Heslo pro připojení k API Flexibee
+ Heslo přiděluje správce FlexiBee
+
+Template: shop4flexibee/WEBUSER
+Type: string
+Default: www-data
+Description: Uzivatel webu
+ Uzivatel pod kterym bezi aplikace
+

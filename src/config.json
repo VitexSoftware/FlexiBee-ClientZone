@@ -1,0 +1,20 @@
+{                                                                                                                                          
+    "EASE_APPNAME": "Shop4FlexiBee",                                                                                                      
+    "EASE_LOGGER": "syslog",                                                                                                       
+    "SEND_MAILS_FROM": "shop@syourdomain.net",                                                                                                
+    "EMAIL_FROM": "shop@yourdomain.net",                                                                                                                       
+    "EASE_EMAILTO": "info@vitexsoftware.cz",                                                                    
+    "SUPPRESS_EMAILS": "true",                                                                                                                              
+    "SEND_INFO_TO": "office@yourdomain.net",                                                                                                                       
+    "DB_HOST": "localhost",                                                                                                                             
+    "DB_USERNAME": "shop4flexibee",                                                                                                                            
+    "DB_PASSWORD": "shop4flexibee",                                                                                                                            
+    "DB_DATABASE": "shop4flexibee",                                                                                                                            
+    "DB_PORT": "3306",
+    "DB_TYPE": "mysql",                                                                                                                                 
+    "FLEXIBEE_URL": "https://demo.flexibee.eu",
+    "FLEXIBEE_LOGIN": "winstrom",
+    "FLEXIBEE_PASSWORD": "winstrom",
+    "FLEXIBEE_COMPANY": "demo",
+    "DEBUG": "false"
+}

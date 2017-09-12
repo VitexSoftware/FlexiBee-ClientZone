@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@  --with=systemd
+
+override_dh_install:
+	dh_install
+	sed -i -e 's/..\//.\//g' debian/shop4flexibee/usr/share/shop4flexibee/about.php
+	sed -i -e 's/..\/vendor/\/var\/lib\/shop4flexibee/g' debian/shop4flexibee/usr/share/shop4flexibee/includes/Init.php
+	sed -i -e 's/..\/i18n/\/usr\/share\/locale/g' debian/shop4flexibee/usr/share/shop4flexibee/includes/Init.php
+	./debian/fixversion.sh
+

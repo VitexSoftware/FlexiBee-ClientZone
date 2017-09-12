@@ -1,0 +1,31 @@
+{
+    "name": "vitexsoftware/shop4flexibee",
+    "description": "eShop for FlexiBee",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Vítězslav Dvořák",
+            "email": "info@vitexsoftware.cz"
+        }
+    ],
+    "require": {
+        "php": ">= 5.5.9",
+        "spoje.net/flexipeehp": "dev-master",
+        "vitexsoftware/ease-framework": "dev-master",
+        "robmorgan/phinx": "^0.6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shop4FlexiBee\\": "src/Shop4FlexiBee/",
+            "Shop4FlexiBee\\ui\\": "src/Shop4FlexiBee/ui/",
+            "Shop4FlexiBee\\whplugins\\": "src/Shop4FlexiBee/whplugins/",
+            "Shop4FlexiBee\\orderplugins\\": "src/Shop4FlexiBee/orderplugins/",
+            "Test\\Shop4FlexiBee\\": "testing/PHPUnit/src/Shop4FlexiBee/"
+        }
+    },
+    "require-dev": {
+        "phpunit/php-token-stream": "~1.2",
+        "phpunit/phpunit": "5.3.*",
+        "phpunit/phpunit-skeleton-generator": "*"
+    }
+}
