@@ -20,8 +20,8 @@ $mainMenu = $oPage->container->addItem(new ui\MainPageMenu());
 
 
 switch (get_class($oUser)) {
-    case 'Shop4FlexiBee\Shop4FlexiBee\User': //Admin
-         $mainMenu->addMenuItem(
+    case 'Shop4FlexiBee\User': //Admin
+        $mainMenu->addMenuItem(
             'images/cennik.png', _('Cennik'), 'adminpricelist.php'
         );
         $mainMenu->addMenuItem(
@@ -30,7 +30,7 @@ switch (get_class($oUser)) {
         );
 
         break;
-    case 'Shop4FlexiBee\Shop4FlexiBee\Customer': //Customer
+    case 'Shop4FlexiBee\Customer': //Customer
         $mainMenu->addMenuItem(
             'images/cennik.png', _('Cennik'), 'pricelist.php'
         );
