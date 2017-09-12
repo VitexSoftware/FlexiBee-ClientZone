@@ -98,7 +98,7 @@ class WebPage extends \Ease\TWB\WebPage
     public function onlyForUser($loginPage = 'adminlogin.php')
     {
         $user = \Ease\Shared::user();
-        if (get_class($user) != 'Shop4FlexiBee\Shop4FlexiBee\User') {
+        if (get_class($user) != 'Shop4FlexiBee\User') {
             \Ease\Shared::webPage()->addStatusMessage(_('Please sign in as user first'),
                 'warning');
             $this->redirect($loginPage);
