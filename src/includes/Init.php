@@ -12,7 +12,7 @@ if (!defined('EASE_APPNAME')) {
     define('EASE_APPNAME', 'shop4flexibee');
 }
 
-\Ease\Shared::initializeGetText(constant('EASE_APPNAME'));
+\Ease\Shared::initializeGetText(constant('EASE_APPNAME'), 'en_US', '../i18n');
 
 session_start();
 
