@@ -13,8 +13,9 @@
     },
     "require": {
         "php": ">= 5.5.9",
-        "spoje.net/flexipeehp": "dev-master",
-        "vitexsoftware/ease-framework": "dev-master"
+        "flexipeehp": "*",
+        "ease-framework": "*",
+        "vitexsoftware/ease-bricks": "dev-master"
     },
     "autoload": {
         "psr-4": {
