@@ -1,5 +1,6 @@
 src/*.php		usr/share/shop4flexibee
 src/bin/*.php		usr/share/shop4flexibee/bin
+src/admin/*.php		usr/share/shop4flexibee/admin
 src/*.ico		usr/share/shop4flexibee
 src/css/*.css	        usr/share/shop4flexibee/css
 #src/css/images/*	usr/share/shop4flexibee/css/images

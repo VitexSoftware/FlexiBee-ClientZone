@@ -64,8 +64,8 @@ class ParovacFaktur extends \Ease\Sand
             'specSym',
             'sumCelkem',
             'datVyst'],
-            "sparovano eq false AND typPohybuK eq 'typPohybu.prijem' AND storno eq false AND datVyst eq '".\FlexiPeeHP\FlexiBeeRW::timestampToFlexiDate(mktime(0,
-                    0, 0, date("m"), date("d") - $daysBack, date("Y")))."' ",
+            ["sparovano eq false AND typPohybuK eq 'typPohybu.prijem' AND storno eq false AND datVyst eq '".\FlexiPeeHP\FlexiBeeRW::timestampToFlexiDate(mktime(0,
+                    0, 0, date("m"), date("d") - $daysBack, date("Y")))."' "],
             'id');
 
         if ($this->banker->lastResponseCode == 200) {
@@ -99,7 +99,7 @@ class ParovacFaktur extends \Ease\Sand
             'duzpPuv',
             'typDokl',
             'datVyst'],
-            "(stavUhrK is null OR stavUhrK eq 'stavUhr.castUhr') AND storno eq false",
+            ["(stavUhrK is null OR stavUhrK eq 'stavUhr.castUhr') AND storno eq false"],
             'id');
 
         if ($this->invoicer->lastResponseCode == 200) {

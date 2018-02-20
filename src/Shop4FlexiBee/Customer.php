@@ -182,7 +182,7 @@ class Customer extends \Ease\User
             'mena',
             'zamekK',
             'datVyst'],
-            "(stavUhrK is null OR stavUhrK eq 'stavUhr.castUhr') AND storno eq false AND firma=".$firma,
+            ["(stavUhrK is null OR stavUhrK eq 'stavUhr.castUhr') AND storno eq false AND firma=".$firma],
             'id');
 
         if ($this->invoicer->lastResponseCode == 200) {

@@ -5,8 +5,8 @@ namespace Shop4FlexiBee;
 /**
  * Přihlašovací stránka.
  *
- * @author    Vitex <vitex@hippy.cz>
- * @copyright Vitex@hippy.cz (G) 2017
+ * @author Vítězslav Dvořák <info@vitexsoftware.cz>
+ * @copyright Vitex@hippy.cz (G) 2017-2018
  */
 require_once 'includes/Init.php';
 
