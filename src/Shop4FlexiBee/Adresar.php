@@ -140,7 +140,7 @@ class Adresar extends Importer\Importer
             $data = $this->getData();
         }
         $converted                    = parent::convertRow($data);
-        $converted['kod']             = $data[$this->myKeyColumn];
+        $converted['kod']             = $data[$this->keyColumn];
         $converted[$this->nameColumn] = trim(ucfirst($data['name']).' '.ucfirst($data['lastname']));
 
         return $converted;

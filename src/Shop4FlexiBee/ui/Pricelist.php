@@ -38,13 +38,23 @@ class Pricelist extends \Ease\TWB\Panel
 
         $this->pricer = new \FlexiPeeHP\Cenik();
         $items        = $this->pricer->getColumnsFromFlexibee('info',
-            '(in subtree '.$category.')');
+            ['(in subtree '.$category.')']);
 
         parent::__construct(_('Pricelist'), 'info', null,
             new \Ease\TWB\Label('info',
             sprintf(_('%s items found'), count($items))));
 
         if (count($items)) {
+            $headerRow = new \Ease\TWB\Row(null);
+            $headerRow->addColumn(1);
+            $headerRow->addColumn(2, new \Ease\TWB\Label('info', _('Item name')));
+            $headerRow->addColumn(2,
+                new \Ease\TWB\Label('info', _('Price without VAT')));
+            $headerRow->addColumn(2,
+                new \Ease\TWB\Label('info', _('Price with VAT')));
+            $headerRow->addColumn(2, new \Ease\TWB\Label('info', _('Actions')));
+            $this->addItem( $headerRow);
+            $this->addItem('<p><hr/></p>');
             foreach ($items as $item) {
 
                 if (array_key_exists($item['kod'], $orderable)) {
@@ -66,7 +76,8 @@ class Pricelist extends \Ease\TWB\Panel
             new ProductImageThumbnail($this->pricer,
             ['class' => 'thumbnail', 'style' => 'height: 40px']));
         $row->addColumn(2, $pricelistItemData['nazev']);
-        $row->addColumn(2, $pricelistItemData['cenaZakl']);
+        $row->addColumn(2, $pricelistItemData['cenaZaklBezDph']);
+        $row->addColumn(2, round($pricelistItemData['cenaZaklVcDph']));
         if (array_key_exists('service', $pricelistItemData)) {
             $row->addColumn(2,
                 new \Ease\TWB\LinkButton('orderform.php?service='.$pricelistItemData['service'],
@@ -75,5 +86,4 @@ class Pricelist extends \Ease\TWB\Panel
 
         return $row;
     }
-
 }

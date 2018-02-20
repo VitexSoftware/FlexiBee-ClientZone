@@ -14,6 +14,7 @@ namespace Shop4FlexiBee\ui;
  */
 class LabelSwitches extends \Ease\Html\DivTag
 {
+
     /**
      * FlexiBee Label Switches
      *
@@ -33,7 +34,7 @@ class LabelSwitches extends \Ease\Html\DivTag
         }
         parent::__construct(null, $properties);
         foreach ($allLabels as $code => $title) {
-            $twbsw = $this->addItem(new TWBSwitch($code,
+            $twbsw = $this->addItem(new \Ease\ui\TWBSwitch($code,
                 array_key_exists($code, $enabledLabels), 1,
                 ['onText' => $code, 'offText' => $title, 'onColor' => 'success',
                 'offColor' => 'default', 'labelWidth' => 10, 'handleWidth' => 200
@@ -70,5 +71,4 @@ $.ajax({
 });
 ');
     }
-
 }

@@ -12,9 +12,9 @@
     "DB_DATABASE": "shop4flexibee",                                                                                                                            
     "DB_PORT": "3306",
     "DB_TYPE": "mysql",                                                                                                                                 
-    "FLEXIBEE_URL": "https://demo.flexibee.eu",
-    "FLEXIBEE_LOGIN": "winstrom",
-    "FLEXIBEE_PASSWORD": "winstrom",
+    "FLEXIBEE_URL": "https://vitexsoftware.flexibee.eu",
+    "FLEXIBEE_LOGIN": "demo",
+    "FLEXIBEE_PASSWORD": "demodemo",
     "FLEXIBEE_COMPANY": "demo",
     "DEBUG": "false"
 }

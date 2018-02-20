@@ -37,7 +37,7 @@ switch ($oPage->getRequestValue('action')) {
 
         $confirmator = $confirmBlock->addItem(new \Ease\TWB\Panel(_('Opravdu smazat ?')), 'danger');
         $confirmator->addItem(new \Ease\TWB\LinkButton('user.php?id='.$user->getId(), _('No').' '.\Ease\TWB\Part::glyphIcon('ok'), 'success'));
-        $confirmator->addItem(new \Ease\TWB\LinkButton('?delete=true&'.$user->myKeyColumn.'='.$user->getID(), _('Yes').' '.\Ease\TWB\Part::glyphIcon('remove'), 'danger'));
+        $confirmator->addItem(new \Ease\TWB\LinkButton('?delete=true&'.$user->keyColumn.'='.$user->getID(), _('Yes').' '.\Ease\TWB\Part::glyphIcon('remove'), 'danger'));
 
         $oPage->container->addItem(new \Ease\TWB\Panel('<strong>'.$user->getUserName().'</strong>', 'info', $confirmBlock));
 

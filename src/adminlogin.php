@@ -61,25 +61,29 @@ $loginColumn = $loginRow->addItem(new \Ease\TWB\Col(4));
 $submit = new \Ease\TWB\SubmitButton(_('Sign in'), 'success');
 
 $loginPanel = new \Ease\TWB\Panel(new \Ease\Html\ImgTag('images/shop4flexibee-logo.svg',
-    'Shop4FlexiBee', ['style' => 'width: 100px']), 'danger', null, $submit);
+        'Shop4FlexiBee', ['style' => 'width: 100px']), 'danger', null, $submit);
 $loginPanel->addItem(new \Ease\TWB\FormGroup(_('Username'),
-    new \Ease\Html\InputTextTag('login', $login)));
+        new \Ease\Html\InputTextTag('login', $login)));
 $loginPanel->addItem(new \Ease\TWB\FormGroup(_('Password'),
-    new \Ease\Html\InputPasswordTag('password')));
+        new \Ease\Html\InputPasswordTag('password')));
 $loginPanel->body->setTagCss(['margin' => '20px']);
 
 $loginColumn->addItem($loginPanel);
 
 $passRecoveryColumn = $loginRow->addItem(new \Ease\TWB\Col(4,
-    new \Ease\TWB\LinkButton('admpasswrcvr.php',
-    '<i class="fa fa-key"></i>
+        new \Ease\TWB\LinkButton('admpasswrcvr.php',
+            '<i class="fa fa-key"></i>
 '._('Lost password recovery'), 'warning')));
 
 
-$passRecoveryColumn->additem(new \Ease\TWB\LinkButton('createaccount.php',
-    '<i class="fa fa-user"></i>
+if (\Ease\Shared::db()->queryToCount('SELECT * FROM user') == 0) {
+    $oPage->addStatusMessage('Please register first Admin user');
+    $oPage->redirect('createaccount.php');
+} else {
+    $passRecoveryColumn->additem(new \Ease\TWB\LinkButton('createaccount.php',
+            '<i class="fa fa-user"></i>
 '._('Sign On'), 'success'));
-
+}
 
 $oPage->container->addItem(new \Ease\TWB\Form('Login', null, 'POST', $loginRow));
 

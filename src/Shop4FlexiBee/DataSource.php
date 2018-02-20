@@ -220,7 +220,7 @@ class DataSource extends \Ease\Brick
 
         if (($query !== false) && strlen($query) && ($qtype !== false)) {
             $type = $this->handledObejct->useKeywords[$qtype];
-            if ($qtype == $this->handledObejct->myKeyColumn) {
+            if ($qtype == $this->handledObejct->keyColumn) {
                 $type = 'INT';
             }
 
@@ -261,10 +261,10 @@ class DataSource extends \Ease\Brick
     {
         $page     = isset($_REQUEST['page']) ? $_REQUEST['page'] : 1;
         $rp       = isset($_REQUEST['rp']) ? $_REQUEST['rp'] : 10;
-        $sortname = isset($_REQUEST['sortname']) ? $_REQUEST['sortname'] : $this->handledObejct->getmyKeySelect();
+        $sortname = isset($_REQUEST['sortname']) ? $_REQUEST['sortname'] : $this->handledObejct->getKeySelect();
 
         if (!$sortname) {
-            $sortname = $this->handledObejct->getmyKeySelect();
+            $sortname = $this->handledObejct->getKeySelect();
         }
 
         $sortorder = isset($_REQUEST['sortorder']) ? $_REQUEST['sortorder'] : 'desc';
@@ -343,8 +343,8 @@ class DataSource extends \Ease\Brick
             } else {
                 $order = '';
             }
-            $transactions = $this->handledObejct->dblink->queryToArray($queryRaw.' WHERE `'.$this->handledObejct->myKeyColumn.'` IN('.$rows.')'.$order,
-                $this->handledObejct->getmyKeyColumn());
+            $transactions = $this->handledObejct->dblink->queryToArray($queryRaw.' WHERE `'.$this->handledObejct->keyColumn.'` IN('.$rows.')'.$order,
+                $this->handledObejct->getKeyColumn());
             $total        = count(explode(',', $rows));
         } else {
             $total        = $this->getTotal($queryRaw, $this->getWhere());
@@ -355,7 +355,7 @@ class DataSource extends \Ease\Brick
         if (count($transactions)) {
             foreach ($transactions as $row) {
                 $entry = [
-                    'id' => $row[$this->handledObejct->myKeyColumn],
+                    'id' => $row[$this->handledObejct->keyColumn],
                     'cell' => $row,
                 ];
                 if (isset($row['color'])) {
@@ -387,7 +387,7 @@ class DataSource extends \Ease\Brick
         if (count($transactions)) {
             foreach ($transactions as $row) {
                 $entry = [
-                    'id' => $row[$this->handledObejct->myKeyColumn],
+                    'id' => $row[$this->handledObejct->keyColumn],
                     'cell' => $row,
                 ];
                 if (isset($row['color'])) {
@@ -627,7 +627,7 @@ class DataSource extends \Ease\Brick
      */
     public function controlDeleteColumns()
     {
-        $id = \Ease\Shared::webPage()->getRequestValue($this->myKeyColumn);
+        $id = \Ease\Shared::webPage()->getRequestValue($this->keyColumn);
         if ($id) {
             $this->setMyKey($id);
 
@@ -654,7 +654,7 @@ class DataSource extends \Ease\Brick
      */
     public function controlEditColumns()
     {
-        $id = $this->webPage->getRequestValue($this->myKeyColumn);
+        $id = $this->webPage->getRequestValue($this->keyColumn);
         if ($id) {
             $this->setMyKey($id);
 

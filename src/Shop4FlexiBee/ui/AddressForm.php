@@ -43,7 +43,7 @@ class AddressForm extends \Ease\TWB\Form
             'success'), ['style' => 'text-align: right']));
 
         if (!is_null($addressID)) {
-            $this->addItem(new \Ease\Html\InputHiddenTag($address->myKeyColumn,
+            $this->addItem(new \Ease\Html\InputHiddenTag($address->keyColumn,
                 $addressID));
         }
     }

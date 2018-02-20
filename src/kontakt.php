@@ -55,7 +55,7 @@ switch ($oPage->getRequestValue('action')) {
             'danger');
         $confirmator->addItem(new \Ease\TWB\LinkButton('contact.php?id='.$contact->getId(),
             _('No').' '.\Ease\TWB\Part::glyphIcon('ok'), 'success'));
-        $confirmator->addItem(new \Ease\TWB\LinkButton('?delete=true&'.$contact->myKeyColumn.'='.$contact->getID(),
+        $confirmator->addItem(new \Ease\TWB\LinkButton('?delete=true&'.$contact->keyColumn.'='.$contact->getID(),
             _('Yes').' '.\Ease\TWB\Part::glyphIcon('remove'), 'danger'));
 
         $oPage->container->addItem(new \Ease\TWB\Panel('<strong>'.$contact->getContactName().'</strong>',

@@ -49,7 +49,7 @@ class KontaktForm extends \Ease\TWB\Form
             'success'), ['style' => 'text-align: right']));
 
         if (!is_null($contactID)) {
-            $this->addItem(new \Ease\Html\InputHiddenTag($contact->myKeyColumn,
+            $this->addItem(new \Ease\Html\InputHiddenTag($contact->keyColumn,
                 $contactID));
         }
     }

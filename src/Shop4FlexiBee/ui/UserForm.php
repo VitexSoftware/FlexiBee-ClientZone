@@ -39,7 +39,7 @@ class UserForm extends \Ease\TWB\Form
             'success'), ['style' => 'text-align: right']));
 
         if (!is_null($userID)) {
-            $this->addItem(new \Ease\Html\InputHiddenTag($user->myKeyColumn,
+            $this->addItem(new \Ease\Html\InputHiddenTag($user->keyColumn,
                 $userID));
         }
     }

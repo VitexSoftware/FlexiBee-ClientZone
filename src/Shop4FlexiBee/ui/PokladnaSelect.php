@@ -43,8 +43,8 @@ class PokladnaSelect extends \Ease\Html\Select
     {
         $kasy  = $this->selector->getColumnsFromFlexibee(
             [
-            $this->selector->nameColumn, $this->selector->myKeyColumn,
-            ], null, $this->selector->nameColumn, $this->selector->myKeyColumn
+            $this->selector->nameColumn, $this->selector->keyColumn,
+            ], null, $this->selector->nameColumn, $this->selector->keyColumn
         );
         $items = [];
         foreach ($kasy as $kasaId => $kasaInfo) {

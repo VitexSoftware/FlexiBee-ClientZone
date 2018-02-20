@@ -255,10 +255,10 @@ class EngineTest extends \Test\Ease\BrickTest
     }
 
     /**
-     * @covers namespace Shop4FlexiBee\Engine::getMyKeySelect
-     * @todo   Implement testGetMyKeySelect().
+     * @covers namespace Shop4FlexiBee\Engine::getKeySelect
+     * @todo   Implement testGetKeySelect().
      */
-    public function testGetMyKeySelect()
+    public function testGetKeySelect()
     {
         // Remove the following lines when you implement this test.
         $this->markTestIncomplete(

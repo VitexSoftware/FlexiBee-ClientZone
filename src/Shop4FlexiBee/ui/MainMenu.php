@@ -29,9 +29,9 @@ class MainMenu extends \Ease\Html\NavTag
      */
     protected function getMenuList($source, $icon = '')
     {
-        $keycolumn  = $source->getmyKeyColumn();
+        $keycolumn  = $source->getKeyColumn();
         $namecolumn = $source->nameColumn;
-        $lister     = $source->getColumnsFromSQL([$source->getmyKeyColumn(), $namecolumn],
+        $lister     = $source->getColumnsFromSQL([$source->getKeyColumn(), $namecolumn],
             null, $namecolumn, $keycolumn);
 
         $itemList = [];
@@ -78,7 +78,7 @@ class MainMenu extends \Ease\Html\NavTag
 //                );
                 $nav->addDropDownMenu('<img width=30 src=images/order.svg> '._('Proposal'),
                     [
-                    'adminpricelist.php' => \Ease\TWB\Part::GlyphIcon('th-list').' '._('Pricelist'),
+                        'adminpricelist.php' => \Ease\TWB\Part::GlyphIcon('th-list').' '._('Pricelist'),
                     ]
                 );
 
@@ -93,9 +93,9 @@ class MainMenu extends \Ease\Html\NavTag
             case 'Shop4FlexiBee\Customer': //Customer
                 $nav->addDropDownMenu('<img width=30 src=images/order.svg> '._('Orders'),
                     [
-                    'orderform.php' => \Ease\TWB\Part::GlyphIcon('plus').' '._('New order'),
-                    'pricelist.php' => \Ease\TWB\Part::GlyphIcon('th-list').' '._('Pricelist'),
-                    'myorders.php' => \Ease\TWB\Part::GlyphIcon('list').'&nbsp;'._('My orders')]
+                        'orderform.php' => \Ease\TWB\Part::GlyphIcon('plus').' '._('New order'),
+                        'pricelist.php' => \Ease\TWB\Part::GlyphIcon('th-list').' '._('Pricelist'),
+                        'myorders.php' => \Ease\TWB\Part::GlyphIcon('list').'&nbsp;'._('My orders')]
                 );
 
                 break;
@@ -121,5 +121,4 @@ class MainMenu extends \Ease\Html\NavTag
             null, true);
         $this->includeJavaScript('js/slideupmessages.js');
     }
-
 }

@@ -15,14 +15,10 @@ $oPage->addItem(new ui\PageTop(_('shop4flexibee')));
 
 $mainMenu = $oPage->container->addItem(new ui\MainPageMenu());
 
-
-
-
-
 switch (get_class($oUser)) {
     case 'Shop4FlexiBee\User': //Admin
         $mainMenu->addMenuItem(
-            'images/cennik.png', _('Cennik'), 'adminpricelist.php'
+            'images/cennik.png', _('Pricelist'), 'adminpricelist.php'
         );
         $mainMenu->addMenuItem(
             'images/flexibee.png', _('FlexiBee'),
@@ -32,7 +28,7 @@ switch (get_class($oUser)) {
         break;
     case 'Shop4FlexiBee\Customer': //Customer
         $mainMenu->addMenuItem(
-            'images/cennik.png', _('Cennik'), 'pricelist.php'
+            'images/cennik.png', _('Pricelist'), 'pricelist.php'
         );
         $mainMenu->addMenuItem(
             'images/order.svg', _('Order Form'), 'orderform.php'
@@ -41,7 +37,7 @@ switch (get_class($oUser)) {
     case 'Ease\Anonym': //Anonymous
     default:
         $mainMenu->addMenuItem(
-            'images/cennik.png', _('Cennik'), 'pricelist.php'
+            'images/cennik.png', _('Pricelist'), 'pricelist.php'
         );
         $mainMenu->addMenuItem(
             'images/login.svg', _('Sign in'), 'customerlogin.php'

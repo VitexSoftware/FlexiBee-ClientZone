@@ -61,7 +61,7 @@ class Engine extends \Ease\Brick
 
         if (!is_null($itemID)) {
             if (is_string($itemID) && $this->nameColumn) {
-                $this->setmyKeyColumn($this->nameColumn);
+                $this->setKeyColumn($this->nameColumn);
                 $this->loadFromSQL($itemID);
                 $this->resetObjectIdentity();
             } else {
@@ -156,7 +156,7 @@ class Engine extends \Ease\Brick
         $class  = $oPage->getRequestValue('class');
         if ($class) {
             $engine = new $class();
-            $key    = $oPage->getRequestValue($engine->myKeyColumn);
+            $key    = $oPage->getRequestValue($engine->keyColumn);
             if ($key) {
                 $engine->setMyKey((int) $key);
             }
@@ -280,7 +280,7 @@ class Engine extends \Ease\Brick
 
         if (is_array($row) && count($row)) {
             foreach ($row as $key => $value) {
-                if ($key == $this->myKeyColumn) {
+                if ($key == $this->keyColumn) {
                     continue;
                 }
                 if (!isset($this->useKeywords[$key])) {
@@ -462,9 +462,9 @@ class Engine extends \Ease\Brick
     public function operationsMenu()
     {
         $id     = $this->getId();
-        $menu[] = new \Ease\Html\ATag($this->keyword.'.php?action=delete&'.$this->myKeyColumn.'='.$id,
+        $menu[] = new \Ease\Html\ATag($this->keyword.'.php?action=delete&'.$this->keyColumn.'='.$id,
             \Ease\TWB\Part::glyphIcon('remove').' '._('Smazat'));
-        $menu[] = new \Ease\Html\ATag($this->keyword.'.php?'.$this->myKeyColumn.'='.$id,
+        $menu[] = new \Ease\Html\ATag($this->keyword.'.php?'.$this->keyColumn.'='.$id,
             \Ease\TWB\Part::glyphIcon('edit').' '._('Modify'));
 
         return new \Ease\TWB\ButtonDropdown(\Ease\TWB\Part::glyphIcon('cog'),
@@ -490,12 +490,12 @@ class Engine extends \Ease\Brick
     {
         $results   = [];
         $conds     = [];
-        $columns[] = $this->myKeyColumn;
+        $columns[] = $this->keyColumn;
         foreach ($this->useKeywords as $keyword => $keywordInfo) {
             if (isset($this->keywordsInfo[$keyword]['virtual']) && ($this->keywordsInfo[$keyword]['virtual']
                 == true)) {
                 if ($keyword == $this->nameColumn) {
-                    $this->nameColumn = $this->myKeyColumn;
+                    $this->nameColumn = $this->keyColumn;
                 }
                 continue;
             }
@@ -516,7 +516,7 @@ class Engine extends \Ease\Brick
         }
 
         $res = \Ease\Shared::db()->queryToArray('SELECT '.implode(',', $columns).','.$this->nameColumn.' FROM '.$this->myTable.' WHERE '.implode(' OR ',
-                $conds).' ORDER BY '.$this->nameColumn, $this->myKeyColumn);
+                $conds).' ORDER BY '.$this->nameColumn, $this->keyColumn);
         foreach ($res as $result) {
             $occurences = '';
             foreach ($result as $key => $value) {
@@ -524,7 +524,7 @@ class Engine extends \Ease\Brick
                     $occurences .= '('.$key.': '.$value.')';
                 }
             }
-            $results[$result[$this->myKeyColumn]] = [$this->nameColumn => $result[$this->nameColumn],
+            $results[$result[$this->keyColumn]] = [$this->nameColumn => $result[$this->nameColumn],
                 'what' => $occurences];
         }
 
@@ -542,7 +542,7 @@ class Engine extends \Ease\Brick
             $data = $this->getData();
         }
         foreach ($data as $column => $value) {
-            if ($column == $this->myKeyColumn) {
+            if ($column == $this->keyColumn) {
                 continue;
             }
             if (!isset($this->keywordsInfo[$column])) {
@@ -576,7 +576,7 @@ class Engine extends \Ease\Brick
             $this->error('loadFromSQL: Unknown Key', $this->data);
         }
 
-        $queryRaw = $this->getListingQuerySelect().'  WHERE '.$this->getListingQueryWhere().' `'.$this->getmyKeyColumn().'`='.$itemID;
+        $queryRaw = $this->getListingQuerySelect().'  WHERE '.$this->getListingQueryWhere().' `'.$this->getKeyColumn().'`='.$itemID;
 
         return $this->dblink->queryToArray($queryRaw);
     }
@@ -594,8 +594,8 @@ class Engine extends \Ease\Brick
         $columnsToRender = [];
         if (is_null($columns)) {
             $columns = $this->keywordsInfo;
-            if (!array_key_exists($this->myKeyColumn, $columns)) {
-                $columns[$this->myKeyColumn] = $this->myKeyColumn;
+            if (!array_key_exists($this->keyColumn, $columns)) {
+                $columns[$this->keyColumn] = $this->keyColumn;
             }
         }
 
@@ -627,9 +627,9 @@ class Engine extends \Ease\Brick
      *
      * @return string
      */
-    public function getMyKeySelect()
+    public function getKeySelect()
     {
-        $keyColumn = $this->getmyKeyColumn();
+        $keyColumn = $this->getKeyColumn();
         if (isset($this->keywordsInfo[$keyColumn]['select'])) {
             return $this->keywordsInfo[$keyColumn]['select'];
         }

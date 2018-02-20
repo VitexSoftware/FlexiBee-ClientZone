@@ -39,14 +39,14 @@ class User extends \Ease\User
      *
      * @var string
      */
-    public $myCreateColumn = 'DatCreate';
+    public $createColumn = 'DatCreate';
 
     /**
      * Slopecek obsahujici datum poslení modifikace záznamu do shopu.
      *
      * @var string
      */
-    public $myLastModifiedColumn = 'DatSave';
+    public $lastModifiedColumn = 'DatSave';
 
     /**
      * Budeme používat serializovaná nastavení uložená ve sloupečku.
@@ -144,9 +144,9 @@ class User extends \Ease\User
      *
      * @return string
      */
-    public function getMyKeySelect()
+    public function getKeySelect()
     {
-        $keyColumn = $this->getmyKeyColumn();
+        $keyColumn = $this->getKeyColumn();
         if (isset($this->keywordsInfo[$keyColumn]['select'])) {
             return $this->keywordsInfo[$keyColumn]['select'];
         }
@@ -182,9 +182,9 @@ class User extends \Ease\User
     public function operationsMenu()
     {
         $id     = $this->getId();
-        $menu[] = new \Ease\Html\ATag($this->keyword.'.php?action=delete&'.$this->myKeyColumn.'='.$id,
+        $menu[] = new \Ease\Html\ATag($this->keyword.'.php?action=delete&'.$this->keyColumn.'='.$id,
             \Ease\TWB\Part::glyphIcon('remove').' '._('Delete'));
-        $menu[] = new \Ease\Html\ATag($this->keyword.'.php?'.$this->myKeyColumn.'='.$id,
+        $menu[] = new \Ease\Html\ATag($this->keyword.'.php?'.$this->keyColumn.'='.$id,
             \Ease\TWB\Part::glyphIcon('edit').' '._('Edit'));
 
         return new \Ease\TWB\ButtonDropdown(\Ease\TWB\Part::glyphIcon('cog'),

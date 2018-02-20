@@ -222,10 +222,11 @@ class OrderItem extends FlexiBeeEngine
         $polozka['service']    = $this->getDataValue('service');
         $this->cenik->loadFromFlexiBee($polozka['cenik']);
         $polozka['typZasobyK'] = $this->cenik->getDataValue('typZasobyK');
-        $polozka['icon']       = $this->cenik->getDataValue('id');
-        $_SESSION['cart'][]    = $polozka;
+        $polozka['cenaZaklBezDph'] = $this->cenik->getDataValue('cenaZaklBezDph');
+        $polozka['cenaZaklVcDph'] = $this->cenik->getDataValue('cenaZaklVcDph');
+        $polozka['icon']    = $this->cenik->getDataValue('id');
+        $_SESSION['cart'][] = $polozka;
         $this->addStatusMessage(sprintf(_('%s added to cart'),
                 $this->cenik->getDataValue('nazev')), 'success');
     }
-
 }

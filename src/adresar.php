@@ -49,7 +49,7 @@ switch ($oPage->getRequestValue('action')) {
             'danger');
         $confirmator->addItem(new \Ease\TWB\LinkButton('addresar.php?id='.$address->getId(),
             _('No').' '.\Ease\TWB\Part::glyphIcon('ok'), 'success'));
-        $confirmator->addItem(new \Ease\TWB\LinkButton('?delete=true&'.$address->myKeyColumn.'='.$address->getID(),
+        $confirmator->addItem(new \Ease\TWB\LinkButton('?delete=true&'.$address->keyColumn.'='.$address->getID(),
             _('Yes').' '.\Ease\TWB\Part::glyphIcon('remove'), 'danger'));
 
         $headerRow = new \Ease\TWB\Row();

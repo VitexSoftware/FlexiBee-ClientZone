@@ -151,10 +151,10 @@ class UserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers namespace Shop4FlexiBee\User::getMyKeySelect
-     * @todo   Implement testGetMyKeySelect().
+     * @covers namespace Shop4FlexiBee\User::getKeySelect
+     * @todo   Implement testGetKeySelect().
      */
-    public function testGetMyKeySelect()
+    public function testGetKeySelect()
     {
         // Remove the following lines when you implement this test.
         $this->markTestIncomplete(
