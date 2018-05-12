@@ -10,7 +10,7 @@ build:
 	echo build
 
 clean:
-	rm -rf debian/shop4flexibee 
+	rm -rf debian/clientzone 
 	rm -rf debian/*.substvars debian/*.log debian/*.debhelper debian/files debian/debhelper-build-stamp
 
 deb:

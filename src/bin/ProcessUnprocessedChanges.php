@@ -1,13 +1,13 @@
 #!/usr/bin/php -f
 <?php
 /**
- * shop4flexibee - Zpracování zatím nezachycených úprav
+ * clientzone - Zpracování zatím nezachycených úprav
  *
  * @author     Vítězslav Dvořák <info@vitexsofware.cz>
  * @copyright  2017 VitexSoftware v.s.cz
  */
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 define('EASE_APPNAME', 'HistoryInitializer');
 $inc = 'includes/Init.php';
@@ -16,7 +16,7 @@ if (!file_exists($inc)) {
 }
 require_once $inc;
 
-$hooker                   = new Shop4FlexiBee\HookReciever();
+$hooker                   = new ClientZone\HookReciever();
 $hooker->defaultUrlParams = ['limit' => 1000];
 $hooker->debug            = false;
 

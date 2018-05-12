@@ -1,9 +1,9 @@
 <?php
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 /**
- * shop4flexibee - Obnova hesla.
+ * clientzone - Obnova hesla.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz
@@ -34,7 +34,7 @@ if ($userEmail) {
 
 
             $email = $oPage->addItem(new \Ease\Mailer($userEmail,
-                _('shop4flexibee').' - '.sprintf(_('New password for %s'),
+                _('clientzone').' - '.sprintf(_('New password for %s'),
                     $_SERVER['SERVER_NAME'])));
             $email->setMailHeaders(['From' => constant('EMAIL_FROM')]);
             $email->addItem(_("Sign On informations was changed:\n"));

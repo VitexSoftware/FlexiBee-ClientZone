@@ -1,13 +1,13 @@
 #!/usr/bin/php -f
 <?php
 /**
- * shop4flexibee - Odeslání Upomínek
+ * clientzone - Odeslání Upomínek
  *
  * @author     Vítězslav Dvořák <info@vitexsofware.cz>
  * @copyright  2017 VitexSoftware v.s.cz
  */
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 define('EASE_APPNAME', 'HistoryInitializer');
 $inc = 'includes/Init.php';
@@ -16,7 +16,7 @@ if (!file_exists($inc)) {
 }
 require_once $inc;
 
-$prehistoric = new Shop4FlexiBee\WebHookHandler(null, ['operation' => 'import']);
+$prehistoric = new ClientZone\WebHookHandler(null, ['operation' => 'import']);
 
 if ($prehistoric->dblink->queryToValue('SELECT COUNT(*) FROM '.$prehistoric->getMyTable())) {
     $prehistoric->addStatusMessage(sprintf(_('History table %s is not empty'),

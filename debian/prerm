@@ -1,5 +1,5 @@
 #!/bin/sh
-# prerm script for shop4flexibee
+# prerm script for clientzone
 #
 # see: dh_installdeb(1)
 
@@ -19,7 +19,7 @@ set -e
 
 case "$1" in
     remove|deconfigure)
-    a2disconf shop4flexibee
+    a2disconf clientzone
     ;;
 
     upgrade)

@@ -1,15 +1,16 @@
 <?php
 /**
- * shop4flexibee - Init aplikace.
+ * clientzone - Init aplikace.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz
  */
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
+
 require_once '../vendor/autoload.php';
 if (!defined('EASE_APPNAME')) {
-    define('EASE_APPNAME', 'shop4flexibee');
+    define('EASE_APPNAME', 'ClientZone');
 }
 
 \Ease\Shared::initializeGetText(constant('EASE_APPNAME'), 'en_US', '../i18n');
@@ -25,7 +26,7 @@ if (\Ease\Shared::isCli()) {
     $oPage = new ui\WebPage();
 }
 
-    $engine = new FlexiBeeEngine();
+$engine = new FlexiBeeEngine();
 
 /**
  * Objekt uživatele User nebo Anonym

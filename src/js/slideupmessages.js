@@ -1,6 +1,6 @@
 
 /**
- * shop4flexibee - Zarolování statusbaru
+ * clientzone - Zarolování statusbaru
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz

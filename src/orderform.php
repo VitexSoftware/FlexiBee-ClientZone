@@ -1,11 +1,11 @@
 <?php
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 require_once 'includes/Init.php';
 
 /**
- * shop4flexibee - Objednávkový formulář
+ * clientzone - Objednávkový formulář
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz

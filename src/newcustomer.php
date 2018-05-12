@@ -1,9 +1,9 @@
 <?php
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 /**
- * shop4flexibee - Vytvoření účtu ve FlexiBee.
+ * clientzone - Vytvoření účtu ve FlexiBee.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz
@@ -75,7 +75,7 @@ if ($oPage->isPosted()) {
             ]
         );
 
-        $companyID = $newOUser->adresar->insertToFlexiBee();
+        $companyID = $newOUser->adresar->refresh();
         if (!is_null($companyID)) {
             $newOUser->addStatusMessage(_('Company registered'), 'success');
 
@@ -89,20 +89,20 @@ if ($oPage->isPosted()) {
                 ]
             );
 
-            $contactID = $newOUser->kontakt->insertToFlexiBee();
+            $contactID = $newOUser->kontakt->refresh();
             if (!is_null($contactID)) {
                 $newOUser->addStatusMessage(_('User account created'), 'success');
 
                 $email = $oPage->addItem(new \Ease\Mailer($newOUser->getDataValue('email'),
                     _('Sign On info')));
                 $email->setMailHeaders(['From' => constant('SEND_MAILS_FROM')]);
-                $email->addItem(new \Ease\Html\H1Tag(_('shop4flexibee Account')));
+                $email->addItem(new \Ease\Html\H1Tag(_('clientzone Account')));
                 $email->addItem(new \Ease\Html\DivTag(' Login: '.$emailAddress."\n"));
                 $email->addItem(new \Ease\Html\DivTag(' Password: '.$password."\n"));
                 $email->send();
 
                 $email = $oPage->addItem(new \Ease\Mailer(constant('SEND_INFO_TO'),
-                    sprintf(_('New shop4flexibee account: %s'),
+                    sprintf(_('New clientzone account: %s'),
                         $newOUser->getUserLogin())));
                 $email->setMailHeaders(['From' => constant('SEND_MAILS_FROM')]);
                 $email->addItem(new \Ease\Html\DivTag(_("New Customer").':\n'));
@@ -179,7 +179,7 @@ $regForm->addItem(new \Ease\Html\DivTag(
     new \Ease\Html\InputSubmitTag('Register', _('Singn On'),
     ['title' => _('Finish'), 'class' => 'btn btn-success'])));
 
-$oPage->columnIII->addItem(new \Ease\Html\ImgTag('images/shop4flexibee-logo.svg',
+$oPage->columnIII->addItem(new \Ease\Html\ImgTag('images/clientzone-logo.svg',
     constant('EASE_APPNAME')));
 
 if (isset($_POST)) {

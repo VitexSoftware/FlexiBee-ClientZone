@@ -1,9 +1,9 @@
 <?php
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 /**
- * shop4flexibee
+ * clientzone
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz

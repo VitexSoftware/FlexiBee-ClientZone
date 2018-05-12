@@ -1,25 +1,25 @@
-Shop4FlexiBee
-=============
+FlexiBee ClientZone
+===================
 
-![Shop4FlexiBee Logo](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/src/images/logo.png "Project Logo")
+![ClientZone Logo](https://raw.githubusercontent.com/VitexSoftware/ClientZone/master/src/images/logo.png "Project Logo")
 
-Aplikace pro objednávání z FlexiBee a následnou reakci na příchozí platbu
+Klientská zóna vašeho FlexiBee. Aplikace taktéž umožňuje objednávání položek ceníku FlexiBee a následnou reakci na příchozí platbu
 
 Administrátor označí v ceníku nabízené položky štítkem ESHOP a ACTIVE. Poté jsou tyto nabízeny k obejdnání:
 
-![Nabídka](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/doc/Shop4FlexiBee-screenshot.png "Snímek obrazovky aplikace")
+![Nabídka](https://raw.githubusercontent.com/VitexSoftware/ClientZone/master/doc/ClientZone-screenshot.png "Snímek obrazovky aplikace")
 
 Po volbě položky je možné vyplnit detaily:
 
-![Formulář](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/doc/Shop4FlexiBee-order-item-form.png "Formulář položky objednávky")
+![Formulář](https://raw.githubusercontent.com/VitexSoftware/ClientZone/master/doc/ClientZone-order-item-form.png "Formulář položky objednávky")
 
 Objednané položky jsou schraňovány v košíku:
 
-![Potvrzení](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/doc/Shop4FlexiBee-confirm-screenshot.png "Potvrzení obejdnávky")
+![Potvrzení](https://raw.githubusercontent.com/VitexSoftware/ClientZone/master/doc/ClientZone-confirm-screenshot.png "Potvrzení obejdnávky")
 
 Výsledkem je buď zálohová faktura, nebo objednávka ve FlexiBee:
 
-![Objednáno](https://raw.githubusercontent.com/VitexSoftware/Shop4FlexiBee/master/doc/Shop4FlexiBee-order-done.png "Dokončená objednávka")
+![Objednáno](https://raw.githubusercontent.com/VitexSoftware/ClientZone/master/doc/ClientZone-order-done.png "Dokončená objednávka")
 
 
 Vlastnosti
@@ -68,14 +68,14 @@ Vlastnosti
 Moduly pro zpracování změn evidencí
 ===================================
 
-Načítají se ze složky Shop4FlexiBee\whplugins např **FakturaPrijata.php** a jsou vždy potomky třídy **\Shop4FlexiBee\WebHookHandler**
+Načítají se ze složky ClientZone\whplugins např **FakturaPrijata.php** a jsou vždy potomky třídy **\ClientZone\WebHookHandler**
 
 V modulu je možné předefinovat metody create() update() a delete() které se vykonávají při patřičné změně.
 
 Moduly pro zpracování objednaných položek
 =========================================
 
-Načítají se ze složky Shop4FlexiBee\orderplugins např **DomainOrg.php** a jsou vždy potomky třídy **\Shop4FlexiBee\OrderPlugin**
+Načítají se ze složky ClientZone\orderplugins např **DomainOrg.php** a jsou vždy potomky třídy **\ClientZone\OrderPlugin**
 
 Plugin může mít předefinovány tyto metody:
 
@@ -85,7 +85,7 @@ Plugin může mít předefinovány tyto metody:
  * **settled()**             - vykonává se v případě že byla zaplacena faktura obsahující položku s kodem který ma plugin na starosti
 
 
-Testovací adresa: [https://shop4flexibeee.vitexsoftware.cz/]
+Testovací adresa: [https://clientzonee.vitexsoftware.cz/]
 
 Požadavky pro běh:
 ------------------
@@ -106,18 +106,18 @@ Pro instalaci je třeba:
         wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key|sudo apt-key add -
         echo deb http://v.s.cz/ stable main > /etc/apt/sources.list.d/ease.list
         apt update
-        apt install shop4flexibeee
+        apt install clientzonee
 
 
 Konfigurace:
 ------------
 
-Aplikace se snaží načíst konfigurační soubor z /etc/shop4flexibeee/config.json
+Aplikace se snaží načíst konfigurační soubor z /etc/clientzonee/config.json
 Pokud jej nenajde tak jej hledá v kořenu webu ()
 
 ```json
 {                                                                                                                                          
-    "EASE_APPNAME": "Shop4FlexiBee",                                                                                                      
+    "EASE_APPNAME": "ClientZone",                                                                                                      
     "EASE_LOGGER": "syslog|console",                                                                                                       
     "SEND_MAILS_FROM": "shop@syourdomain.net",                                                                                                
     "EMAIL_FROM": "shop@yourdomain.net",                                                                                                                       
@@ -125,9 +125,9 @@ Pokud jej nenajde tak jej hledá v kořenu webu ()
     "SUPPRESS_EMAILS": "true",                                                                                                                              
     "SEND_INFO_TO": "office@yourdomain.net",                                                                                                                       
     "DB_HOST": "localhost",                                                                                                                             
-    "DB_USERNAME": "shop4flexibee",                                                                                                                            
-    "DB_PASSWORD": "shop4flexibee",                                                                                                                            
-    "DB_DATABASE": "shop4flexibee",                                                                                                                            
+    "DB_USERNAME": "clientzone",                                                                                                                            
+    "DB_PASSWORD": "clientzone",                                                                                                                            
+    "DB_DATABASE": "clientzone",                                                                                                                            
     "DB_PORT": "3306",                                                                                                                                  
     "DB_TYPE": "mysql",                                                                                                                                 
     "FLEXIBEE_URL": "https://demo.flexibee.eu:5434",
@@ -149,19 +149,19 @@ Informace pro vývojáře:
  * Aplikace je vyvíjena pod v NetBeans pod linuxem.
  * Dokumentace ApiGen se nalézá ve složce doc
  * Složka testing obsahuje testovací sady Selenium a PHPUnit a strukturu DB
- * Aktuální zdrojové kody: **git@github.com:VitexSoftware/Shop4FlexiBee.git**
+ * Aktuální zdrojové kody: **git@github.com:VitexSoftware/ClientZone.git**
 
 Instalace databáze
 ------------------
 
 
-    mysqladmin -u root -p create shop4flexibee
-    mysql -u root -p -e "GRANT ALL PRIVILEGES ON shop4flexibee.* TO 'shop4flexibee'@'localhost' IDENTIFIED BY 'shop4flexibee'"
+    mysqladmin -u root -p create clientzone
+    mysql -u root -p -e "GRANT ALL PRIVILEGES ON clientzone.* TO 'clientzone'@'localhost' IDENTIFIED BY 'clientzone'"
 
     su postgres
     psql 
-    CREATE USER shop4flexibee WITH PASSWORD 'shop4flexibee';
-    CREATE DATABASE shop4flexibee OWNER shop4flexibee;
+    CREATE USER clientzone WITH PASSWORD 'clientzone';
+    CREATE DATABASE clientzone OWNER clientzone;
     \q
     vendor/bin/phinx migrate
 

@@ -1,5 +1,5 @@
 {
-    "name": "vitexsoftware/shop4flexibee",
+    "name": "vitexsoftware/clientzone",
     "description": "eShop for FlexiBee",
     "version": "1.0",
     "authors": [
@@ -17,11 +17,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Shop4FlexiBee\\": "src/Shop4FlexiBee/",
-            "Shop4FlexiBee\\ui\\": "src/Shop4FlexiBee/ui/",
-            "Shop4FlexiBee\\whplugins\\": "src/Shop4FlexiBee/whplugins/",
-            "Shop4FlexiBee\\orderplugins\\": "src/Shop4FlexiBee/orderplugins/",
-            "Test\\Shop4FlexiBee\\": "testing/PHPUnit/src/Shop4FlexiBee/"
+            "ClientZone\\": "src/ClientZone/",
+            "ClientZone\\ui\\": "src/ClientZone/ui/",
+            "ClientZone\\whplugins\\": "src/ClientZone/whplugins/",
+            "ClientZone\\orderplugins\\": "src/ClientZone/orderplugins/",
+            "Test\\ClientZone\\": "tests/src/ClientZone/"
         }
     },
     "require-dev": {

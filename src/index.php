@@ -1,9 +1,9 @@
 <?php
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 /**
- * shop4flexibee - Hlavní strana.
+ * clientzone - Hlavní strana.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz
@@ -11,12 +11,12 @@ namespace Shop4FlexiBee;
 require_once 'includes/Init.php';
 
 
-$oPage->addItem(new ui\PageTop(_('shop4flexibee')));
+$oPage->addItem(new ui\PageTop(_('clientzone')));
 
 $mainMenu = $oPage->container->addItem(new ui\MainPageMenu());
 
 switch (get_class($oUser)) {
-    case 'Shop4FlexiBee\User': //Admin
+    case 'ClientZone\User': //Admin
         $mainMenu->addMenuItem(
             'images/cennik.png', _('Pricelist'), 'adminpricelist.php'
         );
@@ -26,13 +26,17 @@ switch (get_class($oUser)) {
         );
 
         break;
-    case 'Shop4FlexiBee\Customer': //Customer
+    case 'ClientZone\Customer': //Customer
         $mainMenu->addMenuItem(
             'images/cennik.png', _('Pricelist'), 'pricelist.php'
         );
         $mainMenu->addMenuItem(
             'images/order.svg', _('Order Form'), 'orderform.php'
         );
+        
+        $oPage->container->addItem(new ui\ToPayItems($oUser));
+
+        
         break;
     case 'Ease\Anonym': //Anonymous
     default:

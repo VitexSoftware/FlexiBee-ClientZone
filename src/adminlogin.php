@@ -1,6 +1,6 @@
 <?php
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 /**
  * Přihlašovací stránka.
@@ -54,14 +54,14 @@ $loginRow   = new \Ease\TWB\Row();
 $infoColumn = $loginRow->addItem(new \Ease\TWB\Col(4));
 
 $infoBlock = $infoColumn->addItem(new \Ease\TWB\Well(new \Ease\Html\ImgTag('images/password.png')));
-$infoBlock->addItem(_('Welcome to Shop4FlexiBee administration'));
+$infoBlock->addItem(_('Welcome to ClientZone administration'));
 
 $loginColumn = $loginRow->addItem(new \Ease\TWB\Col(4));
 
 $submit = new \Ease\TWB\SubmitButton(_('Sign in'), 'success');
 
-$loginPanel = new \Ease\TWB\Panel(new \Ease\Html\ImgTag('images/shop4flexibee-logo.svg',
-        'Shop4FlexiBee', ['style' => 'width: 100px']), 'danger', null, $submit);
+$loginPanel = new \Ease\TWB\Panel(new \Ease\Html\ImgTag('images/clientzone-logo.svg',
+        'ClientZone', ['style' => 'width: 100px']), 'danger', null, $submit);
 $loginPanel->addItem(new \Ease\TWB\FormGroup(_('Username'),
         new \Ease\Html\InputTextTag('login', $login)));
 $loginPanel->addItem(new \Ease\TWB\FormGroup(_('Password'),

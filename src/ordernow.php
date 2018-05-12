@@ -1,6 +1,6 @@
 <?php
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 require_once 'includes/Init.php';
 
@@ -8,7 +8,7 @@ $oPage->onlyForLogged('customerlogin.php',
     _('Please sign in to finish your order'));
 
 /**
- * shop4flexibee - Hlavní strana.
+ * clientzone - Hlavní strana.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz

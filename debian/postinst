@@ -1,23 +1,23 @@
 #!/bin/bash
-# postinst script for shop4flexibee
+# postinst script for clientzone
 
 set -e
 . /usr/share/debconf/confmodule
 
-db_get "shop4flexibee/WEBUSER"
+db_get "clientzone/WEBUSER"
 WEBUSER=${RET}
 
-touch /etc/shop4flexibee/config.json
+touch /etc/clientzone/config.json
 
 #Replace Key Value in Config File
 function replace {
-    cfg="/etc/shop4flexibee/config.php"
+    cfg="/etc/clientzone/config.php"
     sed -i "/${1}/c\define('${1}', '${2}');" $cfg
 #    echo $cfg ${1} ${2}
 }
 
 replaceJSON() {
-    cfg="/etc/shop4flexibee/config.json"
+    cfg="/etc/clientzone/config.json"
     sed -i "/${1}/c\        \"${1}\": \"${2}\"," $cfg
     echo $cfg ${1} ${2}
 }
@@ -25,7 +25,7 @@ replaceJSON() {
 
 #Replace Key Value in PhinX Config File
 function replaceYML {
-    cfg="/var/lib/shop4flexibee/phinx.yml"
+    cfg="/var/lib/clientzone/phinx.yml"
     sed -i "/${1}/c\        ${1}: ${2}" $cfg
 #    echo $cfg ${1} ${2}
 }
@@ -45,9 +45,9 @@ IFS='
 '                                                                                                                                                            
 for keyword in $listOfConfigs                                                                                                                                
 do                                                                                                                                                           
-  db_get "shop4flexibee/$keyword"
+  db_get "clientzone/$keyword"
   if [ "$RET" = "false" ]; then
-    db_input critical "shop4flexibee/$keyword" || true
+    db_input critical "clientzone/$keyword" || true
     db_go
     fi
 # replace "$keyword" $RET
@@ -55,47 +55,47 @@ do
 done
 
 if [ -x /usr/sbin/a2enconf ] ; then
-    a2enconf shop4flexibee
+    a2enconf clientzone
 fi
 
 if [ -f /lib/systemd/system/apache2.service ] ; then
-    systemctl reload apache2
+    systemctl reload apache2 3>/dev/null || true
 fi
 
 if [ -f /lib/systemd/system/avahi-daemon.service ] ; then
-    systemctl reload avahi-daemon reload 3>/dev/null || true
+    systemctl reload avahi-daemon 3>/dev/null || true
 fi
 
-mkdir -p /var/cache/shop4flexibee/ 
-chown $WEBUSER:$WEBUSER -R /var/cache/shop4flexibee/ 
+mkdir -p /var/cache/clientzone/ 
+chown $WEBUSER:$WEBUSER -R /var/cache/clientzone/ 
 
-mkdir -p /var/lib/shop4flexibee/tmp
-chown $WEBUSER:$WEBUSER /var/lib/shop4flexibee/ -R
+mkdir -p /var/lib/clientzone/tmp
+chown $WEBUSER:$WEBUSER /var/lib/clientzone/ -R
 
-mkdir -p /usr/share/shop4flexibee
-chown $WEBUSER:$WEBUSER /usr/share/shop4flexibee/ -R
-cd /usr/share/shop4flexibee
+mkdir -p /usr/share/clientzone
+chown $WEBUSER:$WEBUSER /usr/share/clientzone/ -R
+cd /usr/share/clientzone
 if [ -f composer.lock ] ; then
     rm -f composer.lock
 fi
 mkdir -p /var/lib/composer
 chown $WEBUSER:$WEBUSER /var/lib/composer
-su - $WEBUSER -s /bin/bash -c 'COMPOSER_HOME="/var/lib/composer" composer --no-dev -o install -d /usr/share/shop4flexibee/'
+su - $WEBUSER -s /bin/bash -c 'COMPOSER_HOME="/var/lib/composer" composer --no-dev -o install -d /usr/share/clientzone/'
 
-db_get "shop4flexibee/DB_TYPE"
+db_get "clientzone/DB_TYPE"
 replaceYML "adapter" $RET
-db_get "shop4flexibee/DB_HOST"
+db_get "clientzone/DB_HOST"
 replaceYML "host" $RET
-db_get "shop4flexibee/DB_PORT"
+db_get "clientzone/DB_PORT"
 replaceYML "port" $RET
-db_get "shop4flexibee/DB_USERNAME"
+db_get "clientzone/DB_USERNAME"
 replaceYML "user" $RET
-db_get "shop4flexibee/DB_PASSWORD"
+db_get "clientzone/DB_PASSWORD"
 replaceYML "pass" $RET
-db_get "shop4flexibee/DB_DATABASE"
+db_get "clientzone/DB_DATABASE"
 replaceYML "name" $RET
 
-phinx -n -c/var/lib/shop4flexibee/phinx.yml migrate
+phinx -n -c/var/lib/clientzone/phinx.yml migrate
 
 #DEBHELPER#
 

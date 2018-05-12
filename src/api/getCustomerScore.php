@@ -1,6 +1,6 @@
 <?php
 /**
- * shop4flexibee - Vraci score uzivatele
+ * clientzone - Vraci score uzivatele
  *
  * @author     Vítězslav Dvořák <info@vitexsofware.cz>
  * @copyright  2017 VitexSoftware v.s.cz
@@ -23,7 +23,7 @@ $form->addItem(new \Ease\TWB\SubmitButton(_('Get Score')));
 $container->addItem($form);
 
 if ($addressID) {
-    $reminder = new \Shop4FlexiBee\Upominac();
+    $reminder = new \ClientZone\Upominac();
     $container->addItem(new Ease\Html\H1Tag($reminder->getCustomerScore($addressID)));
     $adresar  = new FlexiPeeHP\Adresar($addressID);
     $container->addItem(new \Ease\Html\H2Tag($adresar->getDataValue('nazev')));

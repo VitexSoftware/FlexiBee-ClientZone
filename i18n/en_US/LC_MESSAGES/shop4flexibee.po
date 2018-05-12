@@ -16,384 +16,384 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../src\n"
 "X-Poedit-SearchPathExcluded-0: ../vendor\n"
 
-#: ../src/Shop4FlexiBee/Customer.php:209
+#: ../src/ClientZone/Customer.php:209
 msgid "missing login"
 msgstr "missing login"
 
-#: ../src/Shop4FlexiBee/Customer.php:214
+#: ../src/ClientZone/Customer.php:214
 msgid "missing password"
 msgstr "missing password"
 
-#: ../src/Shop4FlexiBee/Customer.php:225
+#: ../src/ClientZone/Customer.php:225
 #, php-format
 msgid "Multiplete ContactID"
 msgstr "Multiplete ContactID"
 
-#: ../src/Shop4FlexiBee/Customer.php:228
+#: ../src/ClientZone/Customer.php:228
 msgid "Using the first one"
 msgstr "Using the first one"
 
-#: ../src/Shop4FlexiBee/Customer.php:269
+#: ../src/ClientZone/Customer.php:269
 #, php-format
 msgid "Sign in %s all ok"
 msgstr "Sign in %s all ok"
 
-#: ../src/Shop4FlexiBee/DataGrid.php:197
+#: ../src/ClientZone/DataGrid.php:197
 #, fuzzy
 msgid "Přidat"
 msgstr "Add contact information"
 
-#: ../src/Shop4FlexiBee/DataGrid.php:198 ../src/Shop4FlexiBee/Engine.php:468
+#: ../src/ClientZone/DataGrid.php:198 ../src/ClientZone/Engine.php:468
 msgid "Modify"
 msgstr "Modify"
 
-#: ../src/Shop4FlexiBee/DataGrid.php:199 ../src/Shop4FlexiBee/Engine.php:466
+#: ../src/ClientZone/DataGrid.php:199 ../src/ClientZone/Engine.php:466
 #, fuzzy
 msgid "Smazat"
 msgstr "delete"
 
-#: ../src/Shop4FlexiBee/DataGrid.php:360 ../src/Shop4FlexiBee/DataGrid.php:400
-#: ../src/Shop4FlexiBee/DataGrid.php:438
+#: ../src/ClientZone/DataGrid.php:360 ../src/ClientZone/DataGrid.php:400
+#: ../src/ClientZone/DataGrid.php:438
 msgid "Je třeba označit nějaké řádky"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/DataSource.php:131
+#: ../src/ClientZone/DataSource.php:131
 msgid "Smazáno"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/DataSource.php:138
+#: ../src/ClientZone/DataSource.php:138
 msgid "Záznam byl přidán"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/DataSource.php:141
+#: ../src/ClientZone/DataSource.php:141
 msgid "Záznam nebyl přidám"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/DataSource.php:149
+#: ../src/ClientZone/DataSource.php:149
 msgid "Záznam byl upraven"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/DataSource.php:152
+#: ../src/ClientZone/DataSource.php:152
 msgid "Záznam nebyl upravn"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/Engine.php:178
+#: ../src/ClientZone/Engine.php:178
 msgid "Záznam byl uložen"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/Engine.php:185
+#: ../src/ClientZone/Engine.php:185
 msgid "Záznam nebyl uložen"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/Engine.php:315
+#: ../src/ClientZone/Engine.php:315
 msgid "Chybná hodnota"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/Engine.php:424
+#: ../src/ClientZone/Engine.php:424
 #, php-format
 msgid " %s %s byl smazán "
 msgstr ""
 
-#: ../src/Shop4FlexiBee/Engine.php:430
+#: ../src/ClientZone/Engine.php:430
 #, php-format
 msgid " %s %s nebyl smazán "
 msgstr ""
 
-#: ../src/Shop4FlexiBee/FlexiBeeStatus.php:39
+#: ../src/ClientZone/FlexiBeeStatus.php:39
 msgid "Zvolená firma neexistuje"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/FlexiBeeStatus.php:43
+#: ../src/ClientZone/FlexiBeeStatus.php:43
 msgid "Chyba komunikace"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/HookReciever.php:74
+#: ../src/ClientZone/HookReciever.php:74
 #, php-format
 msgid "Change version %s already processed"
 msgstr "Change version %s already processed"
 
-#: ../src/Shop4FlexiBee/HookReciever.php:105
+#: ../src/ClientZone/HookReciever.php:105
 #, php-format
 msgid "Handler Class %s does not exist"
 msgstr "Handler Class %s does not exist"
 
-#: ../src/Shop4FlexiBee/HookReciever.php:127
+#: ../src/ClientZone/HookReciever.php:127
 msgid "Empty WebHook request"
 msgstr "Empty WebHook request"
 
-#: ../src/Shop4FlexiBee/HookReciever.php:151
+#: ../src/ClientZone/HookReciever.php:151
 msgid "Last Processed Change ID Saving Failed"
 msgstr "Last Processed Change ID Saving Failed"
 
-#: ../src/Shop4FlexiBee/HookReciever.php:155
+#: ../src/ClientZone/HookReciever.php:155
 #, php-format
 msgid "Last Processed Change ID #%s Saved"
 msgstr "Last Processed Change ID #%s Saved"
 
-#: ../src/Shop4FlexiBee/HookReciever.php:174
+#: ../src/ClientZone/HookReciever.php:174
 msgid "Last Processed Change ID Loading Failed"
 msgstr "Last Processed Change ID Loading Failed"
 
-#: ../src/Shop4FlexiBee/Order.php:68
+#: ../src/ClientZone/Order.php:68
 msgid "Please wait while our salesman contact you."
 msgstr "Please wait while our salesman contact you."
 
-#: ../src/Shop4FlexiBee/Order.php:71
+#: ../src/ClientZone/Order.php:71
 msgid "purchase order"
 msgstr "purchase order"
 
-#: ../src/Shop4FlexiBee/Order.php:117
+#: ../src/ClientZone/Order.php:117
 msgid "Proforma"
 msgstr "Proforma"
 
-#: ../src/Shop4FlexiBee/Order.php:160
+#: ../src/ClientZone/Order.php:160
 msgid "Invoice"
 msgstr "Invoice"
 
-#: ../src/Shop4FlexiBee/Order.php:202
+#: ../src/ClientZone/Order.php:202
 #, php-format
 msgid "Unhandled type of item"
 msgstr "Unhandled type of item"
 
-#: ../src/Shop4FlexiBee/OrderItem.php:126
+#: ../src/ClientZone/OrderItem.php:126
 msgid "Please choose service"
 msgstr "Please choose service"
 
-#: ../src/Shop4FlexiBee/OrderItem.php:141
+#: ../src/ClientZone/OrderItem.php:141
 #, php-format
 msgid "Product with code %s does not exist"
 msgstr "Product with code %s does not exist"
 
-#: ../src/Shop4FlexiBee/OrderItem.php:146
+#: ../src/ClientZone/OrderItem.php:146
 #, php-format
 msgid "Missing product code"
 msgstr "Missing product code"
 
-#: ../src/Shop4FlexiBee/OrderItem.php:227
+#: ../src/ClientZone/OrderItem.php:227
 #, php-format
 msgid "%s added to cart"
 msgstr "%s added to cart"
 
-#: ../src/Shop4FlexiBee/OrderPlugin.php:75
+#: ../src/ClientZone/OrderPlugin.php:75
 msgid "Product not specified"
 msgstr "Product not specified"
 
-#: ../src/Shop4FlexiBee/OrderPlugin.php:88
+#: ../src/ClientZone/OrderPlugin.php:88
 #, php-format
 msgid "Item %s was settled without action handled in OrderPlugin code"
 msgstr "Item %s was settled without action handled in OrderPlugin code"
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:161
+#: ../src/ClientZone/ParovacFaktur.php:161
 #, php-format
 msgid "Invoice with Euro currency %s"
 msgstr "Invoice with Euro currency %s"
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:168
+#: ../src/ClientZone/ParovacFaktur.php:168
 #, php-format
 msgid "Unknown invoice type: %s %s"
 msgstr "Unknown invoice type: %s %s"
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:182
+#: ../src/ClientZone/ParovacFaktur.php:182
 msgid "Invoice found: - overdue?"
 msgstr "Invoice found: - overdue?"
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:216
+#: ../src/ClientZone/ParovacFaktur.php:216
 msgid "Faktura za Eura"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:219
+#: ../src/ClientZone/ParovacFaktur.php:219
 #, php-format
 msgid "Unknown invoice type: %s"
 msgstr "Unknown invoice type: %s"
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:241
+#: ../src/ClientZone/ParovacFaktur.php:241
 #, php-format
 msgid "Castecna uhrada - DOBROPIS: prijato: %s ma byt zaplaceno %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:246
+#: ../src/ClientZone/ParovacFaktur.php:246
 #, php-format
 msgid "Přeplatek - DOBROPIS: prijato: %s ma byt zaplaceno %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:258
+#: ../src/ClientZone/ParovacFaktur.php:258
 #, php-format
 msgid "Platba %s  %s byla sparovana s dobropisem %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:284
+#: ../src/ClientZone/ParovacFaktur.php:284
 #, php-format
 msgid "Platba %s  %s byla sparovana s zalohou %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:348
+#: ../src/ClientZone/ParovacFaktur.php:348
 #, php-format
 msgid "Částečná úhrada %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:351
+#: ../src/ClientZone/ParovacFaktur.php:351
 #, php-format
 msgid "Vytvoř ZDD: %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:357
+#: ../src/ClientZone/ParovacFaktur.php:357
 #, php-format
 msgid "Přeplatek %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:377
+#: ../src/ClientZone/ParovacFaktur.php:377
 #, php-format
 msgid "Faktura #%s byla sparovana"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:381
+#: ../src/ClientZone/ParovacFaktur.php:381
 #, php-format
 msgid "Faktura #%s nebyla sparovana"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:406
+#: ../src/ClientZone/ParovacFaktur.php:406
 #, php-format
 msgid "Castecna uhrada - FAKTURA: prijato: %s ma byt zaplaceno %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:411
+#: ../src/ClientZone/ParovacFaktur.php:411
 #, php-format
 msgid "Přeplatek - FAKTURA: prijato: %s ma byt zaplaceno %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:424
+#: ../src/ClientZone/ParovacFaktur.php:424
 #, php-format
 msgid "Platba %s  %s byla sparovana s fakturou %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:482
+#: ../src/ClientZone/ParovacFaktur.php:482
 #, php-format
 msgid "Faktura %s byla vytvořena z dokladu %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:551
+#: ../src/ClientZone/ParovacFaktur.php:551
 msgid "Neidentifikovaná platba"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:558
+#: ../src/ClientZone/ParovacFaktur.php:558
 msgid "Platba bez faktury"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ParovacFaktur.php:677
+#: ../src/ClientZone/ParovacFaktur.php:677
 #, php-format
 msgid "Platba pro fakturu %s nebyla dohledána"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/Upominac.php:65
+#: ../src/ClientZone/Upominac.php:65
 msgid "Getting clients"
 msgstr "Getting clients"
 
-#: ../src/Shop4FlexiBee/Upominac.php:69
+#: ../src/ClientZone/Upominac.php:69
 #, php-format
 msgid "%s Clients Found"
 msgstr "%s Clients Found"
 
-#: ../src/Shop4FlexiBee/Upominac.php:70
+#: ../src/ClientZone/Upominac.php:70
 msgid "Getting debts"
 msgstr "Getting debts"
 
-#: ../src/Shop4FlexiBee/Upominac.php:92
+#: ../src/ClientZone/Upominac.php:92
 #, php-format
 msgid "%s Debts Found"
 msgstr "%s Debts Found"
 
-#: ../src/Shop4FlexiBee/Upominac.php:119 ../src/Shop4FlexiBee/Upominac.php:122
+#: ../src/ClientZone/Upominac.php:119 ../src/ClientZone/Upominac.php:122
 #, php-format
 msgid "Clear %s Remind labels"
 msgstr "Clear %s Remind labels"
 
-#: ../src/Shop4FlexiBee/Upominac.php:140
+#: ../src/ClientZone/Upominac.php:140
 #, php-format
 msgid "%d clients to remind process"
 msgstr "%d clients to remind process"
 
-#: ../src/Shop4FlexiBee/Upominac.php:146
+#: ../src/ClientZone/Upominac.php:146
 #, php-format
 msgid "(%d / %d) #%s LMS# %s %s "
 msgstr "(%d / %d) #%s LMS# %s %s "
 
-#: ../src/Shop4FlexiBee/Upominac.php:158
+#: ../src/ClientZone/Upominac.php:158
 #, php-format
 msgid "User %s not present in LMS; cannot set dashboard "
 msgstr "User %s not present in LMS; cannot set dashboard "
 
-#: ../src/Shop4FlexiBee/Upominac.php:200
+#: ../src/ClientZone/Upominac.php:200
 #, php-format
 msgid "Dashboard for: %d "
 msgstr "Dashboard for: %d "
 
-#: ../src/Shop4FlexiBee/Upominac.php:209
+#: ../src/ClientZone/Upominac.php:209
 #, php-format
 msgid "Disconnect for: %d "
 msgstr "Disconnect for: %d "
 
-#: ../src/Shop4FlexiBee/Upominac.php:239
+#: ../src/ClientZone/Upominac.php:239
 msgid "Invoice locked: skipping process"
 msgstr "Invoice locked: skipping process"
 
-#: ../src/Shop4FlexiBee/Upominac.php:292
+#: ../src/ClientZone/Upominac.php:292
 #, php-format
 msgid "Invoice %s remind %s date saved"
 msgstr "Invoice %s remind %s date saved"
 
-#: ../src/Shop4FlexiBee/Upominac.php:295
+#: ../src/ClientZone/Upominac.php:295
 #, php-format
 msgid "Invoice %s remind %s date save failed"
 msgstr "Invoice %s remind %s date save failed"
 
-#: ../src/Shop4FlexiBee/Upominac.php:301
+#: ../src/ClientZone/Upominac.php:301
 msgid "Remind send disbled"
 msgstr "Remind send disbled"
 
-#: ../src/Shop4FlexiBee/Upominac.php:304
+#: ../src/ClientZone/Upominac.php:304
 #, php-format
 msgid "Remind %d already sent"
 msgstr "Remind %d already sent"
 
-#: ../src/Shop4FlexiBee/Upominac.php:308
+#: ../src/ClientZone/Upominac.php:308
 msgid "No debts to remind"
 msgstr "No debts to remind"
 
-#: ../src/Shop4FlexiBee/Upominac.php:317
+#: ../src/ClientZone/Upominac.php:317
 #, php-format
 msgid "Invoice %s locked again"
 msgstr "Invoice %s locked again"
 
-#: ../src/Shop4FlexiBee/Upominac.php:320
+#: ../src/ClientZone/Upominac.php:320
 #, php-format
 msgid "Invoice %s locking failed"
 msgstr "Invoice %s locking failed"
 
-#: ../src/Shop4FlexiBee/Upominac.php:398
+#: ../src/ClientZone/Upominac.php:398
 msgid "UPOMINKA NEBYLA ODESLANA!!!!"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/Upominac.php:402
+#: ../src/ClientZone/Upominac.php:402
 #, php-format
 msgid "Set Label %s "
 msgstr "Set Label %s "
 
-#: ../src/Shop4FlexiBee/Upominac.php:413
+#: ../src/ClientZone/Upominac.php:413
 #, php-format
 msgid "Set dashboards for %d customers"
 msgstr "Set dashboards for %d customers"
 
-#: ../src/Shop4FlexiBee/Upominac.php:428
+#: ../src/ClientZone/Upominac.php:428
 #, php-format
 msgid "Disconnect %d customers"
 msgstr "Disconnect %d customers"
 
-#: ../src/Shop4FlexiBee/Upominac.php:443
+#: ../src/ClientZone/Upominac.php:443
 #, php-format
 msgid "Connect %d customers"
 msgstr "Connect %d customers"
 
-#: ../src/Shop4FlexiBee/Upominka.php:70
+#: ../src/ClientZone/Upominka.php:70
 #, php-format
 msgid ""
 "%s \n"
@@ -402,540 +402,540 @@ msgid ""
 " celkem za %s,-"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/Upominka.php:85
+#: ../src/ClientZone/Upominka.php:85
 #, php-format
 msgid "Klient %s nema email - HELPDESK RESIT %s !!!"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/User.php:111 ../src/Shop4FlexiBee/User.php:116
-#: ../src/Shop4FlexiBee/User.php:186
+#: ../src/ClientZone/User.php:111 ../src/ClientZone/User.php:116
+#: ../src/ClientZone/User.php:186
 msgid "Delete"
 msgstr "Delete"
 
-#: ../src/Shop4FlexiBee/User.php:112
+#: ../src/ClientZone/User.php:112
 #, php-format
 msgid "Are you sure %s ?"
 msgstr "Are you sure %s ?"
 
-#: ../src/Shop4FlexiBee/User.php:188
-#: ../src/Shop4FlexiBee/ui/AdminPricelist.php:72
+#: ../src/ClientZone/User.php:188
+#: ../src/ClientZone/ui/AdminPricelist.php:72
 msgid "Edit"
 msgstr "Edit"
 
-#: ../src/Shop4FlexiBee/WebHookHandler.php:129
-#: ../src/Shop4FlexiBee/WebHookHandler.php:138
+#: ../src/ClientZone/WebHookHandler.php:129
+#: ../src/ClientZone/WebHookHandler.php:138
 msgid "No Update Action Defined"
 msgstr "No Update Action Defined"
 
-#: ../src/Shop4FlexiBee/WebHookHandler.php:147
+#: ../src/ClientZone/WebHookHandler.php:147
 msgid "No Delete Action Defined"
 msgstr "No Delete Action Defined"
 
-#: ../src/Shop4FlexiBee/ZalohyZeSmluvDoPohledavek.php:142
+#: ../src/ClientZone/ZalohyZeSmluvDoPohledavek.php:142
 #, php-format
 msgid "Pohledávka %d vytvořena"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ZalohyZeSmluvDoPohledavek.php:150
+#: ../src/ClientZone/ZalohyZeSmluvDoPohledavek.php:150
 #, php-format
 msgid "Bylo vygenerováno %s ostatních pohledávek z %s zálohových faktur"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ZalohyZeSmluvDoPohledavek.php:165
-#: ../src/Shop4FlexiBee/ZalohyZeSmluvDoZavazku.php:165
+#: ../src/ClientZone/ZalohyZeSmluvDoPohledavek.php:165
+#: ../src/ClientZone/ZalohyZeSmluvDoZavazku.php:165
 #, php-format
 msgid "Nepodařilo se smazat zálohovou fakturu %s"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ZalohyZeSmluvDoPohledavek.php:169
+#: ../src/ClientZone/ZalohyZeSmluvDoPohledavek.php:169
 msgid "Zálohové faktury převedené na pohledávky byly smazány"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ZalohyZeSmluvDoZavazku.php:142
+#: ../src/ClientZone/ZalohyZeSmluvDoZavazku.php:142
 #, php-format
 msgid "Závazek %d vytvořen"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ZalohyZeSmluvDoZavazku.php:150
+#: ../src/ClientZone/ZalohyZeSmluvDoZavazku.php:150
 #, php-format
 msgid "Bylo vygenerováno %s ostatních závazků z %s zálohových faktur"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ZalohyZeSmluvDoZavazku.php:169
+#: ../src/ClientZone/ZalohyZeSmluvDoZavazku.php:169
 msgid "Zálohové faktury převedené na závazky byly smazány"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/orderplugins/Common.php:37
+#: ../src/ClientZone/orderplugins/Common.php:37
 msgid "Common item"
 msgstr "Common item"
 
-#: ../src/Shop4FlexiBee/orderplugins/Common.php:57
+#: ../src/ClientZone/orderplugins/Common.php:57
 msgid "Product Code"
 msgstr "Product Code"
 
-#: ../src/Shop4FlexiBee/orderplugins/Common.php:57
+#: ../src/ClientZone/orderplugins/Common.php:57
 msgid "ANTENA_2ODB_OUTDOOR"
 msgstr "ANTENA_2ODB_OUTDOOR"
 
-#: ../src/Shop4FlexiBee/orderplugins/Common.php:58
+#: ../src/ClientZone/orderplugins/Common.php:58
 msgid "Product code from our pricelist"
 msgstr "Product code from our pricelist"
 
-#: ../src/Shop4FlexiBee/orderplugins/Common.php:61
+#: ../src/ClientZone/orderplugins/Common.php:61
 msgid "Items count"
 msgstr "Items count"
 
-#: ../src/Shop4FlexiBee/orderplugins/Common.php:61
+#: ../src/ClientZone/orderplugins/Common.php:61
 msgid "Amount requested"
 msgstr "Amount requested"
 
-#: ../src/Shop4FlexiBee/orderplugins/Common.php:64
+#: ../src/ClientZone/orderplugins/Common.php:64
 msgid "Note for stuff"
 msgstr "Note for stuff"
 
-#: ../src/Shop4FlexiBee/orderplugins/Common.php:65
+#: ../src/ClientZone/orderplugins/Common.php:65
 msgid "ASAP Please"
 msgstr "ASAP Please"
 
-#: ../src/Shop4FlexiBee/orderplugins/Common.php:65
+#: ../src/ClientZone/orderplugins/Common.php:65
 msgid "Your kind words about ordered item"
 msgstr "Your kind words about ordered item"
 
-#: ../src/Shop4FlexiBee/orderplugins/Common.php:107
+#: ../src/ClientZone/orderplugins/Common.php:107
 #, php-format
 msgid "Producet with code %s does not exist"
 msgstr "Producet with code %s does not exist"
 
-#: ../src/Shop4FlexiBee/ui/AddressContactsLinks.php:37
+#: ../src/ClientZone/ui/AddressContactsLinks.php:37
 msgid "New Contact"
 msgstr "New Contact"
 
-#: ../src/Shop4FlexiBee/ui/AddressForm.php:27
+#: ../src/ClientZone/ui/AddressForm.php:27
 msgid "Code"
 msgstr "Code"
 
-#: ../src/Shop4FlexiBee/ui/AddressForm.php:29
-#: ../src/Shop4FlexiBee/ui/CartForm.php:36
-#: ../src/Shop4FlexiBee/ui/KontaktForm.php:27
-#: ../src/Shop4FlexiBee/ui/UserForm.php:27 ../src/createaccount.php:139
+#: ../src/ClientZone/ui/AddressForm.php:29
+#: ../src/ClientZone/ui/CartForm.php:36
+#: ../src/ClientZone/ui/KontaktForm.php:27
+#: ../src/ClientZone/ui/UserForm.php:27 ../src/createaccount.php:139
 #: ../src/newcustomer.php:161
 msgid "Name"
 msgstr "Name"
 
-#: ../src/Shop4FlexiBee/ui/AddressForm.php:32
+#: ../src/ClientZone/ui/AddressForm.php:32
 msgid "Email address is empty"
 msgstr "Email address is empty"
 
-#: ../src/Shop4FlexiBee/ui/AddressForm.php:36
-#: ../src/Shop4FlexiBee/ui/KontaktForm.php:31
-#: ../src/Shop4FlexiBee/ui/UserForm.php:31 ../src/admpasswrcvr.php:70
+#: ../src/ClientZone/ui/AddressForm.php:36
+#: ../src/ClientZone/ui/KontaktForm.php:31
+#: ../src/ClientZone/ui/UserForm.php:31 ../src/admpasswrcvr.php:70
 #: ../src/custmpassrecv.php:78
 msgid "Email"
 msgstr "Email"
 
-#: ../src/Shop4FlexiBee/ui/AddressForm.php:42
-#: ../src/Shop4FlexiBee/ui/ColumnsForm.php:102
-#: ../src/Shop4FlexiBee/ui/KontaktForm.php:48
-#: ../src/Shop4FlexiBee/ui/UserForm.php:38
+#: ../src/ClientZone/ui/AddressForm.php:42
+#: ../src/ClientZone/ui/ColumnsForm.php:102
+#: ../src/ClientZone/ui/KontaktForm.php:48
+#: ../src/ClientZone/ui/UserForm.php:38
 #, fuzzy
 msgid "Uložit"
 msgstr "Save"
 
-#: ../src/Shop4FlexiBee/ui/AdminPricelist.php:43
-#: ../src/Shop4FlexiBee/ui/MainMenu.php:81
-#: ../src/Shop4FlexiBee/ui/MainMenu.php:97
-#: ../src/Shop4FlexiBee/ui/Pricelist.php:43 ../src/pricelist.php:13
+#: ../src/ClientZone/ui/AdminPricelist.php:43
+#: ../src/ClientZone/ui/MainMenu.php:81
+#: ../src/ClientZone/ui/MainMenu.php:97
+#: ../src/ClientZone/ui/Pricelist.php:43 ../src/pricelist.php:13
 msgid "Pricelist"
 msgstr "Pricelist"
 
-#: ../src/Shop4FlexiBee/ui/AdminPricelist.php:45
-#: ../src/Shop4FlexiBee/ui/Pricelist.php:45
+#: ../src/ClientZone/ui/AdminPricelist.php:45
+#: ../src/ClientZone/ui/Pricelist.php:45
 #, php-format
 msgid "%s items found"
 msgstr "%s items found"
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:44
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:64
+#: ../src/ClientZone/ui/BootstrapMenu.php:44
+#: ../src/ClientZone/ui/BootstrapMenu.php:64
 msgid "Settings"
 msgstr "Settings"
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:53
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:74 ../src/changecustpw.php:91
+#: ../src/ClientZone/ui/BootstrapMenu.php:53
+#: ../src/ClientZone/ui/BootstrapMenu.php:74 ../src/changecustpw.php:91
 #: ../src/changepassword.php:89
 msgid "Password change"
 msgstr "Password change"
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:54 ../src/about.php:15
+#: ../src/ClientZone/ui/BootstrapMenu.php:54 ../src/about.php:15
 #: ../src/about.php:19
 msgid "About"
 msgstr "About"
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:56
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:76
+#: ../src/ClientZone/ui/BootstrapMenu.php:56
+#: ../src/ClientZone/ui/BootstrapMenu.php:76
 msgid "Sign Out"
 msgstr "Sign Out"
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:69
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:88
-#: ../src/Shop4FlexiBee/ui/CartForm.php:30
+#: ../src/ClientZone/ui/BootstrapMenu.php:69
+#: ../src/ClientZone/ui/BootstrapMenu.php:88
+#: ../src/ClientZone/ui/CartForm.php:30
 msgid "Cart"
 msgstr "Cart"
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:96
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:103
-#: ../src/Shop4FlexiBee/ui/FlexiBeeLoginForm.php:24 ../src/adminlogin.php:47
+#: ../src/ClientZone/ui/BootstrapMenu.php:96
+#: ../src/ClientZone/ui/BootstrapMenu.php:103
+#: ../src/ClientZone/ui/FlexiBeeLoginForm.php:24 ../src/adminlogin.php:47
 #: ../src/admpasswrcvr.php:78 ../src/custmpassrecv.php:88
 #: ../src/customerlogin.php:35 ../src/flexibeelogin.php:16
 msgid "Sign In"
 msgstr "Sign In"
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:99
-#: ../src/Shop4FlexiBee/ui/FlexiBeeLoginForm.php:20
-#: ../src/Shop4FlexiBee/ui/FlexiBeeLoginForm.php:22
-#: ../src/Shop4FlexiBee/ui/KontaktForm.php:37
+#: ../src/ClientZone/ui/BootstrapMenu.php:99
+#: ../src/ClientZone/ui/FlexiBeeLoginForm.php:20
+#: ../src/ClientZone/ui/FlexiBeeLoginForm.php:22
+#: ../src/ClientZone/ui/KontaktForm.php:37
 msgid "Login"
 msgstr "Login"
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:100
-#: ../src/Shop4FlexiBee/ui/KontaktForm.php:39 ../src/adminlogin.php:67
+#: ../src/ClientZone/ui/BootstrapMenu.php:100
+#: ../src/ClientZone/ui/KontaktForm.php:39 ../src/adminlogin.php:67
 #: ../src/admpasswrcvr.php:43 ../src/changecustpw.php:65
 #: ../src/changepassword.php:66 ../src/custmpassrecv.php:43
 #: ../src/customerlogin.php:56
 msgid "Password"
 msgstr "Password"
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:102
+#: ../src/ClientZone/ui/BootstrapMenu.php:102
 msgid "Remeber me"
 msgstr "Remeber me"
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:104 ../src/createaccount.php:130
+#: ../src/ClientZone/ui/BootstrapMenu.php:104 ../src/createaccount.php:130
 #: ../src/createaccount.php:132
 msgid "Registrace"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/BootstrapMenu.php:122
+#: ../src/ClientZone/ui/BootstrapMenu.php:122
 msgid "Click to hide messages"
 msgstr "Click to hide messages"
 
-#: ../src/Shop4FlexiBee/ui/CartForm.php:31
+#: ../src/ClientZone/ui/CartForm.php:31
 msgid "Cart contents"
 msgstr "Cart contents"
 
-#: ../src/Shop4FlexiBee/ui/CartForm.php:35
-#: ../src/Shop4FlexiBee/ui/ProductEditor.php:51
+#: ../src/ClientZone/ui/CartForm.php:35
+#: ../src/ClientZone/ui/ProductEditor.php:51
 msgid "Image"
 msgstr "Image"
 
-#: ../src/Shop4FlexiBee/ui/CartForm.php:37
+#: ../src/ClientZone/ui/CartForm.php:37
 msgid "Price"
 msgstr "Price"
 
-#: ../src/Shop4FlexiBee/ui/CartForm.php:38
+#: ../src/ClientZone/ui/CartForm.php:38
 msgid "Count"
 msgstr "Count"
 
-#: ../src/Shop4FlexiBee/ui/CartForm.php:39
-#: ../src/Shop4FlexiBee/ui/Pillbox.php:56
+#: ../src/ClientZone/ui/CartForm.php:39
+#: ../src/ClientZone/ui/Pillbox.php:56
 msgid "Remove"
 msgstr "Remove"
 
-#: ../src/Shop4FlexiBee/ui/CartForm.php:55
+#: ../src/ClientZone/ui/CartForm.php:55
 msgid "Cash desk"
 msgstr "Cash desk"
 
-#: ../src/Shop4FlexiBee/ui/CartForm.php:56
+#: ../src/ClientZone/ui/CartForm.php:56
 msgid "Order now"
 msgstr "Order now"
 
-#: ../src/Shop4FlexiBee/ui/CartForm.php:60 ../src/cart.php:14
+#: ../src/ClientZone/ui/CartForm.php:60 ../src/cart.php:14
 msgid "Cart is empty"
 msgstr "Cart is empty"
 
-#: ../src/Shop4FlexiBee/ui/ColumnsForm.php:112
+#: ../src/ClientZone/ui/ColumnsForm.php:112
 msgid "Uložit a zpět na přehled"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/ColumnsForm.php:121
+#: ../src/ClientZone/ui/ColumnsForm.php:121
 msgid "Uložit a další"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/DownloadInvoiceButton.php:21
+#: ../src/ClientZone/ui/DownloadInvoiceButton.php:21
 #, php-format
 msgid "Download Your %s"
 msgstr "Download Your %s"
 
-#: ../src/Shop4FlexiBee/ui/FlexiBeeLoginForm.php:21
+#: ../src/ClientZone/ui/FlexiBeeLoginForm.php:21
 msgid "your email address in most of cases"
 msgstr "your email address in most of cases"
 
-#: ../src/Shop4FlexiBee/ui/FlexiBeeLoginForm.php:23
+#: ../src/ClientZone/ui/FlexiBeeLoginForm.php:23
 msgid "Password you recivied by email"
 msgstr "Password you recivied by email"
 
-#: ../src/Shop4FlexiBee/ui/FlexiBeeLoginForm.php:29
+#: ../src/ClientZone/ui/FlexiBeeLoginForm.php:29
 msgid "Please enter your Login and Password"
 msgstr "Please enter your Login and Password"
 
-#: ../src/Shop4FlexiBee/ui/InvoicesOfAddresButton.php:26
+#: ../src/ClientZone/ui/InvoicesOfAddresButton.php:26
 msgid "Customer Invoices"
 msgstr "Customer Invoices"
 
-#: ../src/Shop4FlexiBee/ui/KontaktForm.php:29
-#: ../src/Shop4FlexiBee/ui/UserForm.php:29 ../src/createaccount.php:140
+#: ../src/ClientZone/ui/KontaktForm.php:29
+#: ../src/ClientZone/ui/UserForm.php:29 ../src/createaccount.php:140
 msgid "Příjmení"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/KontaktForm.php:33
+#: ../src/ClientZone/ui/KontaktForm.php:33
 msgid "Phone"
 msgstr "Phone"
 
-#: ../src/Shop4FlexiBee/ui/KontaktForm.php:35
+#: ../src/ClientZone/ui/KontaktForm.php:35
 msgid "Cell"
 msgstr "Cell"
 
-#: ../src/Shop4FlexiBee/ui/LinkToFlexiBeeButton.php:25
+#: ../src/ClientZone/ui/LinkToFlexiBeeButton.php:25
 msgid "Open in FlexiBee"
 msgstr "Open in FlexiBee"
 
-#: ../src/Shop4FlexiBee/ui/MainMenu.php:79
+#: ../src/ClientZone/ui/MainMenu.php:79
 msgid "Proposal"
 msgstr "Proposal"
 
-#: ../src/Shop4FlexiBee/ui/MainMenu.php:85
+#: ../src/ClientZone/ui/MainMenu.php:85
 msgid "Users"
 msgstr "Users"
 
-#: ../src/Shop4FlexiBee/ui/MainMenu.php:87
+#: ../src/ClientZone/ui/MainMenu.php:87
 msgid "New user"
 msgstr "New user"
 
-#: ../src/Shop4FlexiBee/ui/MainMenu.php:88
+#: ../src/ClientZone/ui/MainMenu.php:88
 msgid "User overview"
 msgstr "User overview"
 
-#: ../src/Shop4FlexiBee/ui/MainMenu.php:94 ../src/customerorders.php:34
+#: ../src/ClientZone/ui/MainMenu.php:94 ../src/customerorders.php:34
 msgid "Orders"
 msgstr "Orders"
 
-#: ../src/Shop4FlexiBee/ui/MainMenu.php:96
+#: ../src/ClientZone/ui/MainMenu.php:96
 msgid "New order"
 msgstr "New order"
 
-#: ../src/Shop4FlexiBee/ui/MainMenu.php:98
+#: ../src/ClientZone/ui/MainMenu.php:98
 msgid "My orders"
 msgstr "My orders"
 
-#: ../src/Shop4FlexiBee/ui/NavBarSearchBox.php:39
+#: ../src/ClientZone/ui/NavBarSearchBox.php:39
 msgid "Hledání"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/NavBarSearchBox.php:45
+#: ../src/ClientZone/ui/NavBarSearchBox.php:45
 msgid "Close"
 msgstr "Close"
 
-#: ../src/Shop4FlexiBee/ui/NavBarSearchBox.php:49
+#: ../src/ClientZone/ui/NavBarSearchBox.php:49
 msgid "Search"
 msgstr "Search"
 
-#: ../src/Shop4FlexiBee/ui/OrderFormHtml.php:36
+#: ../src/ClientZone/ui/OrderFormHtml.php:36
 msgid "Service Requested"
 msgstr "Service Requested"
 
-#: ../src/Shop4FlexiBee/ui/OrderFormHtml.php:38
+#: ../src/ClientZone/ui/OrderFormHtml.php:38
 msgid "Enter details"
 msgstr "Enter details"
 
-#: ../src/Shop4FlexiBee/ui/OrderFormHtml.php:44
-#: ../src/Shop4FlexiBee/ui/Pricelist.php:73
+#: ../src/ClientZone/ui/OrderFormHtml.php:44
+#: ../src/ClientZone/ui/Pricelist.php:73
 msgid "Order Now"
 msgstr "Order Now"
 
-#: ../src/Shop4FlexiBee/ui/OrderFormHtml.php:56
+#: ../src/ClientZone/ui/OrderFormHtml.php:56
 msgid "Please choose your service"
 msgstr "Please choose your service"
 
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:34
+#: ../src/ClientZone/ui/OrderListingItem.php:34
 msgid "Settled"
 msgstr "Settled"
 
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:41
+#: ../src/ClientZone/ui/OrderListingItem.php:41
 msgid "Done"
 msgstr "Done"
 
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:44
+#: ../src/ClientZone/ui/OrderListingItem.php:44
 msgid "Open"
 msgstr "Open"
 
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:58
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:59
+#: ../src/ClientZone/ui/OrderListingItem.php:58
+#: ../src/ClientZone/ui/OrderListingItem.php:59
 msgid "Show"
 msgstr "Show"
 
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:62
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:63
+#: ../src/ClientZone/ui/OrderListingItem.php:62
+#: ../src/ClientZone/ui/OrderListingItem.php:63
 msgid "Download"
 msgstr "Download"
 
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:66
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:67
+#: ../src/ClientZone/ui/OrderListingItem.php:66
+#: ../src/ClientZone/ui/OrderListingItem.php:67
 msgid "Send"
 msgstr "Send"
 
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:72
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:73
+#: ../src/ClientZone/ui/OrderListingItem.php:72
+#: ../src/ClientZone/ui/OrderListingItem.php:73
 msgid "ISDOC"
 msgstr "ISDOC"
 
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:79
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:80 ../src/index.php:28
+#: ../src/ClientZone/ui/OrderListingItem.php:79
+#: ../src/ClientZone/ui/OrderListingItem.php:80 ../src/index.php:28
 msgid "FlexiBee"
 msgstr "FlexiBee"
 
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:83
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:85
+#: ../src/ClientZone/ui/OrderListingItem.php:83
+#: ../src/ClientZone/ui/OrderListingItem.php:85
 msgid "Company"
 msgstr "Company"
 
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:108
+#: ../src/ClientZone/ui/OrderListingItem.php:108
 #, php-format
 msgid " %s days to due"
 msgstr " %s days to due"
 
-#: ../src/Shop4FlexiBee/ui/OrderListingItem.php:111
+#: ../src/ClientZone/ui/OrderListingItem.php:111
 #, php-format
 msgid " %s days after due"
 msgstr " %s days after due"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:32
+#: ../src/ClientZone/ui/PageBottom.php:32
 msgid "Hosted by"
 msgstr "Hosted by"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:39
+#: ../src/ClientZone/ui/PageBottom.php:39
 msgid "More"
 msgstr "More"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:42
+#: ../src/ClientZone/ui/PageBottom.php:42
 msgid "About us"
 msgstr "About us"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:44
+#: ../src/ClientZone/ui/PageBottom.php:44
 msgid "Source code"
 msgstr "Source code"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:46
+#: ../src/ClientZone/ui/PageBottom.php:46
 msgid "Issues"
 msgstr "Issues"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:54
+#: ../src/ClientZone/ui/PageBottom.php:54
 msgid "Version"
 msgstr "Version"
 
-#: ../src/Shop4FlexiBee/ui/PageBottom.php:54
+#: ../src/ClientZone/ui/PageBottom.php:54
 msgid "&copy; 2017 Vitex Software"
 msgstr "&copy; 2017 Vitex Software"
 
-#: ../src/Shop4FlexiBee/ui/Pillbox.php:67 ../src/admpasswrcvr.php:78
+#: ../src/ClientZone/ui/Pillbox.php:67 ../src/admpasswrcvr.php:78
 #: ../src/custmpassrecv.php:87
 msgid "and"
 msgstr "and"
 
-#: ../src/Shop4FlexiBee/ui/Pillbox.php:68
+#: ../src/ClientZone/ui/Pillbox.php:68
 msgid "more ..."
 msgstr "more ..."
 
-#: ../src/Shop4FlexiBee/ui/Pillbox.php:71
+#: ../src/ClientZone/ui/Pillbox.php:71
 msgid "add item"
 msgstr "add item"
 
-#: ../src/Shop4FlexiBee/ui/Pillbox.php:74
+#: ../src/ClientZone/ui/Pillbox.php:74
 msgid "Toggle dropdown"
 msgstr "Toggle dropdown"
 
-#: ../src/Shop4FlexiBee/ui/ProductEditor.php:45
+#: ../src/ClientZone/ui/ProductEditor.php:45
 msgid "Thumbnail"
 msgstr "Thumbnail"
 
-#: ../src/Shop4FlexiBee/ui/ProductEditor.php:45
+#: ../src/ClientZone/ui/ProductEditor.php:45
 msgid "Small 150x150px"
 msgstr "Small 150x150px"
 
-#: ../src/Shop4FlexiBee/ui/ProductEditor.php:52
+#: ../src/ClientZone/ui/ProductEditor.php:52
 msgid "Large image"
 msgstr "Large image"
 
-#: ../src/Shop4FlexiBee/ui/ProductEditor.php:59
+#: ../src/ClientZone/ui/ProductEditor.php:59
 msgid "Save"
 msgstr "Save"
 
-#: ../src/Shop4FlexiBee/ui/ProductEditor.php:97
+#: ../src/ClientZone/ui/ProductEditor.php:97
 #, php-format
 msgid "%s File %s was attached"
 msgstr "%s File %s was attached"
 
-#: ../src/Shop4FlexiBee/ui/RecordsWithLabel.php:28
+#: ../src/ClientZone/ui/RecordsWithLabel.php:28
 #, php-format
 msgid "%s records with label %s"
 msgstr "%s records with label %s"
 
-#: ../src/Shop4FlexiBee/ui/RightsForm.php:21 ../src/user.php:29
+#: ../src/ClientZone/ui/RightsForm.php:21 ../src/user.php:29
 msgid "Uživatel"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/SettleForm.php:24
+#: ../src/ClientZone/ui/SettleForm.php:24
 msgid "Zákazník"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/SettleForm.php:25
+#: ../src/ClientZone/ui/SettleForm.php:25
 msgid "Jaroslav Vomáčka"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/SettleForm.php:26
+#: ../src/ClientZone/ui/SettleForm.php:26
 msgid "Po zadání dvou písmen budou nabídnuty možnosti"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/SettleForm.php:30
+#: ../src/ClientZone/ui/SettleForm.php:30
 msgid "Faktura"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/SettleForm.php:31
+#: ../src/ClientZone/ui/SettleForm.php:31
 msgid "Nejprve vyber Zákazníka"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/SettleForm.php:35
+#: ../src/ClientZone/ui/SettleForm.php:35
 msgid "Kasa"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/SettleForm.php:40
+#: ../src/ClientZone/ui/SettleForm.php:40
 msgid "Celkem"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/SettleForm.php:45
+#: ../src/ClientZone/ui/SettleForm.php:45
 msgid "Popis"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/TWBSwitch.php:28 ../src/adresar.php:53
+#: ../src/ClientZone/ui/TWBSwitch.php:28 ../src/adresar.php:53
 #: ../src/kontakt.php:59 ../src/user.php:40
 msgid "Yes"
 msgstr "Yes"
 
-#: ../src/Shop4FlexiBee/ui/TWBSwitch.php:31 ../src/adresar.php:51
+#: ../src/ClientZone/ui/TWBSwitch.php:31 ../src/adresar.php:51
 #: ../src/kontakt.php:57 ../src/user.php:39
 msgid "No"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/UserForm.php:33
+#: ../src/ClientZone/ui/UserForm.php:33
 msgid "Přihlašovací jméno"
 msgstr ""
 
-#: ../src/Shop4FlexiBee/ui/WebPage.php:86
+#: ../src/ClientZone/ui/WebPage.php:86
 msgid "Please sign in as admin first"
 msgstr "Please sign in as admin first"
 
-#: ../src/Shop4FlexiBee/ui/WebPage.php:102
+#: ../src/ClientZone/ui/WebPage.php:102
 msgid "Please sign in as user first"
 msgstr "Please sign in as user first"
 
-#: ../src/Shop4FlexiBee/ui/ZewlScoreLabel.php:33
+#: ../src/ClientZone/ui/ZewlScoreLabel.php:33
 msgid "Zewl score"
 msgstr "Zewl score"
 
@@ -956,8 +956,8 @@ msgid "Please enter your login creditials"
 msgstr "Please enter your login creditials"
 
 #: ../src/adminlogin.php:57
-msgid "Welcome to Shop4FlexiBee administration"
-msgstr "Welcome to Shop4FlexiBee administration"
+msgid "Welcome to ClientZone administration"
+msgstr "Welcome to ClientZone administration"
 
 #: ../src/adminlogin.php:61 ../src/customerlogin.php:49 ../src/index.php:47
 msgid "Sign in"
@@ -983,8 +983,8 @@ msgid "Pricelist Admin"
 msgstr "Pricelist Admin"
 
 #: ../src/admpasswrcvr.php:38 ../src/custmpassrecv.php:37 ../src/index.php:14
-msgid "shop4flexibee"
-msgstr "shop4flexibee"
+msgid "clientzone"
+msgstr "clientzone"
 
 #: ../src/admpasswrcvr.php:38 ../src/custmpassrecv.php:37
 #, php-format
@@ -1258,8 +1258,8 @@ msgid "Sign in first please"
 msgstr "Sign in first please"
 
 #: ../src/customerlogin.php:45
-msgid "Welcome to Shop4FlexiBee"
-msgstr "Welcome to Shop4FlexiBee"
+msgid "Welcome to ClientZone"
+msgstr "Welcome to ClientZone"
 
 #: ../src/customerlogin.php:55
 msgid "usually your email address"
@@ -1380,13 +1380,13 @@ msgid "Sign On info"
 msgstr "Sign On info"
 
 #: ../src/newcustomer.php:99
-msgid "shop4flexibee Account"
-msgstr "shop4flexibee Account"
+msgid "clientzone Account"
+msgstr "clientzone Account"
 
 #: ../src/newcustomer.php:105
 #, php-format
-msgid "New shop4flexibee account: %s"
-msgstr "New shop4flexibee account: %s"
+msgid "New clientzone account: %s"
+msgstr "New clientzone account: %s"
 
 #: ../src/newcustomer.php:108
 msgid "New Customer"

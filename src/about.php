@@ -1,9 +1,9 @@
 <?php
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 /**
- * Shop4FlexiBee - About Page.
+ * ClientZone - About Page.
  *
  * @author     Vítězslav Dvořák <dvorak@austro-bohemia.cz>
  * @copyright  2017 VitexSoftware v.s.cz
@@ -27,8 +27,8 @@ $listing = $infoBlock->addItem(new \Ease\Html\UlTag());
 if (file_exists('../README.md')) {
     $listing->addItem(implode('<br>', file('../README.md')));
 } else {
-    if (file_exists('/usr/share/doc/shop4flexibee/README.md')) {
-        $listing->addItem(implode('<br>', file('/usr/share/doc/shop4flexibee/README.md')));
+    if (file_exists('/usr/share/doc/clientzone/README.md')) {
+        $listing->addItem(implode('<br>', file('/usr/share/doc/clientzone/README.md')));
     }
 }
 

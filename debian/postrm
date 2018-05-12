@@ -1,5 +1,5 @@
 #!/bin/sh
-# postrm script for shop4flexibee
+# postrm script for clientzone
 set -e
 
 # summary of how this script can be called:
@@ -17,17 +17,17 @@ set -e
 
 case "$1" in
        purge|remove|failed-upgrade|abort-install|abort-upgrade|disappear)
-        if [ -f /usr/share/shop4flexibee/composer.lock ] ; then
-            echo    postrm -rfv /usr/share/shop4flexibee
-            rm -rfv /usr/share/shop4flexibee
+        if [ -f /usr/share/clientzone/composer.lock ] ; then
+            echo    postrm -rfv /usr/share/clientzone
+            rm -rfv /usr/share/clientzone
         fi
 
-        if [ -f /var/lib/shop4flexibee/autoload.php  ] ; then
-            echo    postrm -rfv /var/lib/shop4flexibee/
-            rm -rfv /var/lib/shop4flexibee/
+        if [ -f /var/lib/clientzone/autoload.php  ] ; then
+            echo    postrm -rfv /var/lib/clientzone/
+            rm -rfv /var/lib/clientzone/
         fi
 
-        rm -rfv /var/cache/shop4flexibee/ 
+        rm -rfv /var/cache/clientzone/ 
 
         ;;
 

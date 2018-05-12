@@ -1,7 +1,7 @@
 #!/usr/bin/php -f
 <?php
 /**
- * shop4flexibee - Odeslání kontrolního mailu
+ * clientzone - Odeslání kontrolního mailu
  *
  * @author     Vítězslav Dvořák <info@vitexsofware.cz>
  * @copyright  2017 VitexSoftware v.s.cz

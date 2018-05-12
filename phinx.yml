@@ -8,26 +8,26 @@ environments:
     production:
         adapter: pgsql
         host: localhost
-        name: shop4flexibee
-        user: shop4flexibee
-        pass: shop4flexibee
+        name: clientzone
+        user: clientzone
+        pass: clientzone
         port: 5432
         charset: utf8
 
     development:
         adapter: mysql
         host: localhost
-        name: shop4flexibee
-        user: shop4flexibee
-        pass: shop4flexibee
+        name: clientzone
+        user: clientzone
+        pass: clientzone
         port: 3306
         charset: utf8
 
     testing:
         adapter: pgsql
         host: localhost
-        name: shop4flexibee
-        user: shop4flexibee
-        pass: shop4flexibee
+        name: clientzone
+        user: clientzone
+        pass: clientzone
         port: 5432
         charset: utf8

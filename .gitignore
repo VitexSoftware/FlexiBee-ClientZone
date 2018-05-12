@@ -1,7 +1,7 @@
 /nbproject/private/
-/debian/shop4flexibee/
-/debian/shop4flexibee.debhelper.log
-/debian/shop4flexibee.substvars
+/debian/clientzone/
+/debian/clientzone.debhelper.log
+/debian/clientzone.substvars
 /src/includes/config.php
 /build-stamp
 /testing/PHPUnit/build/
@@ -9,4 +9,4 @@
 /vendor/
 /debian/debhelper-build-stamp
 /.vagrant/
-/debian/shop4flexibee.postrm.debhelper
+/debian/clientzone.postrm.debhelper

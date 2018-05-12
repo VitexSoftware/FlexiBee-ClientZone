@@ -1,11 +1,11 @@
 <?php
 /**
- * shop4flexibee - Obrázek produktu.
+ * clientzone - Obrázek produktu.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz
  */
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 require_once 'includes/Init.php';
 

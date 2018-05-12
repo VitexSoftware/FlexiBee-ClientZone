@@ -1,12 +1,12 @@
-Source: shop4flexibee
+Source: clientzone
 Build-Depends: debhelper (>= 8), dh-systemd
 Standards-Version: 3.8.4
 Maintainer: Vítězslav Dvořák <vitex@arachne.cz>
 Uploaders: Vitex <vitex@hippy.cz>
 Priority: optional
-Homepage: https://github.com/VitexSoftware/Shop4FlexiBee
+Homepage: https://github.com/VitexSoftware/ClientZone
 
-Package: shop4flexibee
+Package: clientzone
 Depends: ${misc:Depends},ease-framework (>= 1.3.1),libjs-font-awesome,php5-curl|php-curl,libjs-fuelux,flexipeehp (>= 1.8.2),php-mail-mime,php-phinx,locales-all,poppler-utils,libjs-bootstrap-switch,php-cli 
 Architecture: all
 Section: web

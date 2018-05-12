@@ -1,59 +1,59 @@
-Template: shop4flexibee/DB_TYPE
+Template: clientzone/DB_TYPE
 Type: select
 Default: pgsql
 Choices: mysql, pgsql
 Description: Jakou pouzit databazi
 
-Template: shop4flexibee/DB_HOST
+Template: clientzone/DB_HOST
 Type: string
 Default: localhost
 Description: Host databáze
 
-Template: shop4flexibee/DB_PORT
+Template: clientzone/DB_PORT
 Type: string
 Default: 5432
 Description: 5432 pro postgres 3306 pro mysql
 
-Template: shop4flexibee/DB_DATABASE
+Template: clientzone/DB_DATABASE
 Type: string
-Default: shop4flexibee
+Default: clientzone
 Description: název databáze pro použití
 
-Template: shop4flexibee/DB_USERNAME
+Template: clientzone/DB_USERNAME
 Type: string
-Default: shop4flexibee
+Default: clientzone
 Description: Login pro připojení k databázi
 
-Template: shop4flexibee/DB_PASSWORD
+Template: clientzone/DB_PASSWORD
 Type: string
-Default: shop4flexibee
+Default: clientzone
 Description: Heslo pro připojení k databázi
 
-Template: shop4flexibee/FLEXIBEE_COMPANY
+Template: clientzone/FLEXIBEE_COMPANY
 Type: string
 Default: demo
 Description: Výchozí firma pro operace s API
  Zatím bude stačit pouze jedna firma
 
-Template: shop4flexibee/FLEXIBEE_URL
+Template: clientzone/FLEXIBEE_URL
 Type: string
 Default: https://demo.flexibee.eu
 Description: Url k API flexibee
  Adresa kde běží FlexiBee API
 
-Template: shop4flexibee/FLEXIBEE_LOGIN
+Template: clientzone/FLEXIBEE_LOGIN
 Type: string
 Default: winstrom
 Description: Login pro připojení k API Flexibee
  Login přiděluje správce FlexiBee
 
-Template: shop4flexibee/FLEXIBEE_PASSWORD
+Template: clientzone/FLEXIBEE_PASSWORD
 Type: string
 Default: winstrom
 Description: Heslo pro připojení k API Flexibee
  Heslo přiděluje správce FlexiBee
 
-Template: shop4flexibee/WEBUSER
+Template: clientzone/WEBUSER
 Type: string
 Default: www-data
 Description: Uzivatel webu

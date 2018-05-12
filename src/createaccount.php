@@ -1,9 +1,9 @@
 <?php
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 /**
- * shop4flexibee - Vytvoření účtu.
+ * clientzone - Vytvoření účtu.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz
@@ -110,7 +110,7 @@ if ($oPage->isPosted()) {
             $email = $oPage->addItem(new \Ease\Mailer($newOUser->getDataValue('email'),
                     _('Potvrzení registrace')));
             $email->setMailHeaders(['From' => EMAIL_FROM]);
-            $email->addItem(new \Ease\Html\Div("Právě jste byl/a zaregistrován/a do Aplikace shop4flexibee s těmito přihlašovacími údaji:\n"));
+            $email->addItem(new \Ease\Html\Div("Právě jste byl/a zaregistrován/a do Aplikace clientzone s těmito přihlašovacími údaji:\n"));
             $email->addItem(new \Ease\Html\Div(' Login: '.$newOUser->GetUserLogin()."\n"));
             $email->addItem(new \Ease\Html\Div(' Heslo: '.$_POST['password']."\n"));
             $email->send();

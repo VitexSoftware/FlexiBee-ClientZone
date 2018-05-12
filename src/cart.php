@@ -1,24 +1,24 @@
 <?php
 /**
- * shop4flexibee - Přehled Košíku.
+ * clientzone - Přehled Košíku.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz
  */
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 require_once 'includes/Init.php';
 
 if (!isset($_SESSION['cart']) || !count($_SESSION['cart'])) {
-    $oUser->addStatusMessage(_('Cart is empty'));
+    $oPage->addStatusMessage(_('Cart is empty'));
     $oPage->redirect('pricelist.php');
 }
 
 $delete = $oPage->getRequestValue('delete', 'int');
 if (!is_null($delete)) {
     $oPage->addStatusMessage(sprintf(_('Cart Item %s was removed'),
-            $$_SESSION['cart'][$delete]['nazev']));
+            $_SESSION['cart'][$delete]['nazev']));
     unset($_SESSION['cart'][$delete]);
     $oPage->redirect('cart.php');
 }

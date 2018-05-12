@@ -1,9 +1,9 @@
 <?php
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 /**
- * shop4flexibee
+ * clientzone
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz
@@ -17,9 +17,17 @@ $documentID = $oPage->getRequestValue('id');
 if (!empty($documentID) && !empty($evidence)) {
     $fetcher = new \FlexiPeeHP\FlexiBeeRO(is_numeric($documentID) ? intval($documentID)
             : $documentID, ['evidence' => $evidence]);
+
+    $kod = \FlexiPeeHP\FlexiBeeRO::uncode($fetcher->getRecordCode());
+
+    $documentURI = dirname(\Ease\Page::getUri()).'/getpdf.php?id='.$documentID.'&evidence='.$evidence.'&embed=true';
+
+    $fetcher->unsetDataValue('kod');
     if ($fetcher->sendByMail($oUser->getUserEmail(),
-            sprintf(_('%s %s'), $fetcher->getDataValue('poznam'), $fetcher),
-            _('Dear Customer, your document is in attachment'))) {
+            sprintf(_('%s %s %s'), $fetcher->getDataValue('poznam'),
+                $fetcher->getDataValue('nazev'), $kod),
+            sprintf(_('your document %s is in attachment'),
+                new \Ease\Html\ATag($documentURI, $kod)))) {
         $oPage->addStatusMessage(_('Invoice was sent'), 'success');
     } else {
         $oPage->addStatusMessage(_('Mailer does not work'), 'warning');

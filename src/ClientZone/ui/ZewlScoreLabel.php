@@ -1,0 +1,35 @@
+<?php
+
+namespace ClientZone\ui;
+
+/**
+ * Description of ZewlScoreLabel
+ *
+ * @author vitex
+ */
+class ZewlScoreLabel extends \Ease\TWB\Label
+{
+
+    public function __construct($address)
+    {
+        $engine = new \ClientZone\Upominac();
+        $zewlScore = $engine->getCustomerScore($address->getMyKey());
+
+        switch ($zewlScore) {
+            case 0:
+                $type = 'success';
+                break;
+            case 1:
+                $type = 'info';
+                break;
+            case 2:
+                $type = 'warning';
+                break;
+            case 3:
+                $type = 'danger';
+                break;
+        }
+
+        parent::__construct($type, $zewlScore, ['title' => _('Zewl score')]);
+    }
+}

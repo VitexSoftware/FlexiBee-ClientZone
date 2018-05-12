@@ -1,9 +1,9 @@
 <?php
 
-namespace Shop4FlexiBee;
+namespace ClientZone;
 
 /**
- * shop4flexibee - předloha stránky.
+ * clientzone - předloha stránky.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz
@@ -45,7 +45,7 @@ $cenik         = new \FlexiPeeHP\Cenik();
 $stitek        = new \FlexiPeeHP\Stitek();
 $labelsDefined = \FlexiPeeHP\Stitek::getAvailbleLabels($cenik);
 
-function createLabel($label)
+function createLabel($label,$stitek)
 {
     $stitekData = [
         "kod" => strtoupper($label),
@@ -61,14 +61,14 @@ function createLabel($label)
 }
 $label = 'ESHOP';
 if (!array_key_exists($label, $labelsDefined)) {
-    createLabel($label);
+    createLabel($label,$stitek);
 } else {
     $stitek->addStatusMessage(sprintf(_('label %s already exists'), $label));
 }
 
 $label = 'AKTIVNI';
 if (!array_key_exists($label, $labelsDefined)) {
-    createLabel($label);
+    createLabel($label,$stitek);
 } else {
     $stitek->addStatusMessage(sprintf(_('label %s already exists'), $label));
 }
