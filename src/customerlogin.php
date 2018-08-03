@@ -47,25 +47,24 @@ $loginColumn = $loginRow->addItem(new \Ease\TWB\Col(4));
 $submit = new \Ease\TWB\SubmitButton(_('Sign in'), 'success');
 
 $loginPanel = new \Ease\TWB\Panel(new \Ease\Html\ImgTag('images/clientzone-logo.svg',
-        'ClientZone', ['style' => 'width:100px']), 'success', null,
-    $submit);
+    'ClientZone', ['style' => 'width:100px']), 'success', null, $submit);
 $loginPanel->addItem(new \Ease\TWB\FormGroup(_('Username'),
-        new \Ease\Html\InputTextTag('email', $login), 'name@domain.tld',
-        _('usually your email address')));
+    new \Ease\Html\InputTextTag('email', $login), 'name@domain.tld',
+    _('usually your email address')));
 $loginPanel->addItem(new \Ease\TWB\FormGroup(_('Password'),
-        new \Ease\Html\InputPasswordTag('password')));
+    new \Ease\Html\InputPasswordTag('password')));
 $loginPanel->body->setTagCss(['margin' => '20px']);
 
 $loginColumn->addItem($loginPanel);
 
 $passRecoveryColumn = $loginRow->addItem(new \Ease\TWB\Col(4,
-        new \Ease\TWB\LinkButton('custmpassrecv.php?email='.$login,
-            '<i class="fa fa-key"></i>
+    new \Ease\TWB\LinkButton('custmpassrecv.php?email='.$login,
+    '<i class="fa fa-key"></i>
 '._('Lost password recovery'), 'warning')));
 
 
 $passRecoveryColumn->additem(new \Ease\TWB\LinkButton('newcustomer.php',
-        '<i class="fa fa-user"></i>
+    '<i class="fa fa-user"></i>
 '._('Sign On'), 'success'));
 
 

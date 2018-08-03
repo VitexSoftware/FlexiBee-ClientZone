@@ -9,13 +9,14 @@
         }
     ],
     "config": {
-	"vendor-dir": "/var/lib/clientzone"
+        "vendor-dir": "/var/lib/clientzone"
     },
     "require": {
-        "php": ">= 5.5.9",
+        "php": ">= 5.6",
         "flexipeehp": "*",
         "ease-framework": "*",
-        "vitexsoftware/ease-bricks": "dev-master"
+        "ease-bricks": "*",
+        "flexipeehp-bricks": "*"
     },
     "autoload": {
         "psr-4": {
@@ -35,7 +36,21 @@
         },
         {
             "type": "path",
+            "url": "/usr/share/php/EaseBricks",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
             "url": "/usr/share/php/FlexiPeeHP",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/usr/share/php/FlexiPeeHPBricks",
             "options": {
                 "symlink": true
             }

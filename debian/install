@@ -1,6 +1,5 @@
 src/*.php		usr/share/clientzone
 src/bin/*.php		usr/share/clientzone/bin
-src/admin/*.php		usr/share/clientzone/admin
 src/*.ico		usr/share/clientzone
 src/css/*.css	        usr/share/clientzone/css
 #src/css/images/*	usr/share/clientzone/css/images
@@ -9,17 +8,14 @@ src/js/*.js		usr/share/clientzone/js
 #src/js/msdropdown/*.js	usr/share/clientzone/js/msdropdown
 #src/img/*		usr/share/clientzone/img
 src/images/*		usr/share/clientzone/images
-src/config.json 	etc/clientzone
+tests/clientzone.json 	etc/flexibee
 src/includes/Init.php	usr/share/clientzone/includes
 src/ClientZone/*.php	usr/share/clientzone/ClientZone
 src/ClientZone/ui/*.php	usr/share/clientzone/ClientZone/ui
 src/ClientZone/orderplugins/*.php	usr/share/clientzone/ClientZone/orderplugins
-src/ClientZone/whplugins/*.php	usr/share/clientzone/ClientZone/whplugins
 debian/conf/clientzone.conf	etc/apache2/conf-available
 debian/conf/clientzone.service etc/avahi/services
 README.md               usr/share/doc/clientzone/
 debian/conf/composer.json    usr/share/clientzone/
-phinx.yml               var/lib/clientzone/
-db/migrations/*.php     var/lib/clientzone/db/migrations
 i18n/cs_CZ/LC_MESSAGES/*.mo     usr/share/locale/cs_CZ/LC_MESSAGES
 i18n/en_US/LC_MESSAGES/*.mo     usr/share/locale/en_US/LC_MESSAGES

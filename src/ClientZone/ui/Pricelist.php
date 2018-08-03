@@ -53,7 +53,7 @@ class Pricelist extends \Ease\TWB\Panel
             $headerRow->addColumn(2,
                 new \Ease\TWB\Label('info', _('Price with VAT')));
             $headerRow->addColumn(2, new \Ease\TWB\Label('info', _('Actions')));
-            $this->addItem( $headerRow);
+            $this->addItem($headerRow);
             $this->addItem('<p><hr/></p>');
             foreach ($items as $item) {
 

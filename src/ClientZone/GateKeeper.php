@@ -1,5 +1,4 @@
 <?php
-
 /**
  * clientzone - GateKeeper
  *
@@ -67,5 +66,4 @@ class GateKeeper extends \Ease\Sand
         return $customer->adresar->getDataValue('kod') ? \FlexiPeeHP\FlexiBeeRO::uncode($customer->adresar->getDataValue('kod'))
                 : null;
     }
-
 }

@@ -25,7 +25,7 @@ class ToPayItems extends MainPageMenu
     {
         parent::__construct();
         $debts = $customer->getCustomerDebts();
-        if (count($debts)) {
+        if (!empty($debts)) {
             $this->row->addItem(new \Ease\Html\H1Tag(_('Orders to pay')));
             foreach ($debts as $invoiceId => $invoiceInfo) {
                 $customer->invoicer->setMyKey($invoiceId);

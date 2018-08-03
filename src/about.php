@@ -15,20 +15,21 @@ $oPage->onlyForLogged();
 $oPage->addItem(new ui\PageTop(_('About')));
 
 $infoBlock = $oPage->container->addItem(
-        new \Ease\TWB\Panel(
+    new \Ease\TWB\Panel(
         _('About'), 'info', null,
-    new \Ease\TWB\LinkButton(
-    'http://v.s.cz/', _('Vitex Software'), 'info'
+        new \Ease\TWB\LinkButton(
+            'http://v.s.cz/', _('Vitex Software'), 'info'
         )
-        )
+    )
 );
-$listing = $infoBlock->addItem(new \Ease\Html\UlTag());
+$listing   = $infoBlock->addItem(new \Ease\Html\UlTag());
 
 if (file_exists('../README.md')) {
     $listing->addItem(implode('<br>', file('../README.md')));
 } else {
     if (file_exists('/usr/share/doc/clientzone/README.md')) {
-        $listing->addItem(implode('<br>', file('/usr/share/doc/clientzone/README.md')));
+        $listing->addItem(implode('<br>',
+                file('/usr/share/doc/clientzone/README.md')));
     }
 }
 

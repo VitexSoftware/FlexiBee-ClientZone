@@ -13,7 +13,7 @@ namespace ClientZone;
  *
  * @author vitex
  */
-class OrderItem extends FlexiBeeEngine
+class OrderItem extends \FlexiPeeHP\FlexiBeeRW
 {
     /**
      * Customer
@@ -100,7 +100,7 @@ class OrderItem extends FlexiBeeEngine
             $this->plugins[$pluginName]->easeShared = $this->easeShared;
         }
         $d->close();
-        return count($this->plugins[$pluginName]);
+        return count($this->plugins);
     }
 
     /**
@@ -226,17 +226,17 @@ class OrderItem extends FlexiBeeEngine
         $polozka            = $this->getServicePlugin()->processFields($this);
         $polozka['service'] = $this->getDataValue('service');
         if (array_key_exists('cenik', $polozka)) {
-        $this->cenik->loadFromFlexiBee($polozka['cenik']);
+            $this->cenik->loadFromFlexiBee($polozka['cenik']);
             $polozka['icon']       = $this->cenik->getDataValue('id');
             $nazev                 = $this->cenik->getDataValue('nazev');
-        $polozka['typZasobyK'] = $this->cenik->getDataValue('typZasobyK');
+            $polozka['typZasobyK'] = $this->cenik->getDataValue('typZasobyK');
 
             if (empty($polozka['cenaMj'])) {
                 if (!array_key_exists('cenaZaklBezDph', $polozka)) {
-        $polozka['cenaZaklBezDph'] = $this->cenik->getDataValue('cenaZaklBezDph');
+                    $polozka['cenaZaklBezDph'] = $this->cenik->getDataValue('cenaZaklBezDph');
                 }
                 if (!array_key_exists('cenaZaklVcDph', $polozka)) {
-        $polozka['cenaZaklVcDph'] = $this->cenik->getDataValue('cenaZaklVcDph');
+                    $polozka['cenaZaklVcDph'] = $this->cenik->getDataValue('cenaZaklVcDph');
                 }
             } else {
                 $polozka['cenaZaklBezDph'] = $polozka['cenaMj'];
@@ -248,13 +248,13 @@ class OrderItem extends FlexiBeeEngine
         }
 
         if (is_null($itemId)) {
-        $_SESSION['cart'][] = $polozka;
+            $_SESSION['cart'][] = $polozka;
             $this->addStatusMessage(sprintf(_('%s added to cart'), $nazev),
                 'success');
         } else {
             $_SESSION['cart'][$itemId] = $polozka;
             $this->addStatusMessage(sprintf(_('%s chnged in cart'), $nazev),
                 'success');
+        }
     }
-}
 }

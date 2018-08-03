@@ -27,7 +27,7 @@ class OrdersListing extends \Ease\TWB\Panel
         $documents = $fetcher->getColumnsFromFlexiBee('full', $conditions);
         $celkem    = 0;
         parent::__construct($caption, 'info');
-        if (count($documents)) {
+        if (!empty($documents)) {
             foreach ($documents as $orderData) {
                 $this->addItem(new OrderListingItem($orderData,
                     $fetcher->getEvidence()));

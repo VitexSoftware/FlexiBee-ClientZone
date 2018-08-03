@@ -13,13 +13,13 @@
         "spoje.net/flexipeehp": "dev-master",
         "vitexsoftware/ease-framework": "dev-master",
         "robmorgan/phinx": "^0.6.4",
-        "vitexsoftware/ease-bricks": "dev-master"
+        "vitexsoftware/ease-bricks": "dev-master",
+        "vitexsoftware/flexipeehp-bricks": "dev-master"
     },
     "autoload": {
         "psr-4": {
             "ClientZone\\": "src/ClientZone/",
             "ClientZone\\ui\\": "src/ClientZone/ui/",
-            "ClientZone\\whplugins\\": "src/ClientZone/whplugins/",
             "ClientZone\\orderplugins\\": "src/ClientZone/orderplugins/",
             "Test\\ClientZone\\": "tests/src/ClientZone/"
         }

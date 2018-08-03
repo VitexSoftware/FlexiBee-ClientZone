@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-09-12 14:58+0200\n"
-"PO-Revision-Date: 2017-09-12 14:58+0200\n"
+"POT-Creation-Date: 2018-08-02 17:04+0200\n"
+"PO-Revision-Date: 2018-08-03 10:29+0200\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
@@ -167,10 +167,15 @@ msgstr "Produkt s kódem %s neexistuje"
 msgid "Missing product code"
 msgstr "Chybějící kód produktu"
 
-#: ../src/ClientZone/OrderItem.php:227
+#: ../src/ClientZone/OrderItem.php:252
 #, php-format
 msgid "%s added to cart"
 msgstr "%s přidáno do košíku"
+
+#: ../src/ClientZone/OrderItem.php:256
+#, php-format
+msgid "%s chnged in cart"
+msgstr ""
 
 #: ../src/ClientZone/OrderPlugin.php:75
 msgid "Product not specified"
@@ -180,108 +185,6 @@ msgstr "Produkt nebyl zvolen"
 #, php-format
 msgid "Item %s was settled without action handled in OrderPlugin code"
 msgstr "Položka %s byla zaplacena bez akce v kódu objednávkového pluginu"
-
-#: ../src/ClientZone/ParovacFaktur.php:161
-#, php-format
-msgid "Invoice with Euro currency %s"
-msgstr ""
-
-#: ../src/ClientZone/ParovacFaktur.php:168
-#, php-format
-msgid "Unknown invoice type: %s %s"
-msgstr "Neznámý druh domény:  %s %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:182
-msgid "Invoice found: - overdue?"
-msgstr "Nalezená faktura - přeplatek ?"
-
-#: ../src/ClientZone/ParovacFaktur.php:216
-#, fuzzy
-msgid "Faktura za Eura"
-msgstr "Faktura za Eura %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:219
-#, php-format
-msgid "Unknown invoice type: %s"
-msgstr "Neznámý druh faktury  %s "
-
-#: ../src/ClientZone/ParovacFaktur.php:241
-#, php-format
-msgid "Castecna uhrada - DOBROPIS: prijato: %s ma byt zaplaceno %s"
-msgstr "Castecna uhrada - DOBROPIS: prijato: %s ma byt zaplaceno %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:246
-#, php-format
-msgid "Přeplatek - DOBROPIS: prijato: %s ma byt zaplaceno %s"
-msgstr "Přeplatek - DOBROPIS: prijato: %s ma byt zaplaceno %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:258
-#, php-format
-msgid "Platba %s  %s byla sparovana s dobropisem %s"
-msgstr "Platba %s  %s byla sparovana s dobropisem %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:284
-#, php-format
-msgid "Platba %s  %s byla sparovana s zalohou %s"
-msgstr "Platba %s  %s byla sparovana s zalohou %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:348
-#, php-format
-msgid "Částečná úhrada %s"
-msgstr "Částečná úhrada %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:351
-#, php-format
-msgid "Vytvoř ZDD: %s"
-msgstr "Vytvoř ZDD: %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:357
-#, php-format
-msgid "Přeplatek %s"
-msgstr "Přeplatek %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:377
-#, php-format
-msgid "Faktura #%s byla sparovana"
-msgstr "Faktura #%s byla sparovana"
-
-#: ../src/ClientZone/ParovacFaktur.php:381
-#, php-format
-msgid "Faktura #%s nebyla sparovana"
-msgstr "Faktura #%s nebyla sparovana"
-
-#: ../src/ClientZone/ParovacFaktur.php:406
-#, php-format
-msgid "Castecna uhrada - FAKTURA: prijato: %s ma byt zaplaceno %s"
-msgstr "Castecna uhrada - FAKTURA: prijato: %s ma byt zaplaceno %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:411
-#, php-format
-msgid "Přeplatek - FAKTURA: prijato: %s ma byt zaplaceno %s"
-msgstr "Přeplatek - FAKTURA: prijato: %s ma byt zaplaceno %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:424
-#, php-format
-msgid "Platba %s  %s byla sparovana s fakturou %s"
-msgstr "Platba %s  %s byla sparovana s fakturou %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:482
-#, php-format
-msgid "Faktura %s byla vytvořena z dokladu %s"
-msgstr "Faktura %s byla vytvořena z dokladu %s"
-
-#: ../src/ClientZone/ParovacFaktur.php:551
-msgid "Neidentifikovaná platba"
-msgstr "Neidentifikovaná platba"
-
-#: ../src/ClientZone/ParovacFaktur.php:558
-msgid "Platba bez faktury"
-msgstr "Platba bez faktury"
-
-#: ../src/ClientZone/ParovacFaktur.php:677
-#, php-format
-msgid "Platba pro fakturu %s nebyla dohledána"
-msgstr "Platba pro fakturu %s nebyla dohledána"
 
 #: ../src/ClientZone/Upominac.php:65
 msgid "Getting clients"
@@ -416,8 +319,7 @@ msgstr "Smazat"
 msgid "Are you sure %s ?"
 msgstr "Jste si jistý  %s ?"
 
-#: ../src/ClientZone/User.php:188
-#: ../src/ClientZone/ui/AdminPricelist.php:72
+#: ../src/ClientZone/User.php:188 ../src/ClientZone/ui/AdminPricelist.php:72
 msgid "Edit"
 msgstr "Upravit"
 
@@ -513,10 +415,8 @@ msgstr "Nový kontakt"
 msgid "Code"
 msgstr "Kód"
 
-#: ../src/ClientZone/ui/AddressForm.php:29
-#: ../src/ClientZone/ui/CartForm.php:36
-#: ../src/ClientZone/ui/KontaktForm.php:27
-#: ../src/ClientZone/ui/UserForm.php:27 ../src/createaccount.php:139
+#: ../src/ClientZone/ui/AddressForm.php:29 ../src/ClientZone/ui/CartForm.php:36
+#: ../src/ClientZone/ui/KontaktForm.php:27 ../src/ClientZone/ui/UserForm.php:27
 #: ../src/newcustomer.php:161
 msgid "Name"
 msgstr "Jméno"
@@ -526,24 +426,21 @@ msgid "Email address is empty"
 msgstr "Emailová adresa je prázdná"
 
 #: ../src/ClientZone/ui/AddressForm.php:36
-#: ../src/ClientZone/ui/KontaktForm.php:31
-#: ../src/ClientZone/ui/UserForm.php:31 ../src/admpasswrcvr.php:70
+#: ../src/ClientZone/ui/KontaktForm.php:31 ../src/ClientZone/ui/UserForm.php:31
 #: ../src/custmpassrecv.php:78
 msgid "Email"
 msgstr "Email"
 
 #: ../src/ClientZone/ui/AddressForm.php:42
 #: ../src/ClientZone/ui/ColumnsForm.php:102
-#: ../src/ClientZone/ui/KontaktForm.php:48
-#: ../src/ClientZone/ui/UserForm.php:38
+#: ../src/ClientZone/ui/KontaktForm.php:48 ../src/ClientZone/ui/UserForm.php:38
 #, fuzzy
 msgid "Uložit"
 msgstr "Uložit"
 
 #: ../src/ClientZone/ui/AdminPricelist.php:43
-#: ../src/ClientZone/ui/MainMenu.php:81
-#: ../src/ClientZone/ui/MainMenu.php:97
-#: ../src/ClientZone/ui/Pricelist.php:43 ../src/pricelist.php:13
+#: ../src/ClientZone/ui/MainMenu.php:63 ../src/ClientZone/ui/Pricelist.php:43
+#: ../src/index.php:21 ../src/index.php:34 ../src/pricelist.php:13
 msgid "Pricelist"
 msgstr "Ceník"
 
@@ -583,24 +480,22 @@ msgstr "Košík"
 
 #: ../src/ClientZone/ui/BootstrapMenu.php:96
 #: ../src/ClientZone/ui/BootstrapMenu.php:103
-#: ../src/ClientZone/ui/FlexiBeeLoginForm.php:24 ../src/adminlogin.php:47
-#: ../src/admpasswrcvr.php:78 ../src/custmpassrecv.php:88
-#: ../src/customerlogin.php:35 ../src/flexibeelogin.php:16
+#: ../src/ClientZone/ui/FlexiBeeLoginForm.php:24 ../src/custmpassrecv.php:88
+#: ../src/customerlogin.php:33 ../src/flexibeelogin.php:16
 msgid "Sign In"
 msgstr "Přihlášení"
 
 #: ../src/ClientZone/ui/BootstrapMenu.php:99
 #: ../src/ClientZone/ui/FlexiBeeLoginForm.php:20
 #: ../src/ClientZone/ui/FlexiBeeLoginForm.php:22
-#: ../src/ClientZone/ui/KontaktForm.php:37
+#: ../src/ClientZone/ui/KontaktForm.php:37 ../src/createaccount.php:158
 msgid "Login"
 msgstr "Přihlašovací jméno"
 
 #: ../src/ClientZone/ui/BootstrapMenu.php:100
-#: ../src/ClientZone/ui/KontaktForm.php:39 ../src/adminlogin.php:67
-#: ../src/admpasswrcvr.php:43 ../src/changecustpw.php:65
+#: ../src/ClientZone/ui/KontaktForm.php:39 ../src/changecustpw.php:65
 #: ../src/changepassword.php:66 ../src/custmpassrecv.php:43
-#: ../src/customerlogin.php:56
+#: ../src/customerlogin.php:55
 msgid "Password"
 msgstr "Heslo"
 
@@ -608,12 +503,11 @@ msgstr "Heslo"
 msgid "Remeber me"
 msgstr "Pamatuj si mne"
 
-#: ../src/ClientZone/ui/BootstrapMenu.php:104 ../src/createaccount.php:130
-#: ../src/createaccount.php:132
+#: ../src/ClientZone/ui/BootstrapMenu.php:104
 msgid "Registrace"
 msgstr ""
 
-#: ../src/ClientZone/ui/BootstrapMenu.php:122
+#: ../src/ClientZone/ui/BootstrapMenu.php:123
 msgid "Click to hide messages"
 msgstr "Klikněte pro skrytí zpráv"
 
@@ -635,7 +529,6 @@ msgid "Count"
 msgstr "Počet"
 
 #: ../src/ClientZone/ui/CartForm.php:39
-#: ../src/ClientZone/ui/Pillbox.php:56
 msgid "Remove"
 msgstr "Odstranit"
 
@@ -680,8 +573,7 @@ msgstr "Prosím zadej jméno a heslo"
 msgid "Customer Invoices"
 msgstr "Faktury Zákazníka"
 
-#: ../src/ClientZone/ui/KontaktForm.php:29
-#: ../src/ClientZone/ui/UserForm.php:29 ../src/createaccount.php:140
+#: ../src/ClientZone/ui/KontaktForm.php:29 ../src/ClientZone/ui/UserForm.php:29
 msgid "Příjmení"
 msgstr ""
 
@@ -697,33 +589,21 @@ msgstr "Mobilní číslo"
 msgid "Open in FlexiBee"
 msgstr "Otevřít ve FlexiBee"
 
-#: ../src/ClientZone/ui/MainMenu.php:79
-msgid "Proposal"
-msgstr "Nabídka"
-
-#: ../src/ClientZone/ui/MainMenu.php:85
-msgid "Users"
-msgstr "Uživatelé"
-
-#: ../src/ClientZone/ui/MainMenu.php:87
-msgid "New user"
-msgstr "Nový uživatel"
-
-#: ../src/ClientZone/ui/MainMenu.php:88
-msgid "User overview"
-msgstr "Přehled uživatelů"
-
-#: ../src/ClientZone/ui/MainMenu.php:94 ../src/customerorders.php:34
+#: ../src/ClientZone/ui/MainMenu.php:60 ../src/customerorders.php:34
 msgid "Orders"
 msgstr "Objednávky"
 
-#: ../src/ClientZone/ui/MainMenu.php:96
+#: ../src/ClientZone/ui/MainMenu.php:62
 msgid "New order"
 msgstr "Nová objednávka"
 
-#: ../src/ClientZone/ui/MainMenu.php:98
+#: ../src/ClientZone/ui/MainMenu.php:64
 msgid "My orders"
 msgstr "Mé objednávky"
+
+#: ../src/ClientZone/ui/MainMenu.php:69
+msgid "ClientZone"
+msgstr ""
 
 #: ../src/ClientZone/ui/NavBarSearchBox.php:39
 msgid "Hledání"
@@ -746,7 +626,7 @@ msgid "Enter details"
 msgstr "Vlož detaily"
 
 #: ../src/ClientZone/ui/OrderFormHtml.php:44
-#: ../src/ClientZone/ui/Pricelist.php:73
+#: ../src/ClientZone/ui/Pricelist.php:84
 msgid "Order Now"
 msgstr "Objednej nyní"
 
@@ -787,7 +667,7 @@ msgid "ISDOC"
 msgstr "ISDOC"
 
 #: ../src/ClientZone/ui/OrderListingItem.php:79
-#: ../src/ClientZone/ui/OrderListingItem.php:80 ../src/index.php:28
+#: ../src/ClientZone/ui/OrderListingItem.php:80
 msgid "FlexiBee"
 msgstr "FlexiBee"
 
@@ -830,22 +710,21 @@ msgstr "Podpora"
 msgid "Version"
 msgstr "Verze"
 
-#: ../src/ClientZone/ui/Pillbox.php:67 ../src/admpasswrcvr.php:78
-#: ../src/custmpassrecv.php:87
-msgid "and"
-msgstr "a"
+#: ../src/ClientZone/ui/Pricelist.php:50
+msgid "Item name"
+msgstr ""
 
-#: ../src/ClientZone/ui/Pillbox.php:68
-msgid "more ..."
-msgstr "více ..."
+#: ../src/ClientZone/ui/Pricelist.php:52
+msgid "Price without VAT"
+msgstr ""
 
-#: ../src/ClientZone/ui/Pillbox.php:71
-msgid "add item"
-msgstr "přidat položku"
+#: ../src/ClientZone/ui/Pricelist.php:54
+msgid "Price with VAT"
+msgstr ""
 
-#: ../src/ClientZone/ui/Pillbox.php:74
-msgid "Toggle dropdown"
-msgstr "Zobrazit nabídku"
+#: ../src/ClientZone/ui/Pricelist.php:55
+msgid "Actions"
+msgstr "Akce"
 
 #: ../src/ClientZone/ui/ProductEditor.php:45
 msgid "Thumbnail"
@@ -873,7 +752,7 @@ msgstr "%s soubor %s byl přiložen"
 msgid "%s records with label %s"
 msgstr "%s záznamů se štítkem %s nalezeno"
 
-#: ../src/ClientZone/ui/RightsForm.php:21 ../src/user.php:29
+#: ../src/ClientZone/ui/RightsForm.php:21
 msgid "Uživatel"
 msgstr ""
 
@@ -910,15 +789,9 @@ msgstr ""
 msgid "Popis"
 msgstr "popis"
 
-#: ../src/ClientZone/ui/TWBSwitch.php:28 ../src/adresar.php:53
-#: ../src/kontakt.php:59 ../src/user.php:40
-msgid "Yes"
-msgstr "Ano"
-
-#: ../src/ClientZone/ui/TWBSwitch.php:31 ../src/adresar.php:51
-#: ../src/kontakt.php:57 ../src/user.php:39
-msgid "No"
-msgstr "Ne"
+#: ../src/ClientZone/ui/ToPayItems.php:29
+msgid "Orders to pay"
+msgstr ""
 
 #: ../src/ClientZone/ui/UserForm.php:33
 msgid "Přihlašovací jméno"
@@ -940,83 +813,6 @@ msgstr "Známka bonity"
 msgid "Vitex Software"
 msgstr "Vitex Software"
 
-#: ../src/adminlogin.php:14 ../src/customerlogin.php:14
-msgid "Please enable cookies in your browser"
-msgstr "Prosím zapněte cookies ve svém prohlížeči"
-
-#: ../src/adminlogin.php:37
-msgid "Signed as"
-msgstr "Příhlášen jako"
-
-#: ../src/adminlogin.php:43
-msgid "Please enter your login creditials"
-msgstr "Prosím zadejte své přihlašovací údaje"
-
-#: ../src/adminlogin.php:57
-msgid "Welcome to ClientZone administration"
-msgstr "Vítejte do informačního systému ClientZone"
-
-#: ../src/adminlogin.php:61 ../src/customerlogin.php:49 ../src/index.php:47
-msgid "Sign in"
-msgstr "Přihlášení"
-
-#: ../src/adminlogin.php:65 ../src/admpasswrcvr.php:42
-#: ../src/custmpassrecv.php:42 ../src/customerlogin.php:53
-msgid "Username"
-msgstr "Uživatelské jméno"
-
-#: ../src/adminlogin.php:76 ../src/admpasswrcvr.php:55
-#: ../src/custmpassrecv.php:62 ../src/customerlogin.php:65
-msgid "Lost password recovery"
-msgstr "Obnova ztraceného hesla"
-
-#: ../src/adminlogin.php:81 ../src/customerlogin.php:70
-#: ../src/newcustomer.php:138
-msgid "Sign On"
-msgstr "Registrace"
-
-#: ../src/adminpricelist.php:14
-msgid "Pricelist Admin"
-msgstr "Administrace Ceníku"
-
-#: ../src/admpasswrcvr.php:38 ../src/custmpassrecv.php:37 ../src/index.php:14
-msgid "clientzone"
-msgstr "clientzone"
-
-#: ../src/admpasswrcvr.php:38 ../src/custmpassrecv.php:37
-#, php-format
-msgid "New password for %s"
-msgstr "Nové heslo pro %s"
-
-#: ../src/admpasswrcvr.php:40 ../src/custmpassrecv.php:40
-msgid "Sign On informations was changed:\n"
-msgstr "Přihlašovací údaje byly změněny\n"
-
-#: ../src/admpasswrcvr.php:47
-#, php-format
-msgid "Your new password was sent to %s"
-msgstr "Vaše nové heslo bylo odesláno na %s"
-
-#: ../src/admpasswrcvr.php:52 ../src/custmpassrecv.php:59
-msgid "Please enter your email."
-msgstr "Prosím zadejte svůj email"
-
-#: ../src/admpasswrcvr.php:65 ../src/custmpassrecv.php:72
-msgid ""
-"Forgot your password? Enter your e-mail address you entered during the "
-"registration and we will send you a new one."
-msgstr ""
-"Zapoměli jste heslo ? Vložte svojí e-mailovou adresu kterou jste zadali "
-"během registrace a my vám pošleme nové."
-
-#: ../src/admpasswrcvr.php:71 ../src/custmpassrecv.php:79
-msgid "Send New Password"
-msgstr "Pošli nové heslo"
-
-#: ../src/admpasswrcvr.php:77 ../src/custmpassrecv.php:86
-msgid "Please check your mailbox for new password"
-msgstr "Prosíme zkontrolujte svou poštu pro nové heslo"
-
 #: ../src/adresar.php:33 ../src/kontakt.php:77
 msgid "Address"
 msgstr "Adresa"
@@ -1025,13 +821,13 @@ msgstr "Adresa"
 msgid "Delete ?"
 msgstr "Smazat ?"
 
-#: ../src/api/getCustomerScore.php:20
-msgid "FlexiBee Address ID"
-msgstr "ID Adresy z FlexiBee"
+#: ../src/adresar.php:51 ../src/kontakt.php:57
+msgid "No"
+msgstr "Ne"
 
-#: ../src/api/getCustomerScore.php:21
-msgid "Get Score"
-msgstr "Získej score"
+#: ../src/adresar.php:53 ../src/kontakt.php:59
+msgid "Yes"
+msgstr "Ano"
 
 #: ../src/bin/InitializeHistory.php:22
 #, php-format
@@ -1047,18 +843,6 @@ msgstr "%d položek bylo nalezeno v evidenci %s"
 #, php-format
 msgid "Saving record %s into history table"
 msgstr ""
-
-#: ../src/bin/ParujFaktury.php:10
-msgid "Stahuji Výpisy online"
-msgstr "Stahuji Výpisy online"
-
-#: ../src/bin/ParujFaktury.php:14
-msgid "Zahajuji programové párování"
-msgstr "Zahajuji programové párování"
-
-#: ../src/bin/ParujFaktury.php:16
-msgid "Párování hotovo"
-msgstr "Párování hotovo"
 
 #: ../src/bin/ProcessUnprocessedChanges.php:25
 #, php-format
@@ -1168,97 +952,154 @@ msgstr "Potvrzení hesla"
 msgid "Change password"
 msgstr "Změna hesla"
 
-#: ../src/createaccount.php:41
-msgid "mailová adresa je příliš krátká"
-msgstr ""
-
 #: ../src/createaccount.php:45
-msgid "chyba v mailové adrese"
+msgid "mail address is too short"
 msgstr ""
 
-#: ../src/createaccount.php:52
+#: ../src/createaccount.php:49
+msgid "Invalid mail address"
+msgstr ""
+
+#: ../src/createaccount.php:56
 #, php-format
-msgid "Mailová adresa %s je již zaregistrována"
+msgid "Mail addressa  %s is already registered"
 msgstr ""
 
-#: ../src/createaccount.php:60
-msgid "heslo je příliš krátké"
+#: ../src/createaccount.php:65
+msgid "Password is too short"
 msgstr ""
 
-#: ../src/createaccount.php:63
-msgid "kontrola hesla nesouhlasí"
+#: ../src/createaccount.php:68
+msgid "password conntrol do not match"
 msgstr ""
 
-#: ../src/createaccount.php:73
+#: ../src/createaccount.php:78
 #, php-format
-msgid ""
-"Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
+msgid "Username %s is already used. Please choose another one."
 msgstr ""
 
-#: ../src/createaccount.php:96
-msgid "Administrátirský účet byl vytvořen"
+#: ../src/createaccount.php:102
+msgid "Admin Account Created"
 msgstr ""
 
-#: ../src/createaccount.php:99
-msgid "Uživatelský účet byl vytvořen"
-msgstr ""
-
-#: ../src/createaccount.php:104
-msgid "Potvrzení registrace"
+#: ../src/createaccount.php:105
+msgid "User Account Created"
 msgstr ""
 
 #: ../src/createaccount.php:111
-#, php-format
-msgid "Nová registrace do Systému: %s"
+msgid "Potvrzení registrace"
 msgstr ""
 
-#: ../src/createaccount.php:113
-msgid "Právě byl zaregistrován nový uživatel:\n"
+#: ../src/createaccount.php:119
+#, php-format
+msgid "New Registration: %s"
 msgstr ""
 
 #: ../src/createaccount.php:122
+msgid "New Registered User"
+msgstr ""
+
+#: ../src/createaccount.php:131
 msgid "Zápis do databáze se nezdařil!"
 msgstr ""
 
-#: ../src/createaccount.php:142
-msgid "přihlašovací jméno"
+#: ../src/createaccount.php:142 ../src/createaccount.php:144
+#: ../src/createaccount.php:167 ../src/customerlogin.php:69
+#: ../src/newcustomer.php:138
+msgid "Sign On"
+msgstr "Registrace"
+
+#: ../src/createaccount.php:153
+msgid "Firstnaname"
 msgstr ""
 
-#: ../src/createaccount.php:143
-#, fuzzy
-msgid "heslo"
-msgstr "Heslo bylo změněno"
-
-#: ../src/createaccount.php:144
-msgid "potvrzení hesla"
-msgstr "potvrzení hesla"
-
-#: ../src/createaccount.php:145
-msgid "emailová adresa"
+#: ../src/createaccount.php:155
+msgid "Lastname"
 msgstr ""
 
-#: ../src/createaccount.php:147
-msgid "Registrovat"
+#: ../src/createaccount.php:159
+msgid "password"
 msgstr ""
 
-#: ../src/createaccount.php:147
-msgid "dokončit registraci"
+#: ../src/createaccount.php:161
+msgid "Password Confirmation"
 msgstr ""
+
+#: ../src/createaccount.php:163
+msgid "email address"
+msgstr ""
+
+#: ../src/createaccount.php:166
+msgid "Register"
+msgstr ""
+
+#: ../src/custmpassrecv.php:37 ../src/index.php:14
+msgid "clientzone"
+msgstr "clientzone"
+
+#: ../src/custmpassrecv.php:37
+#, php-format
+msgid "New password for %s"
+msgstr "Nové heslo pro %s"
+
+#: ../src/custmpassrecv.php:40
+msgid "Sign On informations was changed:\n"
+msgstr "Přihlašovací údaje byly změněny\n"
+
+#: ../src/custmpassrecv.php:42 ../src/customerlogin.php:52
+msgid "Username"
+msgstr "Uživatelské jméno"
 
 #: ../src/custmpassrecv.php:55
 #, php-format
 msgid "unknown email address %s"
 msgstr "Neznámá mailová adresa %s"
 
+#: ../src/custmpassrecv.php:59
+msgid "Please enter your email."
+msgstr "Prosím zadejte svůj email"
+
+#: ../src/custmpassrecv.php:62 ../src/customerlogin.php:64
+msgid "Lost password recovery"
+msgstr "Obnova ztraceného hesla"
+
+#: ../src/custmpassrecv.php:72
+msgid ""
+"Forgot your password? Enter your e-mail address you entered during the "
+"registration and we will send you a new one."
+msgstr ""
+"Zapoměli jste heslo ? Vložte svojí e-mailovou adresu kterou jste zadali "
+"během registrace a my vám pošleme nové."
+
+#: ../src/custmpassrecv.php:79
+msgid "Send New Password"
+msgstr "Pošli nové heslo"
+
+#: ../src/custmpassrecv.php:86
+msgid "Please check your mailbox for new password"
+msgstr "Prosíme zkontrolujte svou poštu pro nové heslo"
+
+#: ../src/custmpassrecv.php:87
+msgid "and"
+msgstr "a"
+
+#: ../src/customerlogin.php:14
+msgid "Please enable cookies in your browser"
+msgstr "Prosím zapněte cookies ve svém prohlížeči"
+
 #: ../src/customerlogin.php:17
 msgid "Sign in first please"
 msgstr "Nejprve se prosím přihlašte"
 
-#: ../src/customerlogin.php:45
+#: ../src/customerlogin.php:43
 msgid "Welcome to ClientZone"
-msgstr "Vítejte do Shopu pro FlexiBee"
+msgstr "Vítejte do Klientské Zony pro FlexiBee"
 
-#: ../src/customerlogin.php:55
+#: ../src/customerlogin.php:47 ../src/index.php:37
+msgid "Sign in"
+msgstr "Přihlášení"
+
+#: ../src/customerlogin.php:54
 msgid "usually your email address"
 msgstr "Obvykle vaše emailová adresa"
 
@@ -1300,21 +1141,17 @@ msgstr "Doména adresa %s je již registrována"
 msgid "I already have an customer number"
 msgstr "Již mám zákaznické číslo"
 
-#: ../src/getisdoc.php:33 ../src/getpdf.php:39 ../src/maildocument.php:29
+#: ../src/getisdoc.php:33 ../src/getpdf.php:39 ../src/maildocument.php:37
 msgid "Wrong call"
 msgstr "Špatné volání"
 
-#: ../src/index.php:25 ../src/index.php:35 ../src/index.php:44
-msgid "Cennik"
-msgstr ""
-
-#: ../src/index.php:38
+#: ../src/index.php:24
 msgid "Order Form"
 msgstr "Objednací formulář"
 
-#: ../src/index.php:50
+#: ../src/index.php:40
 msgid "Sign up"
-msgstr "Registace"
+msgstr "Registrace"
 
 #: ../src/kontakt.php:45 ../src/kontakt.php:74
 msgid "Contact"
@@ -1332,20 +1169,21 @@ msgstr "Odhlášení"
 msgid "Thank you for your favor and we look forward to another visit"
 msgstr "Děkujeme za váš zájem a těšíme se na další návštěvu"
 
-#: ../src/maildocument.php:21
+#: ../src/maildocument.php:27
 #, php-format
-msgid "%s %s"
-msgstr "%s %s"
+msgid "%s %s %s"
+msgstr ""
 
-#: ../src/maildocument.php:22
-msgid "Dear Customer, your document is in attachment"
-msgstr "Vážený zálazníku, váše dokument je v příloze"
+#: ../src/maildocument.php:29
+#, php-format
+msgid "your document %s is in attachment"
+msgstr ""
 
-#: ../src/maildocument.php:23
+#: ../src/maildocument.php:31
 msgid "Invoice was sent"
 msgstr "Faktura byla odeslána"
 
-#: ../src/maildocument.php:25
+#: ../src/maildocument.php:33
 msgid "Mailer does not work"
 msgstr "Pošťák nepracuje"
 
@@ -1527,25 +1365,137 @@ msgstr "Nastavení"
 msgid "Change Password"
 msgstr "Změna hesla"
 
-#: ../src/settings.php:21
-msgid "Init FlexiBee"
-msgstr "Iniciace FlexiBee"
-
 #: ../src/template.php:15
 msgid "Spoje.Net"
 msgstr "Spoje.Net"
 
-#: ../src/user.php:38
-msgid "Opravdu smazat ?"
-msgstr ""
+#~ msgid "Unknown invoice type: %s %s"
+#~ msgstr "Neznámý druh domény:  %s %s"
 
-#: ../src/users.php:17
-msgid "Přehled uživatelů"
-msgstr ""
+#~ msgid "Invoice found: - overdue?"
+#~ msgstr "Nalezená faktura - přeplatek ?"
 
-#: ../src/users.php:19
-msgid "Uživatelé"
-msgstr ""
+#, fuzzy
+#~ msgid "Faktura za Eura"
+#~ msgstr "Faktura za Eura %s"
+
+#~ msgid "Unknown invoice type: %s"
+#~ msgstr "Neznámý druh faktury  %s "
+
+#~ msgid "Castecna uhrada - DOBROPIS: prijato: %s ma byt zaplaceno %s"
+#~ msgstr "Castecna uhrada - DOBROPIS: prijato: %s ma byt zaplaceno %s"
+
+#~ msgid "Přeplatek - DOBROPIS: prijato: %s ma byt zaplaceno %s"
+#~ msgstr "Přeplatek - DOBROPIS: prijato: %s ma byt zaplaceno %s"
+
+#~ msgid "Platba %s  %s byla sparovana s dobropisem %s"
+#~ msgstr "Platba %s  %s byla sparovana s dobropisem %s"
+
+#~ msgid "Platba %s  %s byla sparovana s zalohou %s"
+#~ msgstr "Platba %s  %s byla sparovana s zalohou %s"
+
+#~ msgid "Částečná úhrada %s"
+#~ msgstr "Částečná úhrada %s"
+
+#~ msgid "Vytvoř ZDD: %s"
+#~ msgstr "Vytvoř ZDD: %s"
+
+#~ msgid "Přeplatek %s"
+#~ msgstr "Přeplatek %s"
+
+#~ msgid "Faktura #%s byla sparovana"
+#~ msgstr "Faktura #%s byla sparovana"
+
+#~ msgid "Faktura #%s nebyla sparovana"
+#~ msgstr "Faktura #%s nebyla sparovana"
+
+#~ msgid "Castecna uhrada - FAKTURA: prijato: %s ma byt zaplaceno %s"
+#~ msgstr "Castecna uhrada - FAKTURA: prijato: %s ma byt zaplaceno %s"
+
+#~ msgid "Přeplatek - FAKTURA: prijato: %s ma byt zaplaceno %s"
+#~ msgstr "Přeplatek - FAKTURA: prijato: %s ma byt zaplaceno %s"
+
+#~ msgid "Platba %s  %s byla sparovana s fakturou %s"
+#~ msgstr "Platba %s  %s byla sparovana s fakturou %s"
+
+#~ msgid "Faktura %s byla vytvořena z dokladu %s"
+#~ msgstr "Faktura %s byla vytvořena z dokladu %s"
+
+#~ msgid "Neidentifikovaná platba"
+#~ msgstr "Neidentifikovaná platba"
+
+#~ msgid "Platba bez faktury"
+#~ msgstr "Platba bez faktury"
+
+#~ msgid "Platba pro fakturu %s nebyla dohledána"
+#~ msgstr "Platba pro fakturu %s nebyla dohledána"
+
+#~ msgid "Proposal"
+#~ msgstr "Nabídka"
+
+#~ msgid "Users"
+#~ msgstr "Uživatelé"
+
+#~ msgid "New user"
+#~ msgstr "Nový uživatel"
+
+#~ msgid "User overview"
+#~ msgstr "Přehled uživatelů"
+
+#~ msgid "more ..."
+#~ msgstr "více ..."
+
+#~ msgid "add item"
+#~ msgstr "přidat položku"
+
+#~ msgid "Toggle dropdown"
+#~ msgstr "Zobrazit nabídku"
+
+#~ msgid "Signed as"
+#~ msgstr "Příhlášen jako"
+
+#~ msgid "Please enter your login creditials"
+#~ msgstr "Prosím zadejte své přihlašovací údaje"
+
+#~ msgid "Welcome to ClientZone administration"
+#~ msgstr "Vítejte do informačního systému ClientZone"
+
+#~ msgid "Pricelist Admin"
+#~ msgstr "Administrace Ceníku"
+
+#~ msgid "Your new password was sent to %s"
+#~ msgstr "Vaše nové heslo bylo odesláno na %s"
+
+#~ msgid "FlexiBee Address ID"
+#~ msgstr "ID Adresy z FlexiBee"
+
+#~ msgid "Get Score"
+#~ msgstr "Získej score"
+
+#~ msgid "Stahuji Výpisy online"
+#~ msgstr "Stahuji Výpisy online"
+
+#~ msgid "Zahajuji programové párování"
+#~ msgstr "Zahajuji programové párování"
+
+#~ msgid "Párování hotovo"
+#~ msgstr "Párování hotovo"
+
+#, fuzzy
+#~ msgid "heslo"
+#~ msgstr "Heslo bylo změněno"
+
+#~ msgid "potvrzení hesla"
+#~ msgstr "potvrzení hesla"
+
+#~ msgid "%s %s"
+#~ msgstr "%s %s"
+
+#~ msgid "Dear Customer, your document is in attachment"
+#~ msgstr "Vážený zálazníku, váše dokument je v příloze"
+
+#~ msgid "Init FlexiBee"
+#~ msgstr "Iniciace FlexiBee"
 
 #~ msgid "About us"
 #~ msgstr "O aplikaci"

@@ -55,51 +55,18 @@ class MainMenu extends \Ease\Html\NavTag
         $userID = \Ease\Shared::user()->getUserID();
 
         switch (get_class($user)) {
-            case 'ClientZone\User': //Admin
-                $nav->addMenuItem(new NavBarSearchBox('search', 'search.php'));
-//                $nav->addDropDownMenu('<img width=30 src=images/gear.svg> '._('Scripts'),
-//                    [
-//                    'invoicematch.php' => \Ease\TWB\Part::GlyphIcon('piggy-bank').' '._('Invoice matching (Take so long)'),
-//                'invoice2flexibee.php' => \Ease\TWB\Part::GlyphIcon('plus') . '&nbsp;' . _('Faktury do Flexibee'),
-//                'address2flexibee.php' => \Ease\TWB\Part::GlyphIcon('plus') . '&nbsp;' . _('Adresář do Flexibee'),
-//                    ]
-//                );
-//                $nav->addDropDownMenu('<img width=30 src=images/contract_150.png> '._('Orders'),
-//                    array_merge([
-//                    'contracttodo.php' => new \Ease\Html\ImgTag('images/copying.svg',
-//                    'TODO', ['height' => '20px']).'&nbsp; '._('Orders TODO'),
-//                    'zavazky.php' => \Ease\TWB\Part::GlyphIcon('transfer').' '._('Měsíční závazky'),
-//                    'pohledavky.php' => \Ease\TWB\Part::GlyphIcon('transfer').' '._('Měsíční pohledávky'),
-//                    'contract-reset.php' => \Ease\TWB\Part::GlyphIcon('repeat').' '._('Reset autogenerace'),
-//                    'contract.php' => \Ease\TWB\Part::GlyphIcon('plus').' '._('Nová smlouva'),
-//                    'contracts.php' => \Ease\TWB\Part::GlyphIcon('list').'&nbsp;'._('Přehled smluv'),
-//                    'rspcntrcts.php' => \Ease\TWB\Part::GlyphIcon('user').'&nbsp;'._('Respondenti'),
-//                    ])
-//                );
-                $nav->addDropDownMenu('<img width=30 src=images/order.svg> '._('Proposal'),
-                    [
-                        'adminpricelist.php' => \Ease\TWB\Part::GlyphIcon('th-list').' '._('Pricelist'),
-                    ]
-                );
-
-                $nav->addDropDownMenu('<img width=30 src=images/users_150.png> '._('Users'),
-                    array_merge([
-                    'createaccount.php' => \Ease\TWB\Part::GlyphIcon('plus').' '._('New user'),
-                    'users.php' => \Ease\TWB\Part::GlyphIcon('list').'&nbsp;'._('User overview'),
-                    '' => '',
-                        ], $this->getMenuList(\Ease\Shared::user(), 'user'))
-                );
-                break;
             case 'ClientZone\Customer': //Customer
+                $nav->addMenuItem(new NavBarSearchBox('search', 'search.php'));
                 $nav->addDropDownMenu('<img width=30 src=images/order.svg> '._('Orders'),
                     [
                         'orderform.php' => \Ease\TWB\Part::GlyphIcon('plus').' '._('New order'),
-                        'pricelist.php' => \Ease\TWB\Part::GlyphIcon('th-list').' '._('Pricelist'),
+//                        'pricelist.php' => \Ease\TWB\Part::GlyphIcon('th-list').' '._('Pricelist'),
                         'myorders.php' => \Ease\TWB\Part::GlyphIcon('list').'&nbsp;'._('My orders')]
                 );
 
                 break;
             case 'Ease\Anonym': //Anonymous
+                $nav->addMenuItem( new \Ease\Html\SpanTag(_('ClientZone'),['style'=>'font-size: 35px; padding-top: 6px;']) );
             default:
                 break;
         }

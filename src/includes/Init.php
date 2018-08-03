@@ -2,8 +2,8 @@
 /**
  * clientzone - Init aplikace.
  *
- * @author     Vítězslav Dvořák <vitex@arachne.cz>
- * @copyright  2017 VitexSoftware v.s.cz
+ * @author Vítězslav Dvořák <info@vitexsoftware.cz>
+ * @copyright  2017-2018 VitexSoftware v.s.cz
  */
 
 namespace ClientZone;
@@ -13,9 +13,13 @@ if (!defined('EASE_APPNAME')) {
     define('EASE_APPNAME', 'ClientZone');
 }
 
-\Ease\Shared::initializeGetText(constant('EASE_APPNAME'), 'en_US', '../i18n');
+new \Ease\Locale('cs_CZ', '../i18n', 'clientzone');
 
 session_start();
+
+$shared = \Ease\Shared::instanced();
+$shared->loadConfig('../tests/clientzone.json', true);
+$shared->loadConfig('../tests/client.json', true);
 
 if (\Ease\Shared::isCli()) {
     if (!defined('EASE_LOGGER')) {
@@ -26,11 +30,9 @@ if (\Ease\Shared::isCli()) {
     $oPage = new ui\WebPage();
 }
 
-$engine = new FlexiBeeEngine();
 
 /**
  * Objekt uživatele User nebo Anonym
- * @global \Ease\User
+ * @global User|\Ease\Anonym
  */
-$oUser = \Ease\Shared::user();
-
+$oUser = $shared->user();

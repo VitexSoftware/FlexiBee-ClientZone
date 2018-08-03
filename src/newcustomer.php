@@ -10,11 +10,17 @@ namespace ClientZone;
  */
 require_once 'includes/Init.php';
 
+if ($shared->getConfigValue('ALLOW_REGISTER') != 'true') {
+    $oPage->addStatusMessage('Sing On form is disabled by configuration');
+    $oPage->redirect('index.php');
+    exit();
+}
+
 $process = false;
 
 $nazev         = $oPage->getRequestValue('nazev');
 $email_address = $oPage->getPostValue('email_address');
-$ic            = $oPage->getRequestValue('ic');
+$ico           = $oPage->getRequestValue('ic');
 $dic           = $oPage->getRequestValue('dic');
 $tel           = $oPage->getRequestValue('tel');
 $cube          = $oPage->getRequestValue('cube');
@@ -75,8 +81,8 @@ if ($oPage->isPosted()) {
             ]
         );
 
-        $companyID = $newOUser->adresar->refresh();
-        if (!is_null($companyID)) {
+        if ($newOUser->adresar->sync()) {
+            $companyID = $newOUser->adresar->getRecordID();
             $newOUser->addStatusMessage(_('Company registered'), 'success');
 
             $password = \Ease\Sand::randomString(8);
@@ -89,9 +95,10 @@ if ($oPage->isPosted()) {
                 ]
             );
 
-            $contactID = $newOUser->kontakt->refresh();
-            if (!is_null($contactID)) {
+
+            if ($newOUser->kontakt->sync()) {
                 $newOUser->addStatusMessage(_('User account created'), 'success');
+                $contactID = $newOUser->kontakt->getRecordID();
 
                 $email = $oPage->addItem(new \Ease\Mailer($newOUser->getDataValue('email'),
                     _('Sign On info')));
@@ -108,7 +115,7 @@ if ($oPage->isPosted()) {
                 $email->addItem(new \Ease\Html\DivTag(_("New Customer").':\n'));
                 $email->addItem(new \Ease\Html\DivTag(
                     ' Login: '.$emailAddress."\n", ['id' => 'login']));
-                $email->addItem(new \Ease\Html\ATag($newOUser->adresar->apiURL,
+                $email->addItem(new \Ease\Html\ATag($newOUser->adresar->getApiURL(),
                     $newOUser->adresar));
                 $email->send();
 
@@ -125,7 +132,7 @@ if ($oPage->isPosted()) {
             }
         } else {
             $oUser->addStatusMessage(_('Error saving Company'), 'error');
-            $email = $oPage->addItem(new Ease\Mailer(constant('SEND_ORDERS_TO'),
+            $email = $oPage->addItem(new \Ease\Mailer(constant('SEND_ORDERS_TO'),
                 'Sign on Failed'));
             $email->addItem(serialize($newOUser->adresar->getData()));
             $email->send();
@@ -167,13 +174,17 @@ $regForm->addInput(
 $regForm->addInput(
     new \Ease\Html\InputTextTag('tel', $tel), _('Telephone number'));
 
-$regForm->addInput(new \Ease\Html\InputTextTag('ic', $ic),
+$regForm->addInput(new \Ease\Html\InputTextTag('ic', $ico),
     _('Company ID number'), null, _('Only for company'));
 $regForm->addInput(new \Ease\Html\InputTextTag('dic', $dic),
     _('Company VAT number'), null, _('Only for company'));
 
 $regForm->addInput(new \Ease\Html\InputTextTag('cube'), _('The Cube'),
     _('How many walls does the cube have?'), _('Only for humans'));
+
+//$regForm->addInput(new \Ease\Html\CheckboxTag('consent'), _('GDPR Consent'),
+//    false, _('Agree with').' <a href=eula.php>'._('Agreement').'</a>');
+
 
 $regForm->addItem(new \Ease\Html\DivTag(
     new \Ease\Html\InputSubmitTag('Register', _('Singn On'),
