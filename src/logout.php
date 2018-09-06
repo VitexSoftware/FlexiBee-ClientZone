@@ -19,7 +19,7 @@ $oUser->addStatusMessages($messagesBackup);
 $oPage->addItem(new ui\PageTop(_('Sign Off')));
 
 $oPage->container->addItem('<br/><br/><br/><br/>');
-$oPage->container->addItem(new \Ease\Html\DivTag(new \Ease\Html\ATag('customerlogin.php',
+$oPage->container->addItem(new \Ease\Html\DivTag(new \Ease\Html\ATag('login.php',
     _('Thank you for your favor and we look forward to another visit'),
     ['class' => 'jumbotron'])));
 $oPage->container->addItem('<br/><br/><br/><br/>');

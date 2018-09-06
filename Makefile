@@ -29,6 +29,9 @@ drun: dimage
 	docker run  -dit --name ClientZone -p 2323:80 vitexsoftware/clientzone
 	nightly http://localhost:2323
 
+vagrant: clean
+	vagrant destroy
+	vagrant up
 
 .PHONY : install
 	

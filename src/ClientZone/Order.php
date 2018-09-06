@@ -13,7 +13,7 @@ namespace ClientZone;
  *
  * @author vitex
  */
-class Order extends FlexiBeeEngine
+class Order extends \FlexiPeeHP\FlexiBeeRW
 {
     /**
      * Customer
@@ -108,7 +108,7 @@ class Order extends FlexiBeeEngine
 
         $today = date('Y-m-d');
         $proforma->setDataValue('firma', $this->customer->adresar);
-        $proforma->setDataValue('typDokl', 'code:ZALOHA');
+        $proforma->setDataValue('typDokl', 'code:ZÁLOHA');
         $proforma->setDataValue('uvodTxt', constant('EASE_APPNAME'));
         $proforma->setDataValue('typDoklSkl', 'code:STANDARD');
 

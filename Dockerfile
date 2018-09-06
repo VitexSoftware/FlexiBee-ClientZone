@@ -12,7 +12,7 @@ RUN apt update
 RUN apt-get update
 RUN apt-get -y upgrade
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install apache2 libapache2-mod-php php-mysql clientzone
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install apache2 libapache2-mod-php clientzone
 
 RUN composer install --no-dev --no-plugins --no-scripts  -d /var/www/
 

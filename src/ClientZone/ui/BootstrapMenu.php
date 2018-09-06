@@ -95,7 +95,7 @@ class BootstrapMenu extends \Ease\TWB\Navbar
 <li class="dropdown">
 <a class="dropdown-toggle" href="login.php" data-toggle="dropdown"><i class="icon-circle-arrow-left"></i> '._('Sign In').'<strong class="caret"></strong></a>
 <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px; left: -120px;">
-<form method="post" class="navbar-form navbar-left" action="customerlogin.php" accept-charset="UTF-8">
+<form method="post" class="navbar-form navbar-left" action="login.php" accept-charset="UTF-8">
 <input style="margin-bottom: 15px;" type="text" placeholder="'._('Login').'" id="username" name="email">
 <input style="margin-bottom: 15px;" type="password" placeholder="'._('Password').'" id="password" name="password">
 <!-- input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">

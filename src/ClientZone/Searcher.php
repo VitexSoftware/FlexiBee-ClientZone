@@ -1,22 +1,18 @@
 <?php
 /**
- * Dotazník - vyhledávací třída.
+ * FlexiBee ClientZone - vyhledávací třída.
  *
- * @author     Vítězslav Dvořák <dvorak@austro-bohemia.cz>
- * @copyright  2017 VitexSoftware v.s.cz
+ * @author Vítězslav Dvořák <info@vitexsoftware.cz>
+ * @copyright  2017-2018 VitexSoftware v.s.cz
  */
 
 namespace ClientZone;
 
-class Searcher extends FlexiBeeEngine
+/**
+ * 
+ */
+class Searcher extends \FlexiPeeHP\FlexiBeeRO
 {
-    /**
-     * Prohledávaná tabulka.
-     *
-     * @var string
-     */
-    public $table = null;
-
     /**
      * Prohledávaný sloupeček.
      *
@@ -41,9 +37,11 @@ class Searcher extends FlexiBeeEngine
         parent::__construct();
 
         if (is_null($class)) {
-            $this->registerClass('\FlexiPeeHP\Adresar');
-            $this->registerClass('\FlexiPeeHP\Kontakt');
-            $this->registerClass('\FlexiPeeHP\Cenik');
+//            $this->registerClass('\FlexiPeeHP\Adresar');
+//            $this->registerClass('\FlexiPeeHP\Kontakt');
+//            $this->registerClass('\FlexiPeeHP\Cenik');
+            $this->registerClass('\FlexiPeeHP\FakturaVydana',
+                ['firma' => \Ease\Shared::user()->adresar]);
         } else {
             $this->registerClass($class);
         }

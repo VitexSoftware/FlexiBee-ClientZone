@@ -3,21 +3,21 @@
 namespace ClientZone;
 
 /**
- * clientzone - Změna hesla admina.
+ * clientzone - Změna hesla klienta.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz
  */
 require_once 'includes/Init.php';
 
-$oPage->onlyForUser(); //Pouze pro přihlášené
+$oPage->onlyForLogged(); //Pouze pro přihlášené
 $formOK = true;
 
 if (!isset($_POST['password']) || !strlen($_POST['password'])) {
     $oUser->addStatusMessage('Please enter new password');
     $formOK = false;
 } else {
-    if ($_POST['password'] == $oUser->GetUserLogin()) {
+    if ($_POST['password'] == $oUser->getUserLogin()) {
         $oUser->addStatusMessage('Password cant match with login', 'waring');
         $formOK = false;
     }
@@ -29,7 +29,7 @@ if (!isset($_POST['password']) || !strlen($_POST['password'])) {
      */
 }
 if (!isset($_POST['passwordConfirm']) || !strlen($_POST['passwordConfirm'])) {
-    $oUser->addStatusMessage('Please enter password confirmation');
+    $oPage->addStatusMessage('Please enter password confirmation');
     $formOK = false;
 }
 if ((isset($_POST['passwordConfirm']) && isset($_POST['password'])) && ($_POST['passwordConfirm']
@@ -39,12 +39,11 @@ if ((isset($_POST['passwordConfirm']) && isset($_POST['password'])) && ($_POST['
 }
 
 if (!isset($_POST['CurrentPassword'])) {
-    $oUser->addStatusMessage('Please enter current password');
+    $oPage->addStatusMessage('Please enter current password');
     $formOK = false;
 } else {
-    if (!$oUser->passwordValidation($_POST['CurrentPassword'],
-            $oUser->getDataValue($oUser->passwordColumn))) {
-        $oUser->AddStatusMessage('Current password invalid', 'warning');
+    if (!$oUser->passwordCheck($_POST['CurrentPassword'])) {
+        $oPage->AddStatusMessage('Current password invalid', 'warning');
         $formOK = false;
     }
 }
@@ -60,10 +59,13 @@ if ($formOK && $oPage->isPosted()) {
         $oUser->addStatusMessage(_('Password was changed'), 'success');
 
         $email = $oPage->addItem(new \Ease\Mailer($oUser->getDataValue($oUser->mailColumn),
-            _('Changed password')));
+        constant('EASE_APPNAME').' '._('Changed password')));
         $email->addItem(sprintf(_('Dear user %s, your password was changed to'),
                 $oUser->getUserLogin()).":\n");
         $email->addItem(_('Password').': '.$plainPass."\n");
+
+        $loginUrl = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].dirname(\Ease\WebPage::getUri()).'/login.php';
+        $email->addItem("\n$loginUrl\n");
 
         $email->send();
     }

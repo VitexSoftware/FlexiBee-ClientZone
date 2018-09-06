@@ -14,5 +14,9 @@ namespace ClientZone;
  */
 class Customer extends \FlexiPeeHP\Bricks\Customer
 {
-    
+    /**
+     * Where to look for username
+     * @var string 
+     */
+    public $loginColumn = 'email';
 }

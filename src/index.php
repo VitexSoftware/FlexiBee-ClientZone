@@ -34,7 +34,7 @@ switch (get_class($oUser)) {
             'images/cennik.png', _('Pricelist'), 'pricelist.php'
         );
         $mainMenu->addMenuItem(
-            'images/login.svg', _('Sign in'), 'customerlogin.php'
+            'images/login.svg', _('Sign in'), 'login.php'
         );
 
         if ($shared->getConfigValue('ALLOW_REGISTER') == 'true') {

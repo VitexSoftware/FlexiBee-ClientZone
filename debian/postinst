@@ -9,37 +9,11 @@ WEBUSER=${RET}
 
 touch /etc/clientzone/config.json
 
-#Replace Key Value in Config File
-function replace {
-    cfg="/etc/clientzone/config.php"
-    sed -i "/${1}/c\define('${1}', '${2}');" $cfg
-#    echo $cfg ${1} ${2}
-}
-
 replaceJSON() {
-    cfg="/etc/clientzone/config.json"
+    cfg="/etc/flexibee/clientzone.json"
     sed -i "/${1}/c\        \"${1}\": \"${2}\"," $cfg
     echo $cfg ${1} ${2}
 }
-
-
-#Replace Key Value in PhinX Config File
-function replaceYML {
-    cfg="/var/lib/clientzone/phinx.yml"
-    sed -i "/${1}/c\        ${1}: ${2}" $cfg
-#    echo $cfg ${1} ${2}
-}
-
-listOfConfigs="FLEXIBEE_URL
-FLEXIBEE_LOGIN
-FLEXIBEE_PASSWORD
-FLEXIBEE_COMPANY
-DB_TYPE
-DB_HOST
-DB_PORT
-DB_USERNAME
-DB_PASSWORD
-DB_DATABASE"
 
 IFS='                                                                                                                                                        
 '                                                                                                                                                            
@@ -81,21 +55,6 @@ fi
 mkdir -p /var/lib/composer
 chown $WEBUSER:$WEBUSER /var/lib/composer
 su - $WEBUSER -s /bin/bash -c 'COMPOSER_HOME="/var/lib/composer" composer --no-dev -o install -d /usr/share/clientzone/'
-
-db_get "clientzone/DB_TYPE"
-replaceYML "adapter" $RET
-db_get "clientzone/DB_HOST"
-replaceYML "host" $RET
-db_get "clientzone/DB_PORT"
-replaceYML "port" $RET
-db_get "clientzone/DB_USERNAME"
-replaceYML "user" $RET
-db_get "clientzone/DB_PASSWORD"
-replaceYML "pass" $RET
-db_get "clientzone/DB_DATABASE"
-replaceYML "name" $RET
-
-phinx -n -c/var/lib/clientzone/phinx.yml migrate
 
 #DEBHELPER#
 

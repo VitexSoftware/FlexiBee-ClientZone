@@ -111,7 +111,7 @@ class WebPage extends \Ease\TWB\WebPage
      *
      * @param string $loginPage adresa přihlašovací stránky
      */
-    public function onlyForLogged($loginPage = 'customerlogin.php',
+    public function onlyForLogged($loginPage = 'login.php',
                                   $message = null)
     {
         return parent::onlyForLogged($loginPage.'?backurl='.urlencode($_SERVER['REQUEST_URI']),

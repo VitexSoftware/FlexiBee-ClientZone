@@ -42,7 +42,7 @@ if ($userEmail) {
             $email->addItem(_('Username').': '.$customer->getUserLogin()."\n");
             $email->addItem(_('Password').': '.$newPassword."\n");
 
-            $loginUrl = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].dirname(\Ease\WebPage::getUri()).'/customerlogin.php';
+            $loginUrl = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].dirname(\Ease\WebPage::getUri()).'/login.php';
             $email->addItem("\n$loginUrl\n");
 
             $email->send();
@@ -84,7 +84,7 @@ if (!$success) {
     }
 } else {
     $columnII->addItem(new \Ease\TWB\Well([_('Please check your mailbox for new password')
-        , ' '._('and').' ', new \Ease\TWB\LinkButton('customerlogin.php',
+        , ' '._('and').' ', new \Ease\TWB\LinkButton('login.php?email='.$userEmail,
             _('Sign In'), 'success')]));
 }
 

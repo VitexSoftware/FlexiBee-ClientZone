@@ -4,7 +4,7 @@ namespace ClientZone;
 
 require_once 'includes/Init.php';
 
-$oPage->onlyForLogged('customerlogin.php',
+$oPage->onlyForLogged('login.php',
     _('Please sign in to finish your order'));
 
 /**
