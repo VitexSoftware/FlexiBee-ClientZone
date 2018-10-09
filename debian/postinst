@@ -15,6 +15,8 @@ replaceJSON() {
     echo $cfg ${1} ${2}
 }
 
+listOfConfigs="SEND_MAILS_FROM SEND_INFO_TO EMAIL_FROM EASE_EMAILTO  SUPPRESS_EMAILS ALLOW_REGISTER SHOW_PRICELIST DEBUG"
+
 IFS='                                                                                                                                                        
 '                                                                                                                                                            
 for keyword in $listOfConfigs                                                                                                                                

@@ -1,13 +1,12 @@
 {                                                                                                                                          
     "EASE_APPNAME": "ClientZone",                                                                                                      
-    "EASE_LOGGER": "syslog",                                                                                                       
     "SEND_MAILS_FROM": "shop@syourdomain.net",                                                                                                
+    "SEND_INFO_TO": "office@yourdomain.net",                                                                                                                       
     "EMAIL_FROM": "shop@yourdomain.net",                                                                                                                       
     "EASE_EMAILTO": "info@vitexsoftware.cz",                                                                    
     "SUPPRESS_EMAILS": "true",
     "ALLOW_REGISTER": "true",
     "SHOW_PRICELIST": "false",
-    "PRICELIST_CATID": "0",
-    "SEND_INFO_TO": "office@yourdomain.net",                                                                                                                       
-    "DEBUG": "false"
+    "DEBUG": "false",
+    "EASE_LOGGER": "syslog"                                                                                                       
 }

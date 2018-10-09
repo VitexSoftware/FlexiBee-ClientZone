@@ -1,6 +1,53 @@
 Template: clientzone/WEBUSER
 Type: string
 Default: www-data
-Description: Uzivatel webu
- Uzivatel pod kterym bezi aplikace
+Description: Web User
+ Run Composer under as this user
 
+Template: clientzone/SEND_MAILS_FROM
+Type: string
+Default: shop@syourdomain.net
+Description: Send Mails From:
+ Source email of
+
+Template: clientzone/SEND_INFO_TO
+Type: string
+Default: office@yourdomain.net                                                                                                                      
+Description: Address to notify 
+ Notify this address in case of new order
+
+Template: clientzone/EMAIL_FROM
+Type: string
+Default: shop@yourdomain.net
+Description: From address
+ Default sender arddress
+
+Template: clientzone/EASE_EMAILTO
+Type: string
+Default: info@vitexsoftware.cz
+Description: email logs to
+ Where to send logs / operation results
+
+Template: clientzone/SUPPRESS_EMAILS
+Type: boolean
+Default: false
+Description: Suppress email
+ Do not send any mails
+
+Template: clientzone/ALLOW_REGISTER
+Type: boolean
+Default: true
+Description: Allow register
+ Provide "Create account" dialog
+
+Template: clientzone/SHOW_PRICELIST
+Type: boolean
+Default: false
+Description: Show pricelist
+ Show pricelist to customer
+
+Template: clientzone/DEBUG
+Type: boolean
+Default: false
+Description: Debug
+ Enable debug mode
