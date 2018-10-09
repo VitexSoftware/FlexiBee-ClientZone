@@ -7,7 +7,24 @@ set -e
 db_get "clientzone/WEBUSER"
 WEBUSER=${RET}
 
-touch /etc/clientzone/config.json
+if [ ! -f /etc/clientzone/config.json ] ; then
+cat << EOF > /etc/clientzone/config.json
+{                                                                                                                                          
+    "EASE_APPNAME": "ClientZone",                                                                                                      
+    "SEND_MAILS_FROM": "shop@syourdomain.net",                                                                                                
+    "SEND_INFO_TO": "office@yourdomain.net",                                                                                                                       
+    "EMAIL_FROM": "shop@yourdomain.net",                                                                                                                       
+    "EASE_EMAILTO": "info@vitexsoftware.cz",                                                                    
+    "SUPPRESS_EMAILS": "true",
+    "ALLOW_REGISTER": "true",
+    "SHOW_PRICELIST": "false",
+    "DEBUG": "false",
+    "EASE_LOGGER": "syslog"                                                                                                       
+}
+EOF
+fi
+
+touch 
 
 replaceJSON() {
     cfg="/etc/flexibee/clientzone.json"
