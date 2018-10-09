@@ -102,7 +102,7 @@ class OrderListingItem extends \Ease\TWB\Row
 
     static function dueLabel($date)
     {
-        $days = \ClientZone\Upominac::poSplatnosti($date);
+        $days = \FlexiPeeHP\Bricks\Upominac::poSplatnosti($date);
         if ($days < 0) {
             $type = 'success';
             $msg  = sprintf(_(' %s days to due'),

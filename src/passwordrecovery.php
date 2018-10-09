@@ -3,7 +3,7 @@
 namespace ClientZone;
 
 /**
- * clientzone - Obnova hesla.
+ * clientzone - User Class.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2017 VitexSoftware v.s.cz

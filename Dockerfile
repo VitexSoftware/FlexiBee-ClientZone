@@ -12,9 +12,13 @@ RUN apt update
 RUN apt-get update
 RUN apt-get -y upgrade
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install apache2 libapache2-mod-php clientzone
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install apache2 libapache2-mod-php gdebi apt-utils
 
-RUN composer install --no-dev --no-plugins --no-scripts  -d /var/www/
+ADD clientzone_*_all.deb /tmp/clientzone_all.deb
+
+RUN DEBIAN_FRONTEND=noninteractive gdebi -n /tmp/clientzone_all.deb
+
+#RUN composer install --no-dev --no-plugins --no-scripts  -d /var/www/
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
