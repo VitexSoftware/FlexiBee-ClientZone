@@ -42,7 +42,7 @@ if ($userEmail) {
             $email->addItem(_('Username').': '.$customer->getUserLogin()."\n");
             $email->addItem(_('Password').': '.$newPassword."\n");
 
-            $loginUrl = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].dirname(\Ease\WebPage::getUri()).'/login.php';
+            $loginUrl = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].dirname(\Ease\WebPage::getUri()).'login.php';
             $email->addItem("\n$loginUrl\n");
 
             $email->send();

@@ -78,6 +78,19 @@ Pro instalaci je třeba:
         apt update
         apt install clientzone
 
+Docker
+------
+
+Image pro docker obsahuje jádro debianu a php-fpm na portu 9000
+
+```
+    <VirtualHost *:80>                                                                                                                                                                                                                          
+        ServerName clientzone.vitexsoftware.cz                                                                                                                                                                                              
+        DocumentRoot /usr/share/clientzone                                                                                                                                                                                                  
+        ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://127.0.0.1:9001/usr/share/clientzone/$1                                                                                                                                                               
+        DirectoryIndex /index.php index.php                                                                                                                                                                                                 
+    </VirtualHost>                                                                                                                                                                                                                              
+```                 
 
 Konfigurace:
 ------------
@@ -108,6 +121,8 @@ Aplikace se snaží načíst konfigurační soubor z /etc/flexibee/clientzone.js
   * **PRICELIST_CATID** - ID Zobrazené větve ceníku
 
 Adminská oprávnění pro uživatele: **a:1:{s:5:"admin";s:4:"true";}** 
+
+
 
 Informace pro vývojáře:
 -----------------------

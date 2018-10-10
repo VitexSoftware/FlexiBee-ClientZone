@@ -24,11 +24,14 @@ dimage: deb
 	docker build -t vitexsoftware/clientzone .
 
 dtest:
-	docker-compose run --rm default install
+	docker run -d -p 9001:9000 --name clientzone  vitexsoftware/clientzone:latest
         
 drun: dimage
-	docker run  -dit --name ClientZone -p 2323:80 vitexsoftware/clientzone
+	docker run  -dit --name ClientZone -p 2323:9000 vitexsoftware/clientzone
 	nightly http://localhost:2323/clientzone
+
+dclean:
+	docker rmi $(docker images |grep 'clientzone')
 
 vagrant: clean
 	vagrant destroy

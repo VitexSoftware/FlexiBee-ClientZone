@@ -29,8 +29,8 @@ db_input critical  clientzone/DEBUG || true
 db_go
 
 
-if [ ! -f /etc/clientzone/config.json ] ; then
-cat << EOF > /etc/clientzone/config.json
+if [ ! -f /etc/flexibee/clientzone.json ] ; then
+cat << EOF > /etc/flexibee/clientzone.json
 {                                                                                                                                          
     "EASE_APPNAME": "ClientZone",                                                                                                      
     "SEND_MAILS_FROM": "shop@syourdomain.net",                                                                                                

@@ -17,22 +17,25 @@ $mainMenu = $oPage->container->addItem(new ui\MainPageMenu());
 
 switch (get_class($oUser)) {
     case 'ClientZone\Customer': //Customer
-//        $mainMenu->addMenuItem(
-//            'images/cennik.png', _('Pricelist'), 'pricelist.php'
-//        );
+        if ($shared->getConfigValue('SHOW_PRICELIST') == 'true') {
+            $mainMenu->addMenuItem(
+                'images/cennik.png', _('Pricelist'), 'pricelist.php'
+            );
+        }
         $mainMenu->addMenuItem(
             'images/order.svg', _('Order Form'), 'orderform.php'
         );
 
         $oPage->container->addItem(new ui\ToPayItems($oUser));
 
-
         break;
     case 'Ease\Anonym': //Anonymous
     default:
-        $mainMenu->addMenuItem(
-            'images/cennik.png', _('Pricelist'), 'pricelist.php'
-        );
+        if ($shared->getConfigValue('SHOW_PRICELIST') == 'true') {
+            $mainMenu->addMenuItem(
+                'images/cennik.png', _('Pricelist'), 'pricelist.php'
+            );
+        }
         $mainMenu->addMenuItem(
             'images/login.svg', _('Sign in'), 'login.php'
         );

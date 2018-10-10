@@ -7,7 +7,7 @@ Priority: optional
 Homepage: https://github.com/VitexSoftware/ClientZone
 
 Package: clientzone
-Depends: ${misc:Depends},ease-framework (>= 1.3.1),libjs-font-awesome,php5-curl|php-curl,libjs-fuelux,flexipeehp (>= 1.8.2),php-mail-mime,php-phinx,locales-all,poppler-utils,libjs-bootstrap-switch,php-cli, ease-framework-bricks,flexipeehp-bricks,php-flexibee-config  
+Depends: ${misc:Depends},ease-framework (>= 1.5.10),libjs-font-awesome,php5-curl|php-curl,libjs-fuelux,flexipeehp (>= 1.8.2),php-mail-mime,php-phinx,locales-all,poppler-utils,libjs-bootstrap-switch,php-cli, ease-framework-bricks,flexipeehp-bricks,php-flexibee-config  
 Architecture: all
 Section: web
 Priority: optional

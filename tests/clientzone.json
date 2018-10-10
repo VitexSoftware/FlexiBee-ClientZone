@@ -6,7 +6,7 @@
     "EASE_EMAILTO": "info@vitexsoftware.cz",                                                                    
     "SUPPRESS_EMAILS": "true",
     "ALLOW_REGISTER": "true",
-    "SHOW_PRICELIST": "false",
+    "SHOW_PRICELIST": "true",
     "DEBUG": "false",
     "EASE_LOGGER": "syslog"                                                                                                       
 }
