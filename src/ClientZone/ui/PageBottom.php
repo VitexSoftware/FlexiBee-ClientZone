@@ -13,9 +13,9 @@ class PageBottom extends \Ease\Html\FooterTag
 
     public function __construct($content = null)
     {
-        $composer = '/usr/share/clientzone/composer.json';
+        $composer = '../composer.json';
         if (!file_exists($composer)) {
-            $composer = '../composer.json';
+            $composer = '/usr/share/clientzone/composer.json';
         }
         $appInfo = json_decode(file_get_contents($composer));
 
@@ -41,15 +41,15 @@ class PageBottom extends \Ease\Html\FooterTag
 
         $colD->addItem($icorow);
 
-        $colE      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $listE1    = $colE->addItem(new \Ease\Html\UlTag(_('Hosted by'),
+        $colE   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
+        $listE1 = $colE->addItem(new \Ease\Html\UlTag(_('Hosted by'),
             ['style' => 'list-style-type: none']));
         $listE1->addItemSmart(new \Ease\Html\ATag('https://spoje.net/',
             new \Ease\Html\ImgTag('images/spoje-net_logo.gif', 'Spoje.Net',
             ['class' => 'img-responsive'])));
 
-        $colF      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $listF1    = $colF->addItem(new \Ease\Html\UlTag(_('More'),
+        $colF   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
+        $listF1 = $colF->addItem(new \Ease\Html\UlTag(_('More'),
             ['style' => 'list-style-type: none']));
         $listF1->addItemSmart(new \Ease\Html\ATag('about.php', _('About')));
         $listF1->addItemSmart(new \Ease\Html\ATag('https://github.com/VitexSoftware/ClientZone/',

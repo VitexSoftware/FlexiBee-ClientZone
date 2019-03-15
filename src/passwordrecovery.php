@@ -25,8 +25,8 @@ $oPage->addJavascript('$("#PassworRecovery").validate({
 });', null, true);
 
 if ($userEmail) {
-    $customer = new Customer(['email' => $userEmail]);
-    $customer->kontakt->loadFromFlexiBee();
+    $customer = new Customer();
+    $customer->kontakt->loadFromFlexiBee(['email' => $userEmail]);
     if ($customer->kontakt->getMyKey()) {
         $newPassword = \Ease\Sand::randomString(8);
         if ($customer->passwordChange($newPassword)) {

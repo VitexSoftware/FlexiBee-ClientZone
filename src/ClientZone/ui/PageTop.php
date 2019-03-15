@@ -11,7 +11,7 @@ namespace ClientZone\ui;
 /**
  * Page TOP.
  */
-class PageTop extends \Ease\Html\Div
+class PageTop extends \Ease\Html\DivTag
 {
     /**
      * Titulek stránky.

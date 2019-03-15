@@ -35,7 +35,7 @@ class UserForm extends \Ease\TWB\Form
         $this->addItem(new \Ease\Html\InputHiddenTag('class', get_class($user)));
 //        $this->addItem(new \Ease\Html\InputHiddenTag('enquiry_id', $user->getDataValue('enquiry_id')));
 
-        $this->addItem(new \Ease\Html\Div(new \Ease\TWB\SubmitButton(_('Uložit'),
+        $this->addItem(new \Ease\Html\DivTag(new \Ease\TWB\SubmitButton(_('Uložit'),
             'success'), ['style' => 'text-align: right']));
 
         if (!is_null($userID)) {

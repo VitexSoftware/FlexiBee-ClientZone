@@ -62,7 +62,7 @@ class Combobox extends \Ease\Html\Div
         \Ease\Shared::webPage()->includeJavascript('/javascript/twitter-bootstrap/fuelux.js');
 
         $dropDown = $this->addItem(
-            new \Ease\Html\Div(
+            new \Ease\Html\DivTag(
             new \Ease\Html\ButtonTag(
             new \Ease\Html\Span(null, ['class' => 'caret']
             ),

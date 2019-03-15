@@ -71,7 +71,9 @@ class BootstrapMenu extends \Ease\TWB\Navbar
                 }
 
                 $this->addMenuItem($userMenu.'
-<li><a href="changecustpw.php">'.\Ease\TWB\Part::GlyphIcon('lock').' '._('Password change').'</a></li>
+<li><a href="myaccount.php">'.\Ease\TWB\Part::GlyphIcon('tent').' '._('My Account').'</a></li>
+<li><a href="mycontact.php">'.\Ease\TWB\Part::GlyphIcon('user').' '._('My Contact').'</a></li>
+<li><a href="changepassword.php">'.\Ease\TWB\Part::GlyphIcon('lock').' '._('Password change').'</a></li>
 <li class="divider"></li>
 <li><a href="logout.php">'.\Ease\TWB\Part::GlyphIcon('off').' '._('Sign Out').'</a></li>
 </ul>
@@ -119,10 +121,10 @@ class BootstrapMenu extends \Ease\TWB\Navbar
         $webPage = \Ease\Shared::webPage();
         $statusMessages = $webPage->getStatusMessagesAsHtml();
         if ($statusMessages) {
-            $this->addItem(new \Ease\Html\Div($statusMessages,
+            $this->addItem(new \Ease\Html\DivTag($statusMessages,
                 ['id' => 'StatusMessages', 'class' => 'well', 'title' => _('Click to hide messages'),
                 'data-state' => 'down']));
-            $this->addItem(new \Ease\Html\Div(null, ['id' => 'smdrag']));
+            $this->addItem(new \Ease\Html\DivTag(null, ['id' => 'smdrag']));
             $webPage->cleanMessages();
         }
         parent::draw();

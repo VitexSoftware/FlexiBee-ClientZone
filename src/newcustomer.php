@@ -6,7 +6,7 @@ namespace ClientZone;
  * clientzone - Vytvoření účtu ve FlexiBee.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
- * @copyright  2017 VitexSoftware v.s.cz
+ * @copyright  2017-2019 VitexSoftware v.s.cz
  */
 require_once 'includes/Init.php';
 
@@ -31,12 +31,6 @@ if ($oPage->isPosted()) {
     $error   = false;
 
     $emailAddress = addslashes(strtolower($_POST['email_address']));
-
-    if (isset($_POST['parent'])) {
-        $customerParent = addslashes($_POST['parent']);
-    } else {
-        $customerParent = $oUser->getUserID();
-    }
 
     if (empty($cube)) {
         $oPage->addStatusMessage(_('Human control field is empty'), 'warning');

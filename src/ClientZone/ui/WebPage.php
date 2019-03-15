@@ -63,14 +63,14 @@ class WebPage extends \Ease\TWB\WebPage
      */
     function addPageColumns()
     {
-        $row = $this->container->addItem(new \Ease\Html\Div(null,
+        $row = $this->container->addItem(new \Ease\Html\DivTag(null,
             ['class' => 'row']));
 
-        $this->columnI   = $row->addItem(new \Ease\Html\Div(null,
+        $this->columnI   = $row->addItem(new \Ease\Html\DivTag(null,
             ['class' => 'col-md-4']));
-        $this->columnII  = $row->addItem(new \Ease\Html\Div(null,
+        $this->columnII  = $row->addItem(new \Ease\Html\DivTag(null,
             ['class' => 'col-md-4']));
-        $this->columnIII = $row->addItem(new \Ease\Html\Div(null,
+        $this->columnIII = $row->addItem(new \Ease\Html\DivTag(null,
             ['class' => 'col-md-4']));
     }
 
@@ -79,7 +79,7 @@ class WebPage extends \Ease\TWB\WebPage
      *
      * @param string $loginPage
      */
-    public function onlyForAdmin($loginPage = 'adminlogin.php')
+    public function onlyForAdmin($loginPage = 'login.php')
     {
         $user = \Ease\Shared::user();
         if (!$user->getSettingValue('admin')) {
@@ -95,7 +95,7 @@ class WebPage extends \Ease\TWB\WebPage
      *
      * @param string $loginPage
      */
-    public function onlyForUser($loginPage = 'adminlogin.php')
+    public function onlyForUser($loginPage = 'login.php')
     {
         $user = \Ease\Shared::user();
         if (get_class($user) != 'ClientZone\User') {
@@ -111,11 +111,9 @@ class WebPage extends \Ease\TWB\WebPage
      *
      * @param string $loginPage adresa přihlašovací stránky
      */
-    public function onlyForLogged($loginPage = 'login.php',
-                                  $message = null)
+    public function onlyForLogged($loginPage = 'login.php', $message = null)
     {
         return parent::onlyForLogged($loginPage.'?backurl='.urlencode($_SERVER['REQUEST_URI']),
                 $message);
     }
-
 }

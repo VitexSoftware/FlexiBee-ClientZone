@@ -110,17 +110,17 @@ if ($oPage->isPosted()) {
             $email = $oPage->addItem(new \Ease\Mailer($newOUser->getDataValue('email'),
                     _('Potvrzení registrace')));
             $email->setMailHeaders(['From' => EMAIL_FROM]);
-            $email->addItem(new \Ease\Html\Div("Právě jste byl/a zaregistrován/a do Aplikace clientzone s těmito přihlašovacími údaji:\n"));
-            $email->addItem(new \Ease\Html\Div(' Login: '.$newOUser->GetUserLogin()."\n"));
-            $email->addItem(new \Ease\Html\Div(' Heslo: '.$_POST['password']."\n"));
+            $email->addItem(new \Ease\Html\DivTag("Právě jste byl/a zaregistrován/a do Aplikace clientzone s těmito přihlašovacími údaji:\n"));
+            $email->addItem(new \Ease\Html\DivTag(' Login: '.$newOUser->GetUserLogin()."\n"));
+            $email->addItem(new \Ease\Html\DivTag(' Heslo: '.$_POST['password']."\n"));
             $email->send();
 
             $email = $oPage->addItem(new \Ease\Mailer(SEND_INFO_TO,
                     sprintf(_('New Registration: %s'),
                         $newOUser->GetUserLogin())));
             $email->setMailHeaders(['From' => EMAIL_FROM]);
-            $email->addItem(new \Ease\Html\Div(_("New Registered User")));
-            $email->addItem(new \Ease\Html\Div('Login: '.$newOUser->GetUserLogin()));
+            $email->addItem(new \Ease\Html\DivTag(_("New Registered User")));
+            $email->addItem(new \Ease\Html\DivTag('Login: '.$newOUser->GetUserLogin()));
             $email->send();
 
             \Ease\Shared::user($newOUser)->loginSuccess();
@@ -162,7 +162,7 @@ $regForm->addInput(new \Ease\Html\InputPasswordTag('confirmation'),
 $regForm->addInput(new \Ease\Html\InputTextTag('email_address'),
     _('email address').' *');
 
-$regForm->addItem(new \Ease\Html\Div(new \Ease\Html\InputSubmitTag('Register',
+$regForm->addItem(new \Ease\Html\DivTag(new \Ease\Html\InputSubmitTag('Register',
             _('Register'),
             ['title' => _('Sign On'), 'class' => 'btn btn-success'])));
 
