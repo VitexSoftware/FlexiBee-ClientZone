@@ -10,16 +10,11 @@ namespace ClientZone;
  */
 require_once 'includes/Init.php';
 
-$oPage->onlyForUser();
-
-$address_id = $oPage->getRequestValue('id');
-if (!strstr($address_id, 'code:')) {
-    $address_id = intval($address_id);
-}
+$oPage->onlyForLogged();
 
 $address = Engine::doThings($oPage);
 if (is_null($address)) {
-    $address = new \FlexiPeeHP\Adresar($address_id,
+    $address = new \FlexiPeeHP\Adresar($oUser->adresar->getRecordIdent(),
         ['defaultUrlParams' => ['relations' => 'kontakt']]);
 }
 
@@ -34,8 +29,7 @@ $oPage->addItem(new ui\PageTop(_('Address').': '.$address->getDataValue('nazev')
 
 $addressRow = new \Ease\TWB\Row();
 $infoColumn = $addressRow->addColumn(4,
-    [new ui\ZewlScoreLabel($address), new ui\InvoicesOfAddresButton($address), new ui\LabelSwitches($address)]);
-
+    [/* new ui\ZewlScoreLabel($address), */new ui\InvoicesOfAddresButton($address)]);
 
 
 switch ($oPage->getRequestValue('action')) {

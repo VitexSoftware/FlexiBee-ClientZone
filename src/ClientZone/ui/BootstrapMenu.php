@@ -71,7 +71,9 @@ class BootstrapMenu extends \Ease\TWB\Navbar
                 }
 
                 $this->addMenuItem($userMenu.'
-<li><a href="changecustpw.php">'.\Ease\TWB\Part::GlyphIcon('lock').' '._('Password change').'</a></li>
+<li><a href="myaccount.php">'.\Ease\TWB\Part::GlyphIcon('tent').' '._('My Account').'</a></li>
+<li><a href="mycontact.php">'.\Ease\TWB\Part::GlyphIcon('user').' '._('My Contact').'</a></li>
+<li><a href="changepassword.php">'.\Ease\TWB\Part::GlyphIcon('lock').' '._('Password change').'</a></li>
 <li class="divider"></li>
 <li><a href="logout.php">'.\Ease\TWB\Part::GlyphIcon('off').' '._('Sign Out').'</a></li>
 </ul>

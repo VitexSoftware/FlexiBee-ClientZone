@@ -1,6 +1,6 @@
 {
-    "name": "vitexsoftware/clientzone",
-    "description": "eShop for FlexiBee",
+    "name": "deb/clientzone",
+    "description": "ClientZone for FlexiBee",
     "version": "1.0",
     "authors": [
         {
@@ -12,11 +12,10 @@
         "vendor-dir": "/var/lib/clientzone"
     },
     "require": {
-        "php": ">= 5.6",
-        "flexipeehp": "*",
-        "ease-framework": "*",
-        "ease-bricks": "*",
-        "flexipeehp-bricks": "*"
+        "deb/flexipeehp": "*",
+        "deb/ease-framework": "*",
+        "deb/ease-bricks": "*",
+        "deb/flexipeehp-bricks": "*"
     },
     "autoload": {
         "psr-4": {

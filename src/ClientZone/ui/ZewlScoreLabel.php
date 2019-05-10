@@ -12,7 +12,7 @@ class ZewlScoreLabel extends \Ease\TWB\Label
 
     public function __construct($address)
     {
-        $engine = new \ClientZone\Upominac();
+        $engine    = new \FlexiPeeHP\Bricks\Upominac();
         $zewlScore = $engine->getCustomerScore($address->getMyKey());
 
         switch ($zewlScore) {

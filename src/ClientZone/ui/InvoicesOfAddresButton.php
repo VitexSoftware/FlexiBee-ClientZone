@@ -22,7 +22,7 @@ class InvoicesOfAddresButton extends \Ease\TWB\LinkButton
      */
     public function __construct($address)
     {
-        parent::__construct('customerorders.php?address='.$address,
-            _('Customer Invoices'), 'info');
+        parent::__construct('myorders.php?address='.$address,
+            _('Invoices for me'), 'info');
     }
 }
