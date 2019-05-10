@@ -8,5 +8,6 @@
     "ALLOW_REGISTER": "true",
     "SHOW_PRICELIST": "true",
     "DEBUG": "false",
+    "CONFIGURED": "false",
     "EASE_LOGGER": "syslog"                                                                                                       
 }

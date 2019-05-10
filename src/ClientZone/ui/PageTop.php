@@ -3,7 +3,7 @@
  * clientzone - Vršek stránky.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
- * @copyright  2017 VitexSoftware v.s.cz
+ * @copyright  2017-2019 VitexSoftware v.s.cz
  */
 
 namespace ClientZone\ui;
@@ -11,7 +11,7 @@ namespace ClientZone\ui;
 /**
  * Page TOP.
  */
-class PageTop extends \Ease\Html\Div
+class PageTop extends \Ease\Html\DivTag
 {
     /**
      * Titulek stránky.

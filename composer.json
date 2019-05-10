@@ -8,11 +8,11 @@
             "email": "info@vitexsoftware.cz"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
-        "php": ">= 5.5.9",
         "spoje.net/flexipeehp": "dev-master",
         "vitexsoftware/ease-framework": "dev-master",
-        "robmorgan/phinx": "^0.6.4",
+        "robmorgan/phinx": "*",
         "vitexsoftware/ease-bricks": "dev-master",
         "vitexsoftware/flexipeehp-bricks": "dev-master"
     },

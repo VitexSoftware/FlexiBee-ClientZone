@@ -63,14 +63,14 @@ class WebPage extends \Ease\TWB\WebPage
      */
     function addPageColumns()
     {
-        $row = $this->container->addItem(new \Ease\Html\Div(null,
+        $row = $this->container->addItem(new \Ease\Html\DivTag(null,
             ['class' => 'row']));
 
-        $this->columnI   = $row->addItem(new \Ease\Html\Div(null,
+        $this->columnI   = $row->addItem(new \Ease\Html\DivTag(null,
             ['class' => 'col-md-4']));
-        $this->columnII  = $row->addItem(new \Ease\Html\Div(null,
+        $this->columnII  = $row->addItem(new \Ease\Html\DivTag(null,
             ['class' => 'col-md-4']));
-        $this->columnIII = $row->addItem(new \Ease\Html\Div(null,
+        $this->columnIII = $row->addItem(new \Ease\Html\DivTag(null,
             ['class' => 'col-md-4']));
     }
 

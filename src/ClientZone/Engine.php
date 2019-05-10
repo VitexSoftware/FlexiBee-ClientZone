@@ -1,6 +1,6 @@
 <?php
 /**
- * DBFinance - databázový objekt.
+ * ClientZone - databázový objekt.
  *
  * @author     Vítězslav Dvořák <vitex@murka.cz>
  * @copyright  2017 VitexSoftware v.s.cz

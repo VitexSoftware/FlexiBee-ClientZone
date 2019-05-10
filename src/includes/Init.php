@@ -28,6 +28,12 @@ if (\Ease\Shared::isCli()) {
 } else {
     /* @var $oPage ui\WebPage */
     $oPage = new ui\WebPage();
+
+    if (!strstr(ui\WebPage::phpSelf(), 'setup.php')) {
+        if (empty($shared->getConfigValue('FLEXIBEE_URL')) || !$shared->getConfigValue('CONFIGURED')) {
+            $oPage->redirect('setup.php');
+        }
+    }
 }
 
 
