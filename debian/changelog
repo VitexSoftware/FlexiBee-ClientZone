@@ -1,3 +1,9 @@
+clientzone (1.1) UNRELEASED; urgency=medium
+
+  * Final Rename Composer Package in Debian to be Composer 2.0 valid
+
+ -- Vítězslav Dvořák <vitex@develoid.jinonice.czf>  Fri, 15 Mar 2019 16:47:03 +0100
+
 clientzone (1.0) experimental; urgency=medium
 
   [ Vítězslav Dvořák ]

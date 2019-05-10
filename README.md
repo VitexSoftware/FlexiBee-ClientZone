@@ -95,7 +95,11 @@ Image pro docker obsahuje jádro debianu a php-fpm na portu 9000
 Konfigurace:
 ------------
 
-Aplikace se snaží načíst konfigurační soubor z /etc/flexibee/clientzone.json
+Pokud není nastaven klíč **FLEXIBEE_URL** nebo klíč **CONFIGURED** není "yes" je 
+provedeno přesměrování na stránku setup.php. Zde je formulář po jehož uložení se
+vytvoří konfigurační soubor /etc/flexibee/clientzone.json.
+
+Tento konfigurační soubor se aplikace snaží načíst:
 
 ```json
 {                                                                                                                                          

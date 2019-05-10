@@ -14,17 +14,52 @@ namespace ClientZone\ui;
  */
 class SetupForm extends \FlexiPeeHP\ui\ConnectionForm
 {
+    public $urlField = 'FLEXIBEE_URL';
+
+    /**
+     * FlexiBee User Input name
+     * @var string eg. winstrom
+     */
+    public $usernameField = 'FLEXIBEE_LOGIN';
+
+    /**
+     * FlexiBee Password Input name
+     * @var string eg. winstrom
+     */
+    public $passwordField = 'FLEXIBEE_PASSWORD';
+
+    /**
+     * FlexiBee Company Input name
+     * @var string eg. demo_s_r_o_
+     */
+    public $companyField = 'FLEXIBEE_COMPANY';
+
+    /**
+     * 
+     * @param string $formAction
+     * @param string $formMethod
+     * @param array  $tagProperties
+     */
     public function __construct($formAction = 'setup.php', $formMethod = 'post',
                                 $tagProperties = null)
     {
         parent::__construct($formAction, $formMethod, $tagProperties);
 
-        $this->addInput( new \Ease\Html\InputEmailTag('SEND_MAILS_FROM') , _('Send mails From'), 'clientzone@'.$_SERVER['HTTP_HOST'], _('Outgoing emails sender address'));
-        $this->addInput( new \Ease\Html\InputEmailTag('SEND_INFO_TO') , _('Send info To'), _('Your Address').'@'.$_SERVER['HTTP_HOST'], _('Where to send info about new orderers'));
+        
+        $this->addInput(new \Ease\Html\InputEmailTag('SEND_MAILS_FROM'),
+            _('Send mails From'), 'clientzone@'.$_SERVER['HTTP_HOST'],
+            _('Outgoing emails sender address'));
+        $this->addInput(new \Ease\Html\InputEmailTag('SEND_INFO_TO'),
+            _('Send info To'), _('Your Address').'@'.$_SERVER['HTTP_HOST'],
+            _('Where to send info about new orderers'));
 //        $this->addInput( new \Ease\Html\InputEmailTag('EMAIL_FROM') , 'caption', '$placeholder', '$helptext');
 //        $this->addInput( new \Ease\Html\InputEmailTag('EASE_EMAILTO') , 'caption', '$placeholder', '$helptext');
-        $this->addInput( new \Ease\ui\TWBSwitch('SUPPRESS_EMAILS') , _('Suppress Emails'), null, _('Do not send any emails'));
-        $this->addInput( new \Ease\ui\TWBSwitch('ALLOW_REGISTER') , _('Allow Sign Up'), null, _('Customer can create new account'));
-        $this->addInput( new \Ease\ui\TWBSwitch('SHOW_PRICELIST') , _('Show Pricelist'), null, _('Show pricelist of items with "eshop" flag or label'));
-    }                                                                                                                                                                                                                         
+        $this->addInput(new \Ease\ui\TWBSwitch('SUPPRESS_EMAILS'),
+            _('Suppress Emails'), null, _('Do not send any emails'));
+        $this->addInput(new \Ease\ui\TWBSwitch('ALLOW_REGISTER'),
+            _('Allow Sign Up'), null, _('Customer can create new account'));
+        $this->addInput(new \Ease\ui\TWBSwitch('SHOW_PRICELIST'),
+            _('Show Pricelist'), null,
+            _('Show pricelist of items with "eshop" flag or label'));
+    }
 }

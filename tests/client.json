@@ -1,11 +1,2 @@
 {
-    "xFLEXIBEE_URL": "https:\/\/flexibee-dev.spoje.net:5434",
-    "xFLEXIBEE_LOGIN": "admin",
-    "xFLEXIBEE_PASSWORD": "Ekhuors3",
-    "xFLEXIBEE_COMPANY": "spoje_net_s_r_o_",  
-
-    "FLEXIBEE_URL": "https:\/\/vitexsoftware.flexibee.eu:5434",                                                                                                                                                                             
-    "FLEXIBEE_LOGIN": "demo",                                                                                                                                                                                                               
-    "FLEXIBEE_PASSWORD": "Wrac1osImKens~",                                                                                                                                                                                                  
-    "FLEXIBEE_COMPANY": "demo"
 }
