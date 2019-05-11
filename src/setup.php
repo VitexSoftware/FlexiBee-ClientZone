@@ -10,13 +10,25 @@ namespace ClientZone;
  */
 require_once 'includes/Init.php';
 
-$cfg = new Configurator('../settings-local.json');
+if (!empty($shared->getConfigValue('CONFIGURED'))) {
+    die(_('Already Configured'));
+}
+
+
+$cfg = new Configurator('../clientzone.json', $shared->configuration);
 if ($oPage->isPosted()) {
-    $cfg->takeData($_POST);
+    $cfg->takeData($cfg->processForm($_POST));
     $cfg->publish();
-    $configSaved = $cfg->saveData();
+    $configSaved = $cfg->saveConfig();
 } else {
-//    $cfg->
+    if ($oPage->getRequestValue('CONFIGURED') == 'true') {
+        $cfg->setDataValue('CONFIGURED', true);
+        $configSaved = $cfg->saveConfig();
+        $cfg->addStatusMessage(_('Configuration Finished'),
+            $configSaved ? 'success' : 'error' );
+        $oPage->redirect('index.php');
+    }
+    $configSaved = false;
 }
 
 
@@ -28,28 +40,50 @@ $oPage->addItem(new ui\PageTop(_('ClientZone Setup')));
 
 
 $setupRow = new \Ease\TWB\Row();
-$setupRow->addColumn(8, $cfgForm);
-
+$setupRow->addColumn(4, $cfgForm);
 
 if (!empty($shared->getConfigValue('FLEXIBEE_URL')) &&
     !empty($shared->getConfigValue('FLEXIBEE_LOGIN')) &&
     !empty($shared->getConfigValue('FLEXIBEE_PASSWORD'))
 ) {
-    
+
     $statuser = new \FlexiPeeHP\ui\StatusInfoBox();
 
     $statusBlock = new \Ease\Html\DivTag($statuser);
-    
-    if(($statuser->lastResponseCode == 200) && $configSaved){
-        $statusBlock->addItem( new \Ease\TWB\LinkButton('?CONFIGURED=true', _('Finish Configuration'),'success xs') );
+
+    if (($statuser->lastResponseCode == 200) && $configSaved) {
+
+        $oPage->addCss('.glow {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000073, 0 0 40px #000073, 0 0 50px #000073, 0 0 60px #000073, 0 0 70px #000073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}');
+
+        $statusBlock->addItem(new \Ease\TWB\LinkButton('?CONFIGURED=true',
+                _('Finish Configuration'), 'success btn-lg glow'));
     }
-    
-    $statusBlock->addItem( new \Ease\Html\PreTag( $cfg->getJson() ) );
-    
+
+    $statusBlock->addItem(new \Ease\Html\FieldSet(_('App Config File Preview'),
+            new \Ease\Html\PreTag($cfg->getJson($cfg->getAppData()))));
+
+    $statusBlock->addItem(new \Ease\Html\FieldSet(_('FlexiBee Config File Preview'),
+            new \Ease\Html\PreTag($cfg->getJson($cfg->getFlexiBeeData()))));
+
+
     $setupRow->addColumn(4,
-        new \Ease\Html\FieldSet(_('FlexiBee Connection Status'), $statusBlock  ));
-    
-    
+        new \Ease\Html\FieldSet(_('FlexiBee Connection Status'), $statusBlock));
 } else {
     $setupRow->addColumn(4,
         new \Ease\Html\FieldSet(_('FlexiBee Connection Status'),
@@ -60,6 +94,7 @@ if (!empty($shared->getConfigValue('FLEXIBEE_URL')) &&
 
 $oPage->container->addItem(new \Ease\TWB\Panel(_('FlexiBee setup'), 'warning',
         $setupRow));
+
 
 $oPage->addItem(new ui\PageBottom());
 

@@ -17,9 +17,16 @@ new \Ease\Locale('cs_CZ', '../i18n', 'clientzone');
 
 session_start();
 
-$shared = \Ease\Shared::instanced();
-$shared->loadConfig('../tests/clientzone.json', true);
-$shared->loadConfig('../tests/client.json', true);
+$shared  = \Ease\Shared::instanced();
+$inSetup = strstr(ui\WebPage::phpSelf(), 'setup.php');
+
+if (file_exists('/etc/flexibee/client.json')) {
+    $shared->loadConfig('/etc/flexibee/client.json', !$inSetup);
+}
+
+if (file_exists('../clientzone.json')) {
+    $shared->loadConfig('../clientzone.json', !$inSetup);
+}
 
 if (\Ease\Shared::isCli()) {
     if (!defined('EASE_LOGGER')) {
@@ -29,7 +36,7 @@ if (\Ease\Shared::isCli()) {
     /* @var $oPage ui\WebPage */
     $oPage = new ui\WebPage();
 
-    if (!strstr(ui\WebPage::phpSelf(), 'setup.php')) {
+    if (!$inSetup) {
         if (empty($shared->getConfigValue('FLEXIBEE_URL')) || !$shared->getConfigValue('CONFIGURED')) {
             $oPage->redirect('setup.php');
         }

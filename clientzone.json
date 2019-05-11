@@ -1,0 +1,12 @@
+{
+    "SEND_MAILS_FROM": "clientzone@localhost",
+    "SEND_INFO_TO": "info@vitexsoftware.cz",
+    "EMAIL_FROM": null,
+    "EASE_EMAILTO": null,
+    "SUPPRESS_EMAILS": true,
+    "ALLOW_REGISTER": true,
+    "SHOW_PRICELIST": true,
+    "DEBUG": false,
+    "CONFIGURED": true,
+    "EASE_LOGGER": null
+}

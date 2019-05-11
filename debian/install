@@ -8,7 +8,6 @@ src/js/*.js		usr/share/clientzone/js
 #src/js/msdropdown/*.js	usr/share/clientzone/js/msdropdown
 #src/img/*		usr/share/clientzone/img
 src/images/*		usr/share/clientzone/images
-tests/clientzone.json 	etc/flexibee
 src/includes/Init.php	usr/share/clientzone/includes
 src/ClientZone/*.php	usr/share/clientzone/ClientZone
 src/ClientZone/ui/*.php	usr/share/clientzone/ClientZone/ui

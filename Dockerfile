@@ -1,9 +1,8 @@
-#FROM debian:latest
-FROM bitnami/php-fpm:7.2-debian-9
+FROM debian:latest
 
 MAINTAINER Vítězslav Dvořák <info@vitexsoftware.cz>
 
-RUN apt update;  apt-get install -my wget gnupg dpkg-dev debconf unzip ssmtp
+RUN apt update;  apt-get install -my wget gnupg dpkg-dev debconf unzip ssmtp libapache2-mod-php
 
 ADD clientzone_*_all.deb /repo/clientzone_all.deb
 #RUN gdebi -n /tmp/clientzone_all.deb
@@ -17,11 +16,18 @@ RUN echo deb http://v.s.cz/ stable main | tee /etc/apt/sources.list.d/vitexsoftw
 RUN apt update; DEBIAN_FRONTEND="noninteractive" apt-get -y --allow-unauthenticated install clientzone
 #    DEBCONF_DEBUG="developer" 
 
-RUN rm -rfv /app ; ln -s /usr/share/clientzone /app ;
+RUN chown www-data:www-data /etc/flexibee/clientzone.json /etc/flexibee/client.json
 RUN composer require pear/mail -d /usr/share/clientzone/
 RUN composer require pear/mail_mime -d /usr/share/clientzone/
+RUN rm /var/www/html/index.html
+ADD Docker/index.php /var/www/html/index.php
+COPY Docker/mail.ini   /etc/php/7.0/conf.d/mail.ini
+COPY Docker/ssmtp.conf /etc/ssmtp/ssmtp.conf
 
-EXPOSE 9000
+WORKDIR /usr/share/clientzone
 
-WORKDIR /app
-CMD [ "php-fpm", "-F", "--pid", "/opt/bitnami/php/tmp/php-fpm.pid", "-y", "/opt/bitnami/php/etc/php-fpm.conf" ]
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+EXPOSE 80
+CMD ["/usr/sbin/apachectl","-DFOREGROUND"]

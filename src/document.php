@@ -20,7 +20,11 @@ $document = new \FlexiPeeHP\FlexiBeeRO(is_numeric($id) ? intval($id) : $id,
 
 $oPage->addItem(new ui\PageTop($document->getEvidence().' '.$document));
 
-$oPage->container->addItem(new ui\EmbedResponsivePDF('getpdf.php?evidence='.$document->getEvidence().'&id='.$document->getMyKey().'&embed=true'));
+$embed = new \FlexiPeeHP\ui\EmbedResponsivePDF($document);
+$embed->setTagCss(['min-height'=>'100vh','width'=>'100%']);
+
+$oPage->container->addItem(new \Ease\Html\DivTag($embed,
+        ['style' => 'width: 100%; height: 100%']));
 
 $oPage->addItem(new ui\PageBottom());
 

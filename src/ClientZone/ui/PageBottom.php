@@ -58,7 +58,7 @@ class PageBottom extends \Ease\Html\FooterTag
             _('Issues')));
 
         $colG = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $colG->addItem(_('Version').': '.$appInfo->version.' '.'&copy; 2017 <a href="https://vitexsoftware.cz/">Vitex Software</a>');
+        $colG->addItem(_('Version').': '.$appInfo->version.' '.'&copy; 2017-2019 <a href="https://vitexsoftware.cz/">Vitex Software</a>');
 
         $this->addItem($rowFluid1);
     }

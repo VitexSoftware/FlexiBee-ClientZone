@@ -7,7 +7,7 @@ override_dh_install:
 	dh_install
 	sed -i -e 's/..\//.\//g' debian/clientzone/usr/share/clientzone/about.php
 	sed -i -e 's/..\/vendor/\/var\/lib\/clientzone/g' debian/clientzone/usr/share/clientzone/includes/Init.php
-	sed -i -e 's/..\/tests/\/etc\/flexibee/g' debian/clientzone/usr/share/clientzone/includes/Init.php
+	sed -i -e 's/..\/clientzone.json/\/etc\/flexibee\/clientzone.json/g' debian/clientzone/usr/share/clientzone/includes/Init.php
+	sed -i -e 's/..\/clientzone.json/\/etc\/flexibee\/clientzone.json/g' debian/clientzone/usr/share/clientzone/setup.php
 	sed -i -e 's/..\/i18n/\/usr\/share\/locale/g' debian/clientzone/usr/share/clientzone/includes/Init.php
 	./debian/fixversion.sh
-

@@ -11,12 +11,6 @@ namespace ClientZone;
 require_once 'includes/Init.php';
 $process = false;
 
-if (\Ease\Shared::db()->queryToCount('SELECT * FROM user')) {
-    $oPage->onlyForAdmin();
-} else {
-    $oPage->addStatusMessage('Please register first Admin user');
-}
-
 $firstname = $oPage->getRequestValue('firstname');
 $lastname  = $oPage->getRequestValue('lastname');
 
@@ -97,30 +91,22 @@ if ($oPage->isPosted()) {
 
         if (!is_null($userID)) {
             $newOUser->setMyKey($userID);
-            if ($userID == 1) {
-                $newOUser->setSettingValue('admin', true);
-                $oPage->addStatusMessage(_('Admin Account Created'), 'success');
-                $newOUser->saveToSQL();
-            } else {
-                $oPage->addStatusMessage(_('User Account Created'), 'success');
-            }
-
+            $oPage->addStatusMessage(_('User Account Created'), 'success');
             $newOUser->loginSuccess();
 
             $email = $oPage->addItem(new \Ease\Mailer($newOUser->getDataValue('email'),
                     _('Potvrzení registrace')));
             $email->setMailHeaders(['From' => EMAIL_FROM]);
-            $email->addItem(new \Ease\Html\DivTag("Právě jste byl/a zaregistrován/a do Aplikace clientzone s těmito přihlašovacími údaji:\n"));
-            $email->addItem(new \Ease\Html\DivTag(' Login: '.$newOUser->GetUserLogin()."\n"));
-            $email->addItem(new \Ease\Html\DivTag(' Heslo: '.$_POST['password']."\n"));
+            $email->addItem(new \Ease\Html\DivTag(_('ClientZone sign up confirmation').":\n"));
+            $email->addItem(new \Ease\Html\DivTag(_('Username').': '.$newOUser->GetUserLogin()."\n"));
+            $email->addItem(new \Ease\Html\DivTag(_('Password').': '.$_POST['password']."\n"));
             $email->send();
 
             $email = $oPage->addItem(new \Ease\Mailer(SEND_INFO_TO,
-                    sprintf(_('New Registration: %s'),
-                        $newOUser->GetUserLogin())));
+                    sprintf(_('New Registration: %s'), $newOUser->GetUserLogin())));
             $email->setMailHeaders(['From' => EMAIL_FROM]);
             $email->addItem(new \Ease\Html\DivTag(_("New Registered User")));
-            $email->addItem(new \Ease\Html\DivTag('Login: '.$newOUser->GetUserLogin()));
+            $email->addItem(new \Ease\Html\DivTag(_('Username').': '.$newOUser->GetUserLogin()));
             $email->send();
 
             \Ease\Shared::user($newOUser)->loginSuccess();
@@ -128,8 +114,7 @@ if ($oPage->isPosted()) {
             $oPage->redirect('index.php');
             exit;
         } else {
-            $oPage->addStatusMessage(_('Zápis do databáze se nezdařil!'),
-                'error');
+            $oPage->addStatusMessage(_('Cannot create new account'), 'error');
             $email = $oPage->addItem(new \Ease\Mail(constant('SEND_ORDERS_TO'),
                     'Registrace uzivatel se nezdařila'));
             $email->addItem(new \Ease\Html\DivTag('Fegistrace',
@@ -154,9 +139,9 @@ $regForm->addInput(new \Ease\Html\InputTextTag('firstname', $firstname),
 $regForm->addInput(new \Ease\Html\InputTextTag('lastname', $lastname),
     _('Lastname'));
 
-$regForm->addInput(new \Ease\Html\InputTextTag('login'),
-    _('Login').' *');
-$regForm->addInput(new \Ease\Html\InputPasswordTag('password'), _('password').' *');
+$regForm->addInput(new \Ease\Html\InputTextTag('login'), _('Login').' *');
+$regForm->addInput(new \Ease\Html\InputPasswordTag('password'),
+    _('password').' *');
 $regForm->addInput(new \Ease\Html\InputPasswordTag('confirmation'),
     _('Password Confirmation').' *');
 $regForm->addInput(new \Ease\Html\InputTextTag('email_address'),

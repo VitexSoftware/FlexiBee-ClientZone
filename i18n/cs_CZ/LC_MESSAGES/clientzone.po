@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-08-02 17:04+0200\n"
-"PO-Revision-Date: 2018-08-03 10:29+0200\n"
+"POT-Creation-Date: 2019-05-11 13:01+0200\n"
+"PO-Revision-Date: 2019-05-11 13:02+0200\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
@@ -16,27 +16,15 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../src\n"
 "X-Poedit-SearchPathExcluded-0: ../vendor\n"
 
-#: ../src/ClientZone/Customer.php:209
-msgid "missing login"
-msgstr "chybějící login"
-
-#: ../src/ClientZone/Customer.php:214
-msgid "missing password"
-msgstr "chybějící heslo"
-
-#: ../src/ClientZone/Customer.php:225
+#: ../src/ClientZone/Configurator.php:158
 #, php-format
-msgid "Multiplete ContactID"
-msgstr "Vícenásobné ID kontaktu"
+msgid "Configuration file %s was saved"
+msgstr "Konfigurační soubor %s byl uložen"
 
-#: ../src/ClientZone/Customer.php:228
-msgid "Using the first one"
-msgstr "Používám první"
-
-#: ../src/ClientZone/Customer.php:269
+#: ../src/ClientZone/Configurator.php:162
 #, php-format
-msgid "Sign in %s all ok"
-msgstr "Přihlšení %s vše ok"
+msgid "Configuration file %s was not saved"
+msgstr "Konfigurační soubor %s nebyl uložen"
 
 #: ../src/ClientZone/DataGrid.php:197
 msgid "Přidat"
@@ -97,41 +85,6 @@ msgstr " %s %s byl smazán "
 msgid " %s %s nebyl smazán "
 msgstr " %s %s nebyl smazán "
 
-#: ../src/ClientZone/FlexiBeeStatus.php:39
-msgid "Zvolená firma neexistuje"
-msgstr ""
-
-#: ../src/ClientZone/FlexiBeeStatus.php:43
-msgid "Chyba komunikace"
-msgstr "Chyba komunikace"
-
-#: ../src/ClientZone/HookReciever.php:74
-#, php-format
-msgid "Change version %s already processed"
-msgstr "Verze změny %s byla již zpracována"
-
-#: ../src/ClientZone/HookReciever.php:105
-#, php-format
-msgid "Handler Class %s does not exist"
-msgstr "Třída pro zpracování %s neexistuje"
-
-#: ../src/ClientZone/HookReciever.php:127
-msgid "Empty WebHook request"
-msgstr "Webhook vrátil prázdnou odezvu"
-
-#: ../src/ClientZone/HookReciever.php:151
-msgid "Last Processed Change ID Saving Failed"
-msgstr "Ukládání posledního zpracovaného ID změny selhalo"
-
-#: ../src/ClientZone/HookReciever.php:155
-#, php-format
-msgid "Last Processed Change ID #%s Saved"
-msgstr ""
-
-#: ../src/ClientZone/HookReciever.php:174
-msgid "Last Processed Change ID Loading Failed"
-msgstr ""
-
 #: ../src/ClientZone/Order.php:68
 msgid "Please wait while our salesman contact you."
 msgstr "Prosíme vyčkejte než vás zkontaktuje náš obchodník"
@@ -186,129 +139,6 @@ msgstr "Produkt nebyl zvolen"
 msgid "Item %s was settled without action handled in OrderPlugin code"
 msgstr "Položka %s byla zaplacena bez akce v kódu objednávkového pluginu"
 
-#: ../src/ClientZone/Upominac.php:65
-msgid "Getting clients"
-msgstr "Získávám zákazníky"
-
-#: ../src/ClientZone/Upominac.php:69
-#, php-format
-msgid "%s Clients Found"
-msgstr "%s Klientů nalezeno"
-
-#: ../src/ClientZone/Upominac.php:70
-msgid "Getting debts"
-msgstr "Získávám pohledávky"
-
-#: ../src/ClientZone/Upominac.php:92
-#, php-format
-msgid "%s Debts Found"
-msgstr "%s Pohledávek nalezeno"
-
-#: ../src/ClientZone/Upominac.php:119 ../src/ClientZone/Upominac.php:122
-#, php-format
-msgid "Clear %s Remind labels"
-msgstr "Čistím %s štítky upomínek"
-
-#: ../src/ClientZone/Upominac.php:140
-#, php-format
-msgid "%d clients to remind process"
-msgstr "%d klientů k upomenutí zpracováno"
-
-#: ../src/ClientZone/Upominac.php:146
-#, php-format
-msgid "(%d / %d) #%s LMS# %s %s "
-msgstr "(%d / %d) #%s LMS# %s %s "
-
-#: ../src/ClientZone/Upominac.php:158
-#, php-format
-msgid "User %s not present in LMS; cannot set dashboard "
-msgstr "Uživatel %s nemá LMS id; nemohu nastavit dešbord"
-
-#: ../src/ClientZone/Upominac.php:200
-#, php-format
-msgid "Dashboard for: %d "
-msgstr "Dašbord pro: %d "
-
-#: ../src/ClientZone/Upominac.php:209
-#, php-format
-msgid "Disconnect for: %d "
-msgstr "Odpojení pro %d "
-
-#: ../src/ClientZone/Upominac.php:239
-msgid "Invoice locked: skipping process"
-msgstr "Faktura zamknutá přeskakuji zpracování"
-
-#: ../src/ClientZone/Upominac.php:292
-#, php-format
-msgid "Invoice %s remind %s date saved"
-msgstr "Faktura %s  Datum umomínky %s uloženo"
-
-#: ../src/ClientZone/Upominac.php:295
-#, php-format
-msgid "Invoice %s remind %s date save failed"
-msgstr "Faktura %s chyba ukládání data upomínky %s"
-
-#: ../src/ClientZone/Upominac.php:301
-msgid "Remind send disbled"
-msgstr "Odesílání pohledávek zakázáno"
-
-#: ../src/ClientZone/Upominac.php:304
-#, php-format
-msgid "Remind %d already sent"
-msgstr "Upomínka  %d  byla již odeslána"
-
-#: ../src/ClientZone/Upominac.php:308
-msgid "No debts to remind"
-msgstr "Žádne pohledávky k upomenutí"
-
-#: ../src/ClientZone/Upominac.php:317
-#, php-format
-msgid "Invoice %s locked again"
-msgstr "Faktura %s byla znovu uzamknuta"
-
-#: ../src/ClientZone/Upominac.php:320
-#, php-format
-msgid "Invoice %s locking failed"
-msgstr "Faktura %s chyba znovuzamykání"
-
-#: ../src/ClientZone/Upominac.php:398
-msgid "UPOMINKA NEBYLA ODESLANA!!!!"
-msgstr ""
-
-#: ../src/ClientZone/Upominac.php:402
-#, php-format
-msgid "Set Label %s "
-msgstr "Štítek %s  nastaven"
-
-#: ../src/ClientZone/Upominac.php:413
-#, php-format
-msgid "Set dashboards for %d customers"
-msgstr "Nastavuji dešbord pro %d zákazníků"
-
-#: ../src/ClientZone/Upominac.php:428
-#, php-format
-msgid "Disconnect %d customers"
-msgstr "Odpojuji %d zákazníků"
-
-#: ../src/ClientZone/Upominac.php:443
-#, php-format
-msgid "Connect %d customers"
-msgstr "Připojeno %d klientů"
-
-#: ../src/ClientZone/Upominka.php:70
-#, php-format
-msgid ""
-"%s \n"
-"\n"
-"-----------------------\n"
-" celkem za %s,-"
-msgstr ""
-
-#: ../src/ClientZone/Upominka.php:85
-#, php-format
-msgid "Klient %s nema email - HELPDESK RESIT %s !!!"
-msgstr ""
-
 #: ../src/ClientZone/User.php:111 ../src/ClientZone/User.php:116
 #: ../src/ClientZone/User.php:186
 msgid "Delete"
@@ -322,49 +152,6 @@ msgstr "Jste si jistý  %s ?"
 #: ../src/ClientZone/User.php:188 ../src/ClientZone/ui/AdminPricelist.php:72
 msgid "Edit"
 msgstr "Upravit"
-
-#: ../src/ClientZone/WebHookHandler.php:129
-#: ../src/ClientZone/WebHookHandler.php:138
-msgid "No Update Action Defined"
-msgstr "Akce při aktualizaci nebyla definována"
-
-#: ../src/ClientZone/WebHookHandler.php:147
-msgid "No Delete Action Defined"
-msgstr "Akce při smazání nebyla definována"
-
-#: ../src/ClientZone/ZalohyZeSmluvDoPohledavek.php:142
-#, php-format
-msgid "Pohledávka %d vytvořena"
-msgstr ""
-
-#: ../src/ClientZone/ZalohyZeSmluvDoPohledavek.php:150
-#, php-format
-msgid "Bylo vygenerováno %s ostatních pohledávek z %s zálohových faktur"
-msgstr ""
-
-#: ../src/ClientZone/ZalohyZeSmluvDoPohledavek.php:165
-#: ../src/ClientZone/ZalohyZeSmluvDoZavazku.php:165
-#, php-format
-msgid "Nepodařilo se smazat zálohovou fakturu %s"
-msgstr ""
-
-#: ../src/ClientZone/ZalohyZeSmluvDoPohledavek.php:169
-msgid "Zálohové faktury převedené na pohledávky byly smazány"
-msgstr ""
-
-#: ../src/ClientZone/ZalohyZeSmluvDoZavazku.php:142
-#, php-format
-msgid "Závazek %d vytvořen"
-msgstr ""
-
-#: ../src/ClientZone/ZalohyZeSmluvDoZavazku.php:150
-#, php-format
-msgid "Bylo vygenerováno %s ostatních závazků z %s zálohových faktur"
-msgstr ""
-
-#: ../src/ClientZone/ZalohyZeSmluvDoZavazku.php:169
-msgid "Zálohové faktury převedené na závazky byly smazány"
-msgstr ""
 
 #: ../src/ClientZone/orderplugins/Common.php:37
 msgid "Common item"
@@ -417,7 +204,7 @@ msgstr "Kód"
 
 #: ../src/ClientZone/ui/AddressForm.php:29 ../src/ClientZone/ui/CartForm.php:36
 #: ../src/ClientZone/ui/KontaktForm.php:27 ../src/ClientZone/ui/UserForm.php:27
-#: ../src/newcustomer.php:161
+#: ../src/newcustomer.php:162
 msgid "Name"
 msgstr "Jméno"
 
@@ -427,7 +214,7 @@ msgstr "Emailová adresa je prázdná"
 
 #: ../src/ClientZone/ui/AddressForm.php:36
 #: ../src/ClientZone/ui/KontaktForm.php:31 ../src/ClientZone/ui/UserForm.php:31
-#: ../src/custmpassrecv.php:78
+#: ../src/passwordrecovery.php:78
 msgid "Email"
 msgstr "Email"
 
@@ -439,8 +226,8 @@ msgid "Uložit"
 msgstr "Uložit"
 
 #: ../src/ClientZone/ui/AdminPricelist.php:43
-#: ../src/ClientZone/ui/MainMenu.php:63 ../src/ClientZone/ui/Pricelist.php:43
-#: ../src/index.php:21 ../src/index.php:34 ../src/pricelist.php:13
+#: ../src/ClientZone/ui/Pricelist.php:43 ../src/index.php:22
+#: ../src/index.php:36 ../src/pricelist.php:13
 msgid "Pricelist"
 msgstr "Ceník"
 
@@ -451,13 +238,12 @@ msgid "%s items found"
 msgstr "%s položek nalezeno"
 
 #: ../src/ClientZone/ui/BootstrapMenu.php:44
-#: ../src/ClientZone/ui/BootstrapMenu.php:64
+#: ../src/ClientZone/ui/BootstrapMenu.php:64 ../src/settings.php:15
 msgid "Settings"
 msgstr "Nastavení"
 
 #: ../src/ClientZone/ui/BootstrapMenu.php:53
-#: ../src/ClientZone/ui/BootstrapMenu.php:74 ../src/changecustpw.php:91
-#: ../src/changepassword.php:89
+#: ../src/ClientZone/ui/BootstrapMenu.php:76 ../src/changepassword.php:91
 msgid "Password change"
 msgstr "Změna hesla"
 
@@ -468,46 +254,54 @@ msgid "About"
 msgstr "O aplikaci"
 
 #: ../src/ClientZone/ui/BootstrapMenu.php:56
-#: ../src/ClientZone/ui/BootstrapMenu.php:76
+#: ../src/ClientZone/ui/BootstrapMenu.php:78
 msgid "Sign Out"
 msgstr "Odhlášení"
 
 #: ../src/ClientZone/ui/BootstrapMenu.php:69
-#: ../src/ClientZone/ui/BootstrapMenu.php:88
+#: ../src/ClientZone/ui/BootstrapMenu.php:90
 #: ../src/ClientZone/ui/CartForm.php:30
 msgid "Cart"
 msgstr "Košík"
 
-#: ../src/ClientZone/ui/BootstrapMenu.php:96
-#: ../src/ClientZone/ui/BootstrapMenu.php:103
-#: ../src/ClientZone/ui/FlexiBeeLoginForm.php:24 ../src/custmpassrecv.php:88
-#: ../src/customerlogin.php:33 ../src/flexibeelogin.php:16
+#: ../src/ClientZone/ui/BootstrapMenu.php:74
+msgid "My Account"
+msgstr "Můj účet"
+
+#: ../src/ClientZone/ui/BootstrapMenu.php:75
+msgid "My Contact"
+msgstr "Moje kontaktní informace"
+
+#: ../src/ClientZone/ui/BootstrapMenu.php:98
+#: ../src/ClientZone/ui/BootstrapMenu.php:105
+#: ../src/ClientZone/ui/FlexiBeeLoginForm.php:24 ../src/flexibeelogin.php:16
+#: ../src/login.php:33 ../src/passwordrecovery.php:88
 msgid "Sign In"
 msgstr "Přihlášení"
 
-#: ../src/ClientZone/ui/BootstrapMenu.php:99
+#: ../src/ClientZone/ui/BootstrapMenu.php:101
 #: ../src/ClientZone/ui/FlexiBeeLoginForm.php:20
 #: ../src/ClientZone/ui/FlexiBeeLoginForm.php:22
-#: ../src/ClientZone/ui/KontaktForm.php:37 ../src/createaccount.php:158
+#: ../src/ClientZone/ui/KontaktForm.php:37 ../src/createaccount.php:142
 msgid "Login"
 msgstr "Přihlašovací jméno"
 
-#: ../src/ClientZone/ui/BootstrapMenu.php:100
-#: ../src/ClientZone/ui/KontaktForm.php:39 ../src/changecustpw.php:65
-#: ../src/changepassword.php:66 ../src/custmpassrecv.php:43
-#: ../src/customerlogin.php:55
+#: ../src/ClientZone/ui/BootstrapMenu.php:102
+#: ../src/ClientZone/ui/KontaktForm.php:39 ../src/changepassword.php:65
+#: ../src/createaccount.php:102 ../src/login.php:54
+#: ../src/passwordrecovery.php:43
 msgid "Password"
 msgstr "Heslo"
 
-#: ../src/ClientZone/ui/BootstrapMenu.php:102
+#: ../src/ClientZone/ui/BootstrapMenu.php:104
 msgid "Remeber me"
 msgstr "Pamatuj si mne"
 
-#: ../src/ClientZone/ui/BootstrapMenu.php:104
+#: ../src/ClientZone/ui/BootstrapMenu.php:106
 msgid "Registrace"
 msgstr ""
 
-#: ../src/ClientZone/ui/BootstrapMenu.php:123
+#: ../src/ClientZone/ui/BootstrapMenu.php:125
 msgid "Click to hide messages"
 msgstr "Klikněte pro skrytí zpráv"
 
@@ -570,8 +364,8 @@ msgid "Please enter your Login and Password"
 msgstr "Prosím zadej jméno a heslo"
 
 #: ../src/ClientZone/ui/InvoicesOfAddresButton.php:26
-msgid "Customer Invoices"
-msgstr "Faktury Zákazníka"
+msgid "Invoices for me"
+msgstr "Faktury pro mne"
 
 #: ../src/ClientZone/ui/KontaktForm.php:29 ../src/ClientZone/ui/UserForm.php:29
 msgid "Příjmení"
@@ -589,7 +383,7 @@ msgstr "Mobilní číslo"
 msgid "Open in FlexiBee"
 msgstr "Otevřít ve FlexiBee"
 
-#: ../src/ClientZone/ui/MainMenu.php:60 ../src/customerorders.php:34
+#: ../src/ClientZone/ui/MainMenu.php:60 ../src/myorders.php:17
 msgid "Orders"
 msgstr "Objednávky"
 
@@ -603,7 +397,7 @@ msgstr "Mé objednávky"
 
 #: ../src/ClientZone/ui/MainMenu.php:69
 msgid "ClientZone"
-msgstr ""
+msgstr "ClientZone"
 
 #: ../src/ClientZone/ui/NavBarSearchBox.php:39
 msgid "Hledání"
@@ -688,7 +482,7 @@ msgstr " %s dní po splatnosti"
 
 #: ../src/ClientZone/ui/PageBottom.php:29
 msgid "Other products"
-msgstr ""
+msgstr "Ostatní produkty"
 
 #: ../src/ClientZone/ui/PageBottom.php:45
 msgid "Hosted by"
@@ -712,15 +506,15 @@ msgstr "Verze"
 
 #: ../src/ClientZone/ui/Pricelist.php:50
 msgid "Item name"
-msgstr ""
+msgstr "Jméno položky"
 
 #: ../src/ClientZone/ui/Pricelist.php:52
 msgid "Price without VAT"
-msgstr ""
+msgstr "Cena bez daně"
 
 #: ../src/ClientZone/ui/Pricelist.php:54
 msgid "Price with VAT"
-msgstr ""
+msgstr "Cena s daní"
 
 #: ../src/ClientZone/ui/Pricelist.php:55
 msgid "Actions"
@@ -756,42 +550,53 @@ msgstr "%s záznamů se štítkem %s nalezeno"
 msgid "Uživatel"
 msgstr ""
 
-#: ../src/ClientZone/ui/SettleForm.php:24
-msgid "Zákazník"
-msgstr ""
+#: ../src/ClientZone/ui/SetupForm.php:50
+msgid "Send mails From"
+msgstr "Odesilatel zpráv"
 
-#: ../src/ClientZone/ui/SettleForm.php:25
-msgid "Jaroslav Vomáčka"
-msgstr ""
+#: ../src/ClientZone/ui/SetupForm.php:51
+msgid "Outgoing emails sender address"
+msgstr "Adresa odesilatele odchozích mailů "
 
-#: ../src/ClientZone/ui/SettleForm.php:26
-msgid "Po zadání dvou písmen budou nabídnuty možnosti"
-msgstr ""
+#: ../src/ClientZone/ui/SetupForm.php:53
+msgid "Send info To"
+msgstr "Komu zaslílat informace "
 
-#: ../src/ClientZone/ui/SettleForm.php:30
-msgid "Faktura"
-msgstr ""
+#: ../src/ClientZone/ui/SetupForm.php:53
+msgid "Your Address"
+msgstr "Vaše adresa"
 
-#: ../src/ClientZone/ui/SettleForm.php:31
-msgid "Nejprve vyber Zákazníka"
-msgstr ""
+#: ../src/ClientZone/ui/SetupForm.php:54
+msgid "Where to send info about new orderers"
+msgstr "Kam posílat informace o nových objednávkách"
 
-#: ../src/ClientZone/ui/SettleForm.php:35
-msgid "Kasa"
-msgstr ""
+#: ../src/ClientZone/ui/SetupForm.php:58
+msgid "Suppress Emails"
+msgstr "Potlačit odesílání mailů"
 
-#: ../src/ClientZone/ui/SettleForm.php:40
-msgid "Celkem"
-msgstr ""
+#: ../src/ClientZone/ui/SetupForm.php:58
+msgid "Do not send any emails"
+msgstr "Neodesílat žádné maily"
 
-#: ../src/ClientZone/ui/SettleForm.php:45
-#, fuzzy
-msgid "Popis"
-msgstr "popis"
+#: ../src/ClientZone/ui/SetupForm.php:60
+msgid "Allow Sign Up"
+msgstr "Povolit Registrace"
+
+#: ../src/ClientZone/ui/SetupForm.php:60
+msgid "Customer can create new account"
+msgstr "Zákazník si může vytvořit účet"
+
+#: ../src/ClientZone/ui/SetupForm.php:62
+msgid "Show Pricelist"
+msgstr "Zobrazovat ceník"
+
+#: ../src/ClientZone/ui/SetupForm.php:63
+msgid "Show pricelist of items with \"eshop\" flag or label"
+msgstr "Zobrazit ceník položek s příznakem nebo štítkem \"eshop\""
 
 #: ../src/ClientZone/ui/ToPayItems.php:29
 msgid "Orders to pay"
-msgstr ""
+msgstr "Objednávky k úhradě"
 
 #: ../src/ClientZone/ui/UserForm.php:33
 msgid "Přihlašovací jméno"
@@ -812,22 +617,6 @@ msgstr "Známka bonity"
 #: ../src/about.php:21
 msgid "Vitex Software"
 msgstr "Vitex Software"
-
-#: ../src/adresar.php:33 ../src/kontakt.php:77
-msgid "Address"
-msgstr "Adresa"
-
-#: ../src/adresar.php:48 ../src/kontakt.php:54
-msgid "Delete ?"
-msgstr "Smazat ?"
-
-#: ../src/adresar.php:51 ../src/kontakt.php:57
-msgid "No"
-msgstr "Ne"
-
-#: ../src/adresar.php:53 ../src/kontakt.php:59
-msgid "Yes"
-msgstr "Ano"
 
 #: ../src/bin/InitializeHistory.php:22
 #, php-format
@@ -918,224 +707,123 @@ msgstr "Transakce"
 msgid "Missing product ID"
 msgstr "Chybí ID produktu"
 
-#: ../src/changecustpw.php:51 ../src/changepassword.php:52
+#: ../src/changepassword.php:51
 msgid "User password change"
 msgstr "Změna hesla uživatele"
 
-#: ../src/changecustpw.php:59 ../src/changepassword.php:60
-#: ../src/custmpassrecv.php:33
+#: ../src/changepassword.php:59 ../src/passwordrecovery.php:33
 msgid "Password was changed"
 msgstr "Heslo bylo změněno"
 
-#: ../src/changecustpw.php:62 ../src/changepassword.php:63
+#: ../src/changepassword.php:62
 msgid "Changed password"
 msgstr "Změněné heslo"
 
-#: ../src/changecustpw.php:63 ../src/changepassword.php:64
+#: ../src/changepassword.php:63
 #, php-format
 msgid "Dear user %s, your password was changed to"
 msgstr "Vážený %s, vaše  heslo bylo změněno na"
 
-#: ../src/changecustpw.php:75 ../src/changepassword.php:73
+#: ../src/changepassword.php:75
 msgid "Current password"
 msgstr "Stávající heslo"
 
-#: ../src/changecustpw.php:79 ../src/changepassword.php:77
+#: ../src/changepassword.php:79
 msgid "New Password"
 msgstr "Nové heslo"
 
-#: ../src/changecustpw.php:83 ../src/changepassword.php:81
+#: ../src/changepassword.php:83
 msgid "Password confirm"
 msgstr "Potvrzení hesla"
 
-#: ../src/changecustpw.php:87 ../src/changepassword.php:85
+#: ../src/changepassword.php:87
 msgid "Change password"
 msgstr "Změna hesla"
 
-#: ../src/createaccount.php:45
+#: ../src/createaccount.php:39
 msgid "mail address is too short"
-msgstr ""
+msgstr "mailová adresa je příliš krátká"
 
-#: ../src/createaccount.php:49
+#: ../src/createaccount.php:43
 msgid "Invalid mail address"
-msgstr ""
+msgstr "Chybná mailová adresa"
 
-#: ../src/createaccount.php:56
+#: ../src/createaccount.php:50
 #, php-format
 msgid "Mail addressa  %s is already registered"
-msgstr ""
+msgstr "Mailová adresa %s je již registrována"
 
-#: ../src/createaccount.php:65
+#: ../src/createaccount.php:59
 msgid "Password is too short"
-msgstr ""
+msgstr "Heslo je příliš krátké"
 
-#: ../src/createaccount.php:68
+#: ../src/createaccount.php:62
 msgid "password conntrol do not match"
-msgstr ""
+msgstr "Kontrola hesla nesouhlasí"
 
-#: ../src/createaccount.php:78
+#: ../src/createaccount.php:72
 #, php-format
 msgid "Username %s is already used. Please choose another one."
-msgstr ""
+msgstr "Uživatelské %s jméno je již použito. Prosím zvolte jiné"
 
-#: ../src/createaccount.php:102
-msgid "Admin Account Created"
-msgstr ""
-
-#: ../src/createaccount.php:105
+#: ../src/createaccount.php:94
 msgid "User Account Created"
-msgstr ""
+msgstr "Uživatelský účet byl vytvořen"
 
-#: ../src/createaccount.php:111
+#: ../src/createaccount.php:98
 msgid "Potvrzení registrace"
 msgstr ""
 
-#: ../src/createaccount.php:119
-#, php-format
-msgid "New Registration: %s"
-msgstr ""
+#: ../src/createaccount.php:100
+msgid "ClientZone sign up confirmation"
+msgstr "Potvrzení registrace do ClientZone"
 
-#: ../src/createaccount.php:122
-msgid "New Registered User"
-msgstr ""
-
-#: ../src/createaccount.php:131
-msgid "Zápis do databáze se nezdařil!"
-msgstr ""
-
-#: ../src/createaccount.php:142 ../src/createaccount.php:144
-#: ../src/createaccount.php:167 ../src/customerlogin.php:69
-#: ../src/newcustomer.php:138
-msgid "Sign On"
-msgstr "Registrace"
-
-#: ../src/createaccount.php:153
-msgid "Firstnaname"
-msgstr ""
-
-#: ../src/createaccount.php:155
-msgid "Lastname"
-msgstr ""
-
-#: ../src/createaccount.php:159
-msgid "password"
-msgstr ""
-
-#: ../src/createaccount.php:161
-msgid "Password Confirmation"
-msgstr ""
-
-#: ../src/createaccount.php:163
-msgid "email address"
-msgstr ""
-
-#: ../src/createaccount.php:166
-msgid "Register"
-msgstr ""
-
-#: ../src/custmpassrecv.php:37 ../src/index.php:14
-msgid "clientzone"
-msgstr "clientzone"
-
-#: ../src/custmpassrecv.php:37
-#, php-format
-msgid "New password for %s"
-msgstr "Nové heslo pro %s"
-
-#: ../src/custmpassrecv.php:40
-msgid "Sign On informations was changed:\n"
-msgstr "Přihlašovací údaje byly změněny\n"
-
-#: ../src/custmpassrecv.php:42 ../src/customerlogin.php:52
+#: ../src/createaccount.php:101 ../src/createaccount.php:109
+#: ../src/login.php:51 ../src/passwordrecovery.php:42
 msgid "Username"
 msgstr "Uživatelské jméno"
 
-#: ../src/custmpassrecv.php:55
+#: ../src/createaccount.php:106
 #, php-format
-msgid "unknown email address %s"
-msgstr "Neznámá mailová adresa %s"
+msgid "New Registration: %s"
+msgstr "Nová registrace: %s"
 
-#: ../src/custmpassrecv.php:59
-msgid "Please enter your email."
-msgstr "Prosím zadejte svůj email"
+#: ../src/createaccount.php:108
+msgid "New Registered User"
+msgstr "Nový registrovaný zákazník"
 
-#: ../src/custmpassrecv.php:62 ../src/customerlogin.php:64
-msgid "Lost password recovery"
-msgstr "Obnova ztraceného hesla"
+#: ../src/createaccount.php:117
+msgid "Cannot create new account"
+msgstr "Nemohu vytvořit nový účet"
 
-#: ../src/custmpassrecv.php:72
-msgid ""
-"Forgot your password? Enter your e-mail address you entered during the "
-"registration and we will send you a new one."
-msgstr ""
-"Zapoměli jste heslo ? Vložte svojí e-mailovou adresu kterou jste zadali "
-"během registrace a my vám pošleme nové."
+#: ../src/createaccount.php:127 ../src/createaccount.php:129
+#: ../src/createaccount.php:152 ../src/login.php:70 ../src/newcustomer.php:139
+msgid "Sign On"
+msgstr "Registrace"
 
-#: ../src/custmpassrecv.php:79
-msgid "Send New Password"
-msgstr "Pošli nové heslo"
+#: ../src/createaccount.php:138
+msgid "Firstnaname"
+msgstr "Jméno"
 
-#: ../src/custmpassrecv.php:86
-msgid "Please check your mailbox for new password"
-msgstr "Prosíme zkontrolujte svou poštu pro nové heslo"
+#: ../src/createaccount.php:140
+msgid "Lastname"
+msgstr "Příjmení"
 
-#: ../src/custmpassrecv.php:87
-msgid "and"
-msgstr "a"
+#: ../src/createaccount.php:144
+msgid "password"
+msgstr "heslo"
 
-#: ../src/customerlogin.php:14
-msgid "Please enable cookies in your browser"
-msgstr "Prosím zapněte cookies ve svém prohlížeči"
+#: ../src/createaccount.php:146
+msgid "Password Confirmation"
+msgstr "Potvrzení hesla"
 
-#: ../src/customerlogin.php:17
-msgid "Sign in first please"
-msgstr "Nejprve se prosím přihlašte"
+#: ../src/createaccount.php:148
+msgid "email address"
+msgstr "Mailová adresa"
 
-#: ../src/customerlogin.php:43
-msgid "Welcome to ClientZone"
-msgstr "Vítejte do Klientské Zony pro FlexiBee"
-
-#: ../src/customerlogin.php:47 ../src/index.php:37
-msgid "Sign in"
-msgstr "Přihlášení"
-
-#: ../src/customerlogin.php:54
-msgid "usually your email address"
-msgstr "Obvykle vaše emailová adresa"
-
-#: ../src/customerorders.php:24 ../src/myorders.php:15 ../src/myorders.php:22
-msgid "My Orders"
-msgstr "Mé Objednávky"
-
-#: ../src/customerorders.php:29
-msgid "Invoices"
-msgstr "Faktury"
-
-#: ../src/flexibeeinit.php:15
-msgid "FlexiBee Init"
-msgstr "Inicializace FlexiBee"
-
-#: ../src/flexibeeinit.php:26
-msgid "Changes API Enabled"
-msgstr ""
-
-#: ../src/flexibeeinit.php:28
-msgid "Changes API enabled"
-msgstr ""
-
-#: ../src/flexibeeinit.php:31
-msgid "Changes API disabled"
-msgstr ""
-
-#: ../src/flexibeeinit.php:58
-#, fuzzy, php-format
-msgid "label %s created"
-msgstr "vytvořeno"
-
-#: ../src/flexibeeinit.php:66 ../src/flexibeeinit.php:73
-#, fuzzy, php-format
-msgid "label %s already exists"
-msgstr "Doména adresa %s je již registrována"
+#: ../src/createaccount.php:151
+msgid "Register"
+msgstr "Registrace"
 
 #: ../src/flexibeelogin.php:19
 msgid "I already have an customer number"
@@ -1145,11 +833,19 @@ msgstr "Již mám zákaznické číslo"
 msgid "Wrong call"
 msgstr "Špatné volání"
 
-#: ../src/index.php:24
+#: ../src/index.php:14 ../src/passwordrecovery.php:37
+msgid "clientzone"
+msgstr "clientzone"
+
+#: ../src/index.php:26
 msgid "Order Form"
 msgstr "Objednací formulář"
 
-#: ../src/index.php:40
+#: ../src/index.php:40 ../src/login.php:47
+msgid "Sign in"
+msgstr "Přihlášení"
+
+#: ../src/index.php:45
 msgid "Sign up"
 msgstr "Registrace"
 
@@ -1157,9 +853,45 @@ msgstr "Registrace"
 msgid "Contact"
 msgstr "Kontakt"
 
+#: ../src/kontakt.php:54 ../src/myaccount.php:42
+msgid "Delete ?"
+msgstr "Smazat ?"
+
+#: ../src/kontakt.php:57 ../src/myaccount.php:45
+msgid "No"
+msgstr "Ne"
+
+#: ../src/kontakt.php:59 ../src/myaccount.php:47
+msgid "Yes"
+msgstr "Ano"
+
+#: ../src/kontakt.php:77 ../src/myaccount.php:28
+msgid "Address"
+msgstr "Adresa"
+
 #: ../src/labels.php:21 ../src/labels.php:31
 msgid "Label"
 msgstr "Štítek"
+
+#: ../src/login.php:14
+msgid "Please enable cookies in your browser"
+msgstr "Prosím zapněte cookies ve svém prohlížeči"
+
+#: ../src/login.php:17
+msgid "Sign in first please"
+msgstr "Nejprve se prosím přihlašte"
+
+#: ../src/login.php:43
+msgid "Welcome to ClientZone"
+msgstr "Vítejte do Klientské Zony pro FlexiBee"
+
+#: ../src/login.php:53
+msgid "usually your email address"
+msgstr "Obvykle vaše emailová adresa"
+
+#: ../src/login.php:63 ../src/passwordrecovery.php:62
+msgid "Lost password recovery"
+msgstr "Obnova ztraceného hesla"
 
 #: ../src/logout.php:19
 msgid "Sign Off"
@@ -1177,7 +909,7 @@ msgstr ""
 #: ../src/maildocument.php:29
 #, php-format
 msgid "your document %s is in attachment"
-msgstr ""
+msgstr "váš dokument %s je v příloze"
 
 #: ../src/maildocument.php:31
 msgid "Invoice was sent"
@@ -1186,6 +918,14 @@ msgstr "Faktura byla odeslána"
 #: ../src/maildocument.php:33
 msgid "Mailer does not work"
 msgstr "Pošťák nepracuje"
+
+#: ../src/myorders.php:15
+msgid "My Orders"
+msgstr "Mé Objednávky"
+
+#: ../src/myorders.php:17
+msgid "Invoices"
+msgstr "Faktury"
 
 #: ../src/newcustomer.php:36
 msgid "Human control field is empty"
@@ -1220,84 +960,84 @@ msgstr "Společnost klienta byla zaregistrována"
 msgid "User account created"
 msgstr "Úživatelský účet byl vytvořen"
 
-#: ../src/newcustomer.php:97
+#: ../src/newcustomer.php:98
 msgid "Sign On info"
 msgstr "Přihlašovací údaje"
 
-#: ../src/newcustomer.php:99
+#: ../src/newcustomer.php:100
 msgid "clientzone Account"
 msgstr "Účet clientzone"
 
-#: ../src/newcustomer.php:105
+#: ../src/newcustomer.php:106
 #, php-format
 msgid "New clientzone account: %s"
 msgstr "Nový účet clientzone: %s"
 
-#: ../src/newcustomer.php:108
+#: ../src/newcustomer.php:109
 msgid "New Customer"
 msgstr "Nový zákazník"
 
-#: ../src/newcustomer.php:120
+#: ../src/newcustomer.php:121
 msgid "Error saving Contact"
 msgstr "Chyba ukládání kontaktu"
 
-#: ../src/newcustomer.php:127
+#: ../src/newcustomer.php:128
 msgid "Error saving Company"
 msgstr "Chyba ukládání Firmy"
 
-#: ../src/newcustomer.php:141
+#: ../src/newcustomer.php:142
 msgid "Welcome"
 msgstr "Vítejte"
 
-#: ../src/newcustomer.php:145
+#: ../src/newcustomer.php:146
 msgid "After registering, you will be prompted to order service."
 msgstr "Po registraci vám bude nabídnuta objednávka služeb"
 
-#: ../src/newcustomer.php:146
+#: ../src/newcustomer.php:147
 msgid "All notifications target to your email"
 msgstr "Všechny notifikace směřují na váš mail"
 
-#: ../src/newcustomer.php:162 ../src/newcustomer.php:166
+#: ../src/newcustomer.php:163 ../src/newcustomer.php:167
 msgid "Requied"
 msgstr "Požadováno"
 
-#: ../src/newcustomer.php:166
+#: ../src/newcustomer.php:167
 msgid "Email Address"
 msgstr "Emailová adresa"
 
-#: ../src/newcustomer.php:168
+#: ../src/newcustomer.php:169
 msgid "Telephone number"
 msgstr "Telefoní číslo"
 
-#: ../src/newcustomer.php:171
+#: ../src/newcustomer.php:172
 msgid "Company ID number"
 msgstr "IČO"
 
-#: ../src/newcustomer.php:171 ../src/newcustomer.php:173
+#: ../src/newcustomer.php:172 ../src/newcustomer.php:174
 msgid "Only for company"
 msgstr "Pouze pro firmy"
 
-#: ../src/newcustomer.php:173
+#: ../src/newcustomer.php:174
 msgid "Company VAT number"
 msgstr "DIČ"
 
-#: ../src/newcustomer.php:175
+#: ../src/newcustomer.php:176
 msgid "The Cube"
 msgstr "Krychle"
 
-#: ../src/newcustomer.php:176
+#: ../src/newcustomer.php:177
 msgid "How many walls does the cube have?"
 msgstr "Kolik stěn má krychle ?"
 
-#: ../src/newcustomer.php:176
+#: ../src/newcustomer.php:177
 msgid "Only for humans"
 msgstr "Pouze pro lidi"
 
-#: ../src/newcustomer.php:179
+#: ../src/newcustomer.php:184
 msgid "Singn On"
 msgstr "Registrace"
 
-#: ../src/newcustomer.php:180
+#: ../src/newcustomer.php:185
 msgid "Finish"
 msgstr "Dokončit"
 
@@ -1342,6 +1082,44 @@ msgstr "Vaše %s ke stažení zde  %s"
 msgid "The order is empty"
 msgstr "Objednávka je prázdná"
 
+#: ../src/passwordrecovery.php:37
+#, php-format
+msgid "New password for %s"
+msgstr "Nové heslo pro %s"
+
+#: ../src/passwordrecovery.php:40
+msgid "Sign On informations was changed:\n"
+msgstr "Přihlašovací údaje byly změněny\n"
+
+#: ../src/passwordrecovery.php:55
+#, php-format
+msgid "unknown email address %s"
+msgstr "Neznámá mailová adresa %s"
+
+#: ../src/passwordrecovery.php:59
+msgid "Please enter your email."
+msgstr "Prosím zadejte svůj email"
+
+#: ../src/passwordrecovery.php:72
+msgid ""
+"Forgot your password? Enter your e-mail address you entered during the "
+"registration and we will send you a new one."
+msgstr ""
+"Zapoměli jste heslo ? Vložte svojí e-mailovou adresu kterou jste zadali "
+"během registrace a my vám pošleme nové."
+
+#: ../src/passwordrecovery.php:79
+msgid "Send New Password"
+msgstr "Pošli nové heslo"
+
+#: ../src/passwordrecovery.php:86
+msgid "Please check your mailbox for new password"
+msgstr "Prosíme zkontrolujte svou poštu pro nové heslo"
+
+#: ../src/passwordrecovery.php:87
+msgid "and"
+msgstr "a"
+
 #: ../src/search.php:18
 msgid "Search results"
 msgstr "Výsledky vyhledávání"
@@ -1356,18 +1134,165 @@ msgstr "%d výskytů %s nalezeno"
 msgid "Search for %s results in %s"
 msgstr "Hledám %s v %s"
 
-#: ../src/settings.php:15
-#, fuzzy
-msgid "Nastavení"
-msgstr "Nastavení"
-
 #: ../src/settings.php:18
 msgid "Change Password"
 msgstr "Změna hesla"
 
+#: ../src/setup.php:22
+msgid "Configuration Finished"
+msgstr "Konfigurace ukončena"
+
+#: ../src/setup.php:32
+msgid "ClientZone Setup"
+msgstr "Nastavení ClientZone"
+
+#: ../src/setup.php:68
+msgid "Finish Configuration"
+msgstr "Ukončení konfigurace"
+
+#: ../src/setup.php:71
+msgid "Config File Preview"
+msgstr "Náhled konfiguračního souboru"
+
+#: ../src/setup.php:74 ../src/setup.php:79
+msgid "FlexiBee Connection Status"
+msgstr "Status připojení k FlexiBee"
+
+#: ../src/setup.php:80
+msgid "Connection not set"
+msgstr "Připojení nenastaveno"
+
+#: ../src/setup.php:85
+msgid "FlexiBee setup"
+msgstr "Nastaven9 FlexiBee"
+
 #: ../src/template.php:15
 msgid "Spoje.Net"
 msgstr "Spoje.Net"
+
+#, fuzzy
+#~ msgid "Nastavení"
+#~ msgstr "Nastavení"
+
+#, fuzzy
+#~ msgid "Popis"
+#~ msgstr "popis"
+
+#~ msgid "missing login"
+#~ msgstr "chybějící login"
+
+#~ msgid "missing password"
+#~ msgstr "chybějící heslo"
+
+#~ msgid "Multiplete ContactID"
+#~ msgstr "Vícenásobné ID kontaktu"
+
+#~ msgid "Using the first one"
+#~ msgstr "Používám první"
+
+#~ msgid "Sign in %s all ok"
+#~ msgstr "Přihlšení %s vše ok"
+
+#~ msgid "Chyba komunikace"
+#~ msgstr "Chyba komunikace"
+
+#~ msgid "Change version %s already processed"
+#~ msgstr "Verze změny %s byla již zpracována"
+
+#~ msgid "Handler Class %s does not exist"
+#~ msgstr "Třída pro zpracování %s neexistuje"
+
+#~ msgid "Empty WebHook request"
+#~ msgstr "Webhook vrátil prázdnou odezvu"
+
+#~ msgid "Last Processed Change ID Saving Failed"
+#~ msgstr "Ukládání posledního zpracovaného ID změny selhalo"
+
+#~ msgid "Getting clients"
+#~ msgstr "Získávám zákazníky"
+
+#~ msgid "%s Clients Found"
+#~ msgstr "%s Klientů nalezeno"
+
+#~ msgid "Getting debts"
+#~ msgstr "Získávám pohledávky"
+
+#~ msgid "%s Debts Found"
+#~ msgstr "%s Pohledávek nalezeno"
+
+#~ msgid "Clear %s Remind labels"
+#~ msgstr "Čistím %s štítky upomínek"
+
+#~ msgid "%d clients to remind process"
+#~ msgstr "%d klientů k upomenutí zpracováno"
+
+#~ msgid "(%d / %d) #%s LMS# %s %s "
+#~ msgstr "(%d / %d) #%s LMS# %s %s "
+
+#~ msgid "User %s not present in LMS; cannot set dashboard "
+#~ msgstr "Uživatel %s nemá LMS id; nemohu nastavit dešbord"
+
+#~ msgid "Dashboard for: %d "
+#~ msgstr "Dašbord pro: %d "
+
+#~ msgid "Disconnect for: %d "
+#~ msgstr "Odpojení pro %d "
+
+#~ msgid "Invoice locked: skipping process"
+#~ msgstr "Faktura zamknutá přeskakuji zpracování"
+
+#~ msgid "Invoice %s remind %s date saved"
+#~ msgstr "Faktura %s  Datum umomínky %s uloženo"
+
+#~ msgid "Invoice %s remind %s date save failed"
+#~ msgstr "Faktura %s chyba ukládání data upomínky %s"
+
+#~ msgid "Remind send disbled"
+#~ msgstr "Odesílání pohledávek zakázáno"
+
+#~ msgid "Remind %d already sent"
+#~ msgstr "Upomínka  %d  byla již odeslána"
+
+#~ msgid "No debts to remind"
+#~ msgstr "Žádne pohledávky k upomenutí"
+
+#~ msgid "Invoice %s locked again"
+#~ msgstr "Faktura %s byla znovu uzamknuta"
+
+#~ msgid "Invoice %s locking failed"
+#~ msgstr "Faktura %s chyba znovuzamykání"
+
+#~ msgid "Set Label %s "
+#~ msgstr "Štítek %s  nastaven"
+
+#~ msgid "Set dashboards for %d customers"
+#~ msgstr "Nastavuji dešbord pro %d zákazníků"
+
+#~ msgid "Disconnect %d customers"
+#~ msgstr "Odpojuji %d zákazníků"
+
+#~ msgid "Connect %d customers"
+#~ msgstr "Připojeno %d klientů"
+
+#~ msgid "No Update Action Defined"
+#~ msgstr "Akce při aktualizaci nebyla definována"
+
+#~ msgid "No Delete Action Defined"
+#~ msgstr "Akce při smazání nebyla definována"
+
+#~ msgid "Customer Invoices"
+#~ msgstr "Faktury Zákazníka"
+
+#~ msgid "FlexiBee Init"
+#~ msgstr "Inicializace FlexiBee"
+
+#, fuzzy
+#~ msgid "label %s created"
+#~ msgstr "vytvořeno"
+
+#, fuzzy
+#~ msgid "label %s already exists"
+#~ msgstr "Doména adresa %s je již registrována"
 
 #~ msgid "Unknown invoice type: %s %s"
 #~ msgstr "Neznámý druh domény:  %s %s"

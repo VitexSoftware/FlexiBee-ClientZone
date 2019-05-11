@@ -63,10 +63,13 @@ $passRecoveryColumn = $loginRow->addItem(new \Ease\TWB\Col(4,
 '._('Lost password recovery'), 'warning')));
 
 
+if($shared->getConfigValue('ALLOW_REGISTER')){
+
 $passRecoveryColumn->additem(new \Ease\TWB\LinkButton('newcustomer.php',
     '<i class="fa fa-user"></i>
 '._('Sign On'), 'success'));
 
+}
 
 $oPage->container->addItem(new \Ease\TWB\Form('Login', null, 'POST', $loginRow));
 

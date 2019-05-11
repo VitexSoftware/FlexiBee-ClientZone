@@ -32,12 +32,14 @@ if [ -x /usr/sbin/a2enconf ] ; then
     a2enconf clientzone
 fi
 
-if [ -f /lib/systemd/system/apache2.service ] ; then
-    systemctl reload apache2 3>/dev/null || true
-fi
+if [ -f /bin/systemctl ] ; then
+    if [ -f /lib/systemd/system/apache2.service ] ; then
+        systemctl reload apache2 3>/dev/null || true
+    fi
 
-if [ -f /lib/systemd/system/avahi-daemon.service ] ; then
-    systemctl reload avahi-daemon 3>/dev/null || true
+    if [ -f /lib/systemd/system/avahi-daemon.service ] ; then
+        systemctl reload avahi-daemon 3>/dev/null || true
+    fi
 fi
 
 mkdir -p /var/cache/clientzone/ 

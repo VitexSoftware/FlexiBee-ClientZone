@@ -100,9 +100,15 @@ class OrderListingItem extends \Ease\TWB\Row
         return new \Ease\TWB\Label($type, $content);
     }
 
+    /**
+     * 
+     * @param DateTime|string $date
+     * 
+     * @return \Ease\TWB\Label
+     */
     static function dueLabel($date)
     {
-        $days = \FlexiPeeHP\Bricks\Upominac::poSplatnosti($date);
+        $days = \FlexiPeeHP\FakturaVydana::overdueDays($date);
         if ($days < 0) {
             $type = 'success';
             $msg  = sprintf(_(' %s days to due'),

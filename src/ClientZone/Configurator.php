@@ -58,20 +58,29 @@ class Configurator extends \Ease\Brick
     {
         parent::__construct();
         $this->settingsFile = $settingsFile;
-        $this->setDefaults();
+        $this->setDefaults($intialData);
         $this->loadData();
     }
 
-    public function setDefaults()
+    /**
+     * Set Initial defaults 
+     * 
+     * @param array $intialData
+     */
+    public function setDefaults($intialData = [])
     {
         foreach ($this->myKeywords as $keyWord => $type) {
-            switch ($type) {
-                case 'boolean':
-                    $this->setDataValue($keyWord, false);
-                    break;
-                default:
-                    $this->setDataValue($keyWord, '');
-                    break;
+            if (array_key_exists($keyWord, $intialData)) {
+                $this->setDataValue($keyWord, $intialData[$keyWord]);
+            } else {
+                switch ($type) {
+                    case 'boolean':
+                        $this->setDataValue($keyWord, false);
+                        break;
+                    default:
+                        $this->setDataValue($keyWord, '');
+                        break;
+                }
             }
         }
     }
@@ -92,12 +101,52 @@ class Configurator extends \Ease\Brick
 
     public function takeData($data): int
     {
-        foreach ($data as $key => $value) {
-            if (!array_key_exists($key, $this->myKeywords)) {
-                unset($data[$key]);
+        if ($data) {
+            foreach ($data as $key => $value) {
+                if (!array_key_exists($key, $this->myKeywords)) {
+                    unset($data[$key]);
+                } else {
+                    switch ($this->myKeywords[$key]) {
+                        case 'boolean':
+                            $data[$key] = boolval($value);
+
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+            return parent::takeData($data);
+        } else {
+            return 0;
+        }
+    }
+
+    /**
+     * Add Missing boolean falses
+     * 
+     * @param array $dataRaw
+     * 
+     * @return array
+     */
+    public function processForm($data)
+    {
+        foreach ($this->myKeywords as $keyWord => $keyType) {
+            switch ($keyType) {
+                case 'boolean':
+                    if (array_key_exists($keyWord, $data)) {
+                        $data[$keyWord] = true;
+                    } else {
+                        $data[$keyWord] = false;
+                    }
+                    break;
+
+                default:
+                    break;
             }
         }
-        return parent::takeData($data);
+        return $data;
     }
 
     /**
@@ -138,25 +187,75 @@ class Configurator extends \Ease\Brick
      * 
      * @return string
      */
-    public function getJson()
+    public function getJson($data = [])
     {
-        return json_encode($this->getData(), JSON_PRETTY_PRINT);
+        if (empty($data)) {
+            $data = $this->getData();
+        }
+        return json_encode($data, JSON_PRETTY_PRINT);
     }
-    
+
     /**
      * Save Configuration to file
      *  
      * @return boolean
      */
-    public function saveData()
+    public function saveDataFile(array $data, $configFile)
     {
-        if (file_put_contents($this->settingsFile, $this->getJson())) {
+        if (file_put_contents($configFile, $this->getJson($data))) {
             $this->addStatusMessage(sprintf(_('Configuration file %s was saved'),
-                    $this->settingsFile), 'success');
+                    $configFile), 'success');
             return true;
         } else {
             $this->addStatusMessage(sprintf(_('Configuration file %s was not saved'),
-                    $this->settingsFile), 'error');
+                    $configFile), 'error');
         }
+    }
+
+    public function getAppData()
+    {
+        return array_filter($this->getData(),
+            function($k) {
+            return !strstr($k, 'FLEXIBEE_');
+        }, ARRAY_FILTER_USE_KEY);
+    }
+
+    public function getFlexiBeeData()
+    {
+        return array_filter($this->getData(),
+            function($k) {
+            return strstr($k, 'FLEXIBEE_');
+        }, ARRAY_FILTER_USE_KEY);
+    }
+
+    /**
+     * Save ClientZone Configuration to file
+     *  
+     * @return boolean
+     */
+    public function saveAppConfig()
+    {
+        return $this->saveDataFile($this->getAppData(), $this->settingsFile);
+    }
+
+    /**
+     * Save FlexiBee Configuration to file
+     *  
+     * @return boolean
+     */
+    public function saveFlexiBeeConfig()
+    {
+        return $this->saveDataFile($this->getFlexiBeeData(),
+                '/etc/flexibee/client.json');
+    }
+
+    /**
+     * Save All data
+     * 
+     * @return boolean
+     */
+    public function saveConfig()
+    {
+        return $this->saveAppConfig() && $this->saveFlexiBeeConfig();
     }
 }

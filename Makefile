@@ -24,11 +24,11 @@ dimage: deb
 	docker build -t vitexsoftware/clientzone .
 
 dtest:
-	docker run -d -p 9001:9000 --name clientzone  vitexsoftware/clientzone:latest
+	docker run -d -p 9002:80 --name clientzone  vitexsoftware/clientzone:latest
         
 drun: dimage
-	docker run  -dit --name ClientZone -p 2323:9000 vitexsoftware/clientzone
-	nightly http://localhost:2323/clientzone
+	docker run  -dit --name ClientZone -p 9002:80 vitexsoftware/clientzone
+	nightly http://localhost:9002/clientzone
 
 dclean:
 	docker rmi $(docker images |grep 'clientzone')

@@ -3,16 +3,16 @@
 namespace ClientZone;
 
 /**
- * clientzone - Hlavní strana.
+ * ClientZone - Customer's settings page.
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
- * @copyright  2017 VitexSoftware v.s.cz
+ * @copyright  2017-2019 VitexSoftware v.s.cz
  */
 require_once 'includes/Init.php';
 
 $oPage->onlyForUser();
 
-$oPage->addItem(new ui\PageTop(_('Nastavení')));
+$oPage->addItem(new ui\PageTop(_('Settings')));
 
 $oPage->container->addItem(new \Ease\TWB\LinkButton('changepassword.php',
     _('Change Password'), 'warning'));
