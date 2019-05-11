@@ -19,4 +19,10 @@ class Customer extends \FlexiPeeHP\Bricks\Customer
      * @var string 
      */
     public $loginColumn = 'email';
+    
+    public function passwordCheck($plaintext)
+    {
+        return $this->kontakt->authenticate($this->getUserLogin(), $plaintext);
+    }
+    
 }

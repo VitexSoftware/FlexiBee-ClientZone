@@ -28,11 +28,11 @@ class ToPayItems extends MainPageMenu
         if (!empty($debts)) {
             $this->row->addItem(new \Ease\Html\H1Tag(_('Orders to pay')));
             foreach ($debts as $invoiceId => $invoiceInfo) {
-                $customer->invoicer->setMyKey($invoiceId);
+                $customer->invoicer->setMyKey((int) $invoiceInfo['id']);
                 $this->addMenuItem(
                     $customer->invoicer->getQrCodeBase64(200),
                     $invoiceInfo['kod'].' <strong>'.$invoiceInfo['sumCelkem'].'</strong> '.\FlexiPeeHP\FlexiBeeRO::uncode($invoiceInfo['mena']),
-                    'document.php?id='.$invoiceId.'&embed=true&evidence='.$customer->invoicer->getEvidence()
+                    'document.php?id='.\FlexiPeeHP\FlexiBeeRO::code($invoiceId) .'&embed=true&evidence='.$customer->invoicer->getEvidence()
                 );
             }
         }
